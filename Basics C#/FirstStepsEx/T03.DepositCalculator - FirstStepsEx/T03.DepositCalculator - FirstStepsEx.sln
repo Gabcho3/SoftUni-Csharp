@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.DepositCalculator - FirstStepsEx", "T03.DepositCalculator - FirstStepsEx.csproj", "{EA769407-FC71-481D-AD5E-312395C332BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA769407-FC71-481D-AD5E-312395C332BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA769407-FC71-481D-AD5E-312395C332BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA769407-FC71-481D-AD5E-312395C332BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA769407-FC71-481D-AD5E-312395C332BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4573C316-DF0A-4D09-A4CB-E95EB44BA4B5}
+	EndGlobalSection
+EndGlobal
