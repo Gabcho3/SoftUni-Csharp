@@ -1,2 +1,2 @@
-# SoftUni-Csharp
- Softuni's Csharp path
+# SoftUni Csharp
+**Softuni's Csharp Path**
