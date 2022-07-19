@@ -6,15 +6,15 @@ namespace T04._VegetableMarket
     {
         static void Main(string[] args)
         {
-            double prkgve = double.Parse(Console.ReadLine());
-            double prkgfr  = double.Parse(Console.ReadLine());
-            double kgve = double.Parse(Console.ReadLine());
-            double kgfr = double.Parse(Console.ReadLine());
+            double priceVegatable = double.Parse(Console.ReadLine());
+            double priceFruit  = double.Parse(Console.ReadLine());
+            double kgVegatables = double.Parse(Console.ReadLine());
+            double kgFruits = double.Parse(Console.ReadLine());
 
-            double prve = prkgve * kgve;
-            double prfr = prkgfr * kgfr;
+            double totalVegatable = priceVegatable * kgVegatables;
+            double prfr = priceFruit * kgFruits;
 
-            double preuro = (prve + prfr) / 1.94;
+            double preuro = (priceVegatable + priceFruit) / 1.94;
             Console.WriteLine($"{preuro:F2}");
         }
     }
