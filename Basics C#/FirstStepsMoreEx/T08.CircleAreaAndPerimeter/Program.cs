@@ -8,10 +8,10 @@ namespace T08.CircleAreaAndPerimeter
         {
             double r = double.Parse(Console.ReadLine());
 
-            double calculatedarea = r * r * Math.PI;
-            double calculatedperimetrer = 2 * r * Math.PI;
-            Console.WriteLine($"{calculatedarea:F2}");
-            Console.WriteLine($"{calculatedperimetrer:F2}");
+            double calculatedArea = r * r * Math.PI;
+            double calculatedPerimetrer = 2 * r * Math.PI;
+            Console.WriteLine($"{calculatedArea:F2}");
+            Console.WriteLine($"{calculatedPerimetrer:F2}");
         }
     }
 }

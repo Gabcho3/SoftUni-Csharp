@@ -6,25 +6,25 @@ namespace T10.WeatherForecastPart2
     {
         static void Main(string[] args)
         {
-            double tp = double.Parse(Console.ReadLine());
+            double temperature = double.Parse(Console.ReadLine());
 
-            if (tp >= 26 & tp <= 35)
+            if (temperature >= 26 & temperature <= 35)
             {
                 Console.WriteLine("Hot");
             }
-            else if (tp >= 20.1 & tp <= 25.9)
+            else if (temperature >= 20.1 & temperature <= 25.9)
             {
                 Console.WriteLine("Warm");
             }
-            else if (tp >= 15 & tp <= 20)
+            else if (temperature >= 15 & temperature <= 20)
             {
                 Console.WriteLine("Mild");
             }
-            else if (tp >= 12 & tp < 15)
+            else if (temperature >= 12 & temperature < 15)
             {
                 Console.WriteLine("Cool");
             }
-            else if (tp >= 5 & tp < 12)
+            else if (temperature >= 5 & temperature < 12)
             {
                 Console.WriteLine("Cold");
             }
