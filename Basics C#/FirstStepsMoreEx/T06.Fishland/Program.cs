@@ -6,17 +6,17 @@ namespace T06.Fishland
     {
         static void Main(string[] args)
         {
-            double prskum = double.Parse(Console.ReadLine());
-            double prcaca = double.Parse(Console.ReadLine());
-            double kgpalm = double.Parse(Console.ReadLine());
-            double kgsafr = double.Parse(Console.ReadLine());
-            int kgmidi = int.Parse(Console.ReadLine());
+            double priceMackerel = double.Parse(Console.ReadLine());
+            double priceSprinkle = double.Parse(Console.ReadLine());
+            double kgBonito = double.Parse(Console.ReadLine());
+            double kgSafrid = double.Parse(Console.ReadLine());
+            double kgMussels = double.Parse(Console.ReadLine());
 
-            double prpalm = kgpalm * (prskum + (prskum * 0.60));
-            double prsafr = kgsafr * (prcaca + (prcaca * 0.80));
-            double prmidi = kgmidi * 7.50;
-            double tot = prpalm + prsafr + prmidi;
-            Console.WriteLine($"{tot:F2}");
+            double priceBonito = kgBonito * (priceMackerel + (priceMackerel * 0.60));
+            double priceSafrid = kgSafrid * (priceSprinkle + (priceSprinkle * 0.80));
+            double priceMussels = kgMussels * 7.50;
+            double total = priceBonito + priceSafrid + priceMussels;
+            Console.WriteLine($"{total:F2}");
 
         }
     }
