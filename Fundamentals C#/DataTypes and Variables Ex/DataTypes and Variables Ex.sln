@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T08. Beer Kegs", "T08. Beer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T09. Spice Must Flow", "T09. Spice Must Flow\T09. Spice Must Flow.csproj", "{76B4C2B5-0CB6-42B8-BAE1-2455E2B39FFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T10. Pokemon", "T10. Pokemon\T10. Pokemon.csproj", "{81571EF3-B7A4-46D1-8891-E916019B5FEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{76B4C2B5-0CB6-42B8-BAE1-2455E2B39FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76B4C2B5-0CB6-42B8-BAE1-2455E2B39FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76B4C2B5-0CB6-42B8-BAE1-2455E2B39FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81571EF3-B7A4-46D1-8891-E916019B5FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81571EF3-B7A4-46D1-8891-E916019B5FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81571EF3-B7A4-46D1-8891-E916019B5FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81571EF3-B7A4-46D1-8891-E916019B5FEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
