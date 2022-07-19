@@ -12,14 +12,16 @@ namespace T10._Pokemon
             int distance = int.Parse(Console.ReadLine());
             int exhaustionFactor = int.Parse(Console.ReadLine());
 
+            int halfOfOriginalValue = originalValue / 2;
             int reachedTargets = 0;
 
             while(powerоfPokemon >= distance) {
                 powerоfPokemon -= distance;
-                if (originalValue * 0.5 == powerоfPokemon) {
+                if (halfOfOriginalValue == powerоfPokemon && exhaustionFactor != 0)
+                {
                     powerоfPokemon /= exhaustionFactor;
                 }
-                
+
                 reachedTargets++; 
             }
             Console.WriteLine(powerоfPokemon);
