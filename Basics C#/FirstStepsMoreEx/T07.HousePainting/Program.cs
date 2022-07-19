@@ -12,11 +12,11 @@ namespace T07.HousePainting
             //walls:
             double wall1 = x * y;
             double window = 1.5 * 1.5;
-            double tot1 = 2 * (wall1 - window);
+            double totalWall1 = 2 * (wall1 - window);
             double wall2 = x * x;
             double entry = 1.2 * 2;
-            double tot2 = 2 * wall2 - entry;
-            double walls = tot1 + tot2;
+            double totalWall2 = 2 * wall2 - entry;
+            double walls = totalWall1 + totalWall2;
             double green = walls / 3.4;
             Console.WriteLine($"{green:F2}");
             //roof:
