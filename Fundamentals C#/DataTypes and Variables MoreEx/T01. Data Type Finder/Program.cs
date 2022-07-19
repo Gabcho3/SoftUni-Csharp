@@ -6,9 +6,10 @@ namespace T01._Data_Type_Finder
     {
         static void Main(string[] args)
         {
+            //HOW to CHECK data type of INPUT
             string input = Console.ReadLine();
-
             string finalType = string.Empty;
+
             while (input != "END")
                 if (!string.IsNullOrEmpty(input))
                 {
