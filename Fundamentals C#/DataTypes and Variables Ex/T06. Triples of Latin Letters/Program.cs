@@ -6,7 +6,7 @@ namespace T06._Triples_of_Latin_Letters
     {
         static void Main(string[] args)
         {
-            sbyte n = 3;
+            sbyte n = sbyte.Parse(Console.ReadLine());
             //How to print all triples of the first n small Latin letters
             for (int i = 0;  i < n; i++) {
                 char first = (char)('a' + i);
