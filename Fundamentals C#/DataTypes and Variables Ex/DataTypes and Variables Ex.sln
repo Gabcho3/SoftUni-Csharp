@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T09. Spice Must Flow", "T09
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T10. Pokemon", "T10. Pokemon\T10. Pokemon.csproj", "{81571EF3-B7A4-46D1-8891-E916019B5FEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T11. Snowballs", "T11. Snowballs\T11. Snowballs.csproj", "{4E162894-8788-40D2-BAB6-C4F5978A7C4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{81571EF3-B7A4-46D1-8891-E916019B5FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81571EF3-B7A4-46D1-8891-E916019B5FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81571EF3-B7A4-46D1-8891-E916019B5FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E162894-8788-40D2-BAB6-C4F5978A7C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E162894-8788-40D2-BAB6-C4F5978A7C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E162894-8788-40D2-BAB6-C4F5978A7C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E162894-8788-40D2-BAB6-C4F5978A7C4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
