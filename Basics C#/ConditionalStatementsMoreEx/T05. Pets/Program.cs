@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Т05.Pets
+namespace T05._Pets
 {
     internal class Program
     {
