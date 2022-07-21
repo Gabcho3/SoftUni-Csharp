@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T07.FuelTank", "T07.FuelTan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T08.FuelTankPart2", "T08.FuelTankPart2\T08.FuelTankPart2.csproj", "{2D49F4FD-6DA6-415E-A41C-B9784DF9DBBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Pets", "T05. Pets\T05. Pets.csproj", "{6B280587-3E66-4B57-8441-0094C5554AE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Pets", "T05. Pets\T05. Pets.csproj", "{F1D1D82D-84CB-4E48-99FF-3701205262AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +53,10 @@ Global
 		{2D49F4FD-6DA6-415E-A41C-B9784DF9DBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D49F4FD-6DA6-415E-A41C-B9784DF9DBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D49F4FD-6DA6-415E-A41C-B9784DF9DBBE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B280587-3E66-4B57-8441-0094C5554AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B280587-3E66-4B57-8441-0094C5554AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B280587-3E66-4B57-8441-0094C5554AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B280587-3E66-4B57-8441-0094C5554AE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1D1D82D-84CB-4E48-99FF-3701205262AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D1D82D-84CB-4E48-99FF-3701205262AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D1D82D-84CB-4E48-99FF-3701205262AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D1D82D-84CB-4E48-99FF-3701205262AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
