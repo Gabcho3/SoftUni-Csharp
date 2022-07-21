@@ -6,6 +6,7 @@ namespace T02._From_Left_to_the_Right
     {
         static void Main(string[] args)
         {
+            //WORKING ONLY WITH POSITIVE NUMBERS!
             int lines = int.Parse(Console.ReadLine());
             string first = string.Empty;
             string second = string.Empty;
