@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01.Dishwasher", "T01.Dishw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02.ReportSystem", "T02.ReportSystem\T02.ReportSystem.csproj", "{4230B073-D79D-4C3C-995E-0C1A869C7DBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.StreamOfLetters", "T03.StreamOfLetters\T03.StreamOfLetters.csproj", "{4CA954A3-37C9-4592-A239-80563312DE52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Stream Of Letters", "T03. Stream Of Letters\T03. Stream Of Letters.csproj", "{A01948DA-7395-4042-AA42-023CC815C5F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{4230B073-D79D-4C3C-995E-0C1A869C7DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4230B073-D79D-4C3C-995E-0C1A869C7DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4230B073-D79D-4C3C-995E-0C1A869C7DBA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4CA954A3-37C9-4592-A239-80563312DE52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4CA954A3-37C9-4592-A239-80563312DE52}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4CA954A3-37C9-4592-A239-80563312DE52}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4CA954A3-37C9-4592-A239-80563312DE52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A01948DA-7395-4042-AA42-023CC815C5F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01948DA-7395-4042-AA42-023CC815C5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01948DA-7395-4042-AA42-023CC815C5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01948DA-7395-4042-AA42-023CC815C5F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
