@@ -22,9 +22,21 @@ namespace T03.TravelAgency
                 case "Borovets":
                     switch(packet)
                     {
-                        case "noEquipment": price = days * 80; if (VIP == "yes") price -= price * 0.05;
+                        case "noEquipment": price = days * 80;
+                            if (VIP == "yes")
+                            {
+                                price -= price * 0.05;
+                            }
+                            if (days > 7)
+                                price -= 80;
                             break;
-                        case "withEquipment": price = days * 100; if (VIP == "yes") price -= price * 0.10;
+                        case "withEquipment": price = days * 100;
+                            if (VIP == "yes")
+                            {
+                                price -= price * 0.10;
+                            }
+                            if (days > 7)
+                                price -= 100;
                             break;
                         default: Console.WriteLine("Invalid input!"); return;
                     }
@@ -33,9 +45,21 @@ namespace T03.TravelAgency
                 case "Burgas":
                     switch (packet)
                     {
-                        case "noBreakfast": price = days * 100; if (VIP == "yes") price -= price * 0.07;
-                             break;
-                        case "withBreakfast": price = days * 130; if (VIP == "yes") price -= price * 0.12;
+                        case "noBreakfast": price = days * 100;
+                            if (VIP == "yes")
+                            {
+                                price -= price * 0.07;
+                            }
+                            if (days > 7)
+                                price -= 100;
+                            break;
+                        case "withBreakfast": price = days * 130;
+                            if (VIP == "yes")
+                            {
+                                price -= price * 0.12;
+                            }
+                            if (days > 7)
+                                price -= 130;
                             break;
                         default: Console.WriteLine("Invalid input!"); return;
                     }
