@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Т01. Day of Week", "Т01. Day of Week\Т01. Day of Week.csproj", "{CCA26766-E904-4DBB-B3D2-44D052DCFD5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Day of Week", "Т01. Day of Week\T01. Day of Week.csproj", "{CCA26766-E904-4DBB-B3D2-44D052DCFD5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Print Numbers in Reverse Order", "T02. Print Numbers in Reverse Order\T02. Print Numbers in Reverse Order.csproj", "{E50F6902-C235-4DDB-8F51-6649A682BAF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CCA26766-E904-4DBB-B3D2-44D052DCFD5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCA26766-E904-4DBB-B3D2-44D052DCFD5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCA26766-E904-4DBB-B3D2-44D052DCFD5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E50F6902-C235-4DDB-8F51-6649A682BAF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E50F6902-C235-4DDB-8F51-6649A682BAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E50F6902-C235-4DDB-8F51-6649A682BAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E50F6902-C235-4DDB-8F51-6649A682BAF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
