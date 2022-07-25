@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Sum Even Numbers", "T0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06. Even and Odd Subtraction", "T06. Even and Odd Subtraction\T06. Even and Odd Subtraction.csproj", "{C4F01A37-07A9-485E-BDB7-CE6BA91B4FB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07. Equal Arrays", "T07. Equal Arrays\T07. Equal Arrays.csproj", "{0A0F960B-061C-4586-91FA-6A770854C6C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{C4F01A37-07A9-485E-BDB7-CE6BA91B4FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4F01A37-07A9-485E-BDB7-CE6BA91B4FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4F01A37-07A9-485E-BDB7-CE6BA91B4FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A0F960B-061C-4586-91FA-6A770854C6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A0F960B-061C-4586-91FA-6A770854C6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A0F960B-061C-4586-91FA-6A770854C6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A0F960B-061C-4586-91FA-6A770854C6C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
