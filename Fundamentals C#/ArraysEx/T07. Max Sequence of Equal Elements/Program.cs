@@ -9,38 +9,32 @@ namespace T07._Max_Sequence_of_Equal_Elements
         {
             int[] nums = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
-            string output = null;
-            int maxLength = int.MinValue;
-            string maxSequence = null;
-            for (int i = 0; i < nums.Length - 1; i++) //-1 --> row 17 "nums[i + 1]"
-            {
-                if (nums[i] == nums[i + 1])
-                {
-                    output += nums[i];
-                }
-                else
-                    output = "";
+            int bestCount = int.MinValue;
+            int bestIndex = 0;
 
-                int outputLength = output.Length;
+            for(int i = 0; i < nums.Length; i++)
+            {
+                int countSequenceLength = 1; //by DEFAULT
 
-                if (outputLength > maxLength)
+                for(int j = i + 1; j < nums.Length; j++) //checking sequences
                 {
-                    maxLength = outputLength;
-                    maxSequence = output;
+                    if (nums[i] == nums[j])
+                        countSequenceLength++;
+                    else
+                        break;
+
+                }
+
+                if(countSequenceLength > bestCount) //finding MAX sequence
+                {
+                    bestCount = countSequenceLength;
+                    bestIndex = i; //position of starting digit of sequence
                 }
             }
-            if (output == "")
+            for(int k = 0; k < bestCount; k++) //printing digits
             {
-                maxSequence += nums[0];
+                Console.Write(nums[bestIndex] + " ");
             }
-            else
-                maxSequence += maxSequence[0]; //one more digit cause of ROWS 17-20 //CHECK DEBUG
-            int[] result = new int[maxLength + 1]; //+1 --> one MORE digit
-            for (int i = 0; i < maxLength + 1; i++) //+1 --> one MORE digit
-            {
-                result[i] += int.Parse(maxSequence[i].ToString()); //to SPLIT digits
-            }
-            Console.WriteLine(string.Join(" ", result));
         }
     }
 }
