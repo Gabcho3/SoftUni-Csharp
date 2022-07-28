@@ -9,7 +9,7 @@ namespace Т06.TheMostPowerfulWord
             string word = Console.ReadLine();
 
             string strongestWord = null;
-            decimal sumOfWord = 0; // because of Math.Floor()
+            decimal sumOfWord = 0; //decimal --> Math.Floor()
             decimal maxSum = int.MinValue;
 
             while (word != "End of words")
