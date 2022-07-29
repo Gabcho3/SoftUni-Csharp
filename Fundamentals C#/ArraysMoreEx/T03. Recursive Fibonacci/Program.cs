@@ -7,7 +7,17 @@ namespace T03._Recursive_Fibonacci
         static void Main(string[] args)
         {
             int wantedNum = int.Parse(Console.ReadLine());
-            
+
+            if (wantedNum == 1) //program is much faster
+            {
+                Console.WriteLine(1);
+                return;
+            }
+            if (wantedNum == 2) //program is much faster
+            {
+                Console.WriteLine(1);
+                return;
+            }
 
             int[] output = new int[2]; //first amd second num is always 1
 
