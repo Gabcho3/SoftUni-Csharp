@@ -26,10 +26,8 @@ namespace T01._Encrypt__Sort__and_Print_Array
                         ascciCode[i] += letter / input[i].Length;
 
                 }
-
-                if (i == lines - 1) 
-                    Array.Sort(ascciCode); //Sorting in ascending order 
             }
+            Array.Sort(ascciCode); //Sorting in ascending order 
 
             for(int i = 0; i < ascciCode.Length; i++) //printing nums
             {
