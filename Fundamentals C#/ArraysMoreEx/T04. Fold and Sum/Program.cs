@@ -40,7 +40,6 @@ namespace T04._Fold_and_Sum
                 }
             }
 
-
             int[] upperRow1 = new int[upperRow.Length / 2]; //first digits
             int[] upperRow2 = new int[upperRow.Length / 2]; //last digits
             for(int j = 0; j < upperRow.Length / 2; j++)
