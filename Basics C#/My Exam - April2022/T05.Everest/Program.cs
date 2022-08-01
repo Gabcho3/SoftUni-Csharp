@@ -12,27 +12,22 @@ namespace T05.Everest
 
             while (yesOrNo != "END")
             {
+                if (yesOrNo == "Yes")
+                    days++;
+
+                if (days > 5)
+                    break;
+
                 double meters = double.Parse(Console.ReadLine());
                 start += meters;
-                if (yesOrNo == "Yes")
-                {
-                    days++;
-                }
-                if (days > 5)
-                {
-                    if(start < 8848)
-                    {
-                        start -= meters;
-                    }
-                    break;
-                }
+
                 if (start >= 8848)
-                {
                     break;
-                }
                 yesOrNo = Console.ReadLine();
             }
-            if (start >= 8848) Console.WriteLine($"Goal reached for {days} days!");
+
+            if (start >= 8848) 
+                Console.WriteLine($"Goal reached for {days} days!");
             else
             {
                 Console.WriteLine("Failed!");
