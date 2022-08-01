@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06. Calculate Rectangle Ar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07. Repeat String", "T07. Repeat String\T07. Repeat String.csproj", "{D92163AA-A695-413E-8554-1FB6AD561E09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T08. Math Power", "T08. Math Power\T08. Math Power.csproj", "{6C330F7C-D60E-4FB2-AC01-7DE5F495F4D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{D92163AA-A695-413E-8554-1FB6AD561E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D92163AA-A695-413E-8554-1FB6AD561E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D92163AA-A695-413E-8554-1FB6AD561E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C330F7C-D60E-4FB2-AC01-7DE5F495F4D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C330F7C-D60E-4FB2-AC01-7DE5F495F4D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C330F7C-D60E-4FB2-AC01-7DE5F495F4D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C330F7C-D60E-4FB2-AC01-7DE5F495F4D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

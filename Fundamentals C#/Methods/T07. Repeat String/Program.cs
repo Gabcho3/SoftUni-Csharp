@@ -14,26 +14,28 @@ namespace T07._Repeat_String
             Console.WriteLine(result);
         }
 
-        //static string RepeatString(string input, int repeats)
-        //{
-        //    string result = String.Empty;
-
-        //    for(int i = 0; i < repeats; i++)
-        //    {
-        //        result += input;
-        //    }
-        //    return result;
-        //}
-
         static string RepeatString(string input, int repeats)
         {
-            StringBuilder result = new StringBuilder();
+            string result = String.Empty;
 
             for (int i = 0; i < repeats; i++)
             {
-                result.Append(input);
+                result += input;
             }
-            return result.ToString();
+            return result;
         }
+
+        //OTHER SOLUTION
+
+        //static string repeatstring(string input, int repeats)
+        //{
+        //    stringbuilder result = new stringbuilder();
+
+        //    for (int i = 0; i < repeats; i++)
+        //    {
+        //        result.append(input);
+        //    }
+        //    return result.tostring();
+        //}
     }
 }
