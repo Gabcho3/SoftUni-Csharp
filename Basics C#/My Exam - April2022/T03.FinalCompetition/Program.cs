@@ -17,15 +17,19 @@ namespace T03.FinalCompetition
                 case "Bulgaria": 
                     switch(season)
                     {
-                        case "summer": reward -= reward * 0.05; break;
-                        case "winter": reward -= reward * 0.08; break;
+                        case "summer": reward -= reward * 0.05; 
+                            break;
+                        case "winter": reward -= reward * 0.08; 
+                            break;
                     }
                     break;
                 case "Abroad": reward += reward * 0.50;
                     switch (season)
                     {
-                        case "summer": reward -= reward * 0.10; break;
-                        case "winter": reward -= reward * 0.15; break;
+                        case "summer": reward -= reward * 0.10; 
+                            break;
+                        case "winter": reward -= reward * 0.15; 
+                            break;
                     }
                     break;
             }
