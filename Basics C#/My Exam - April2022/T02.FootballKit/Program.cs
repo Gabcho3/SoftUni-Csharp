@@ -12,17 +12,17 @@ namespace T02.FootballKit
             double priceShorts = priceShirt * 0.75;
             double priceSocks = priceShorts * 0.20;
             double priceButtons = (priceShirt + priceShorts) * 2;
-            double total = priceShirt + priceShorts + priceSocks + priceButtons;
-            double sum = total - (total * 0.15);
-            if (sum >= neededSum)
+            double totalSum = priceShirt + priceShorts + priceSocks + priceButtons;
+            double sumAfterDiscount = totalSum - (totalSum * 0.15);
+            if (sumAfterDiscount >= neededSum)
             {
                 Console.WriteLine("Yes, he will earn the world-cup replica ball!");
-                Console.WriteLine($"His sum is {sum:f2} lv.");
+                Console.WriteLine($"His sum is {sumAfterDiscount:f2} lv.");
             }
             else
             {
                 Console.WriteLine("No, he will not earn the world-cup replica ball."); 
-                Console.WriteLine($"He needs {neededSum - sum:f2} lv. more.");
+                Console.WriteLine($"He needs {neededSum - sumAfterDiscount:f2} lv. more.");
             }
         }
     }
