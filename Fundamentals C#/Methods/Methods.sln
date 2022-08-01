@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Sign of Integer Numbers", "T01. Sign of Integer Numbers\T01. Sign of Integer Numbers.csproj", "{B278EE52-8ECA-4EDD-A202-60C6E88D795E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B278EE52-8ECA-4EDD-A202-60C6E88D795E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B278EE52-8ECA-4EDD-A202-60C6E88D795E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B278EE52-8ECA-4EDD-A202-60C6E88D795E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B278EE52-8ECA-4EDD-A202-60C6E88D795E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D48AFB41-4A62-4D43-8E6E-0B1CC915A028}
+	EndGlobalSection
+EndGlobal
