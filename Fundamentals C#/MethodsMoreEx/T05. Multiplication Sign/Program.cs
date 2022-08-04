@@ -17,7 +17,6 @@ namespace T05._Multiplication_Sign
             double num2 = double.Parse(Console.ReadLine());
             double num3 = double.Parse(Console.ReadLine());
 
-            CheckMultiplicationSign(num1, num2, num3);
             Console.WriteLine(CheckMultiplicationSign(num1, num2, num3));
         }
         static string CheckMultiplicationSign(double num1, double num2, double num3)
