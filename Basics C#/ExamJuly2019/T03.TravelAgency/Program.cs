@@ -13,30 +13,42 @@ namespace T03.TravelAgency
             double price = 0;
             if (days <= 0)
             {
-                Console.WriteLine("Days must be positive number!"); 
+                Console.WriteLine("Days must be positive number!");
                 return;
             }
-            switch(city)
+            switch (city)
             {
                 case "Bansko":
                 case "Borovets":
-                    switch(packet)
+                    switch (packet)
                     {
-                        case "noEquipment": price = days * 80;
+                        case "noEquipment":
+                            price = days * 80;
                             if (VIP == "yes")
                             {
                                 price -= price * 0.05;
+                                if (days > 7)
+                                    price -= 80 * 0.95;
                             }
-                            if (days > 7)
-                                price -= 80;
+                            else
+                            {
+                                if (days > 7)
+                                    price -= 80;
+                            }
                             break;
-                        case "withEquipment": price = days * 100;
+                        case "withEquipment":
+                            price = days * 100;
                             if (VIP == "yes")
                             {
                                 price -= price * 0.10;
+                                if (days > 7)
+                                    price -= 100 * 0.90;
                             }
-                            if (days > 7)
-                                price -= 100;
+                            else
+                            {
+                                if (days > 7)
+                                    price -= 100;
+                            }
                             break;
                         default: Console.WriteLine("Invalid input!"); return;
                     }
@@ -45,21 +57,33 @@ namespace T03.TravelAgency
                 case "Burgas":
                     switch (packet)
                     {
-                        case "noBreakfast": price = days * 100;
+                        case "noBreakfast":
+                            price = days * 100;
                             if (VIP == "yes")
                             {
                                 price -= price * 0.07;
+                                if (days > 7)
+                                    price -= 100 * 0.83;
                             }
-                            if (days > 7)
-                                price -= 100;
+                            else
+                            {
+                                if (days > 7)
+                                    price -= 100;
+                            }
                             break;
-                        case "withBreakfast": price = days * 130;
+                        case "withBreakfast":
+                            price = days * 130;
                             if (VIP == "yes")
                             {
                                 price -= price * 0.12;
+                                if (days > 7)
+                                    price -= 130 * 0.88;
                             }
-                            if (days > 7)
-                                price -= 130;
+                            else
+                            {
+                                if (days > 7)
+                                    price -= 130;
+                            }
                             break;
                         default: Console.WriteLine("Invalid input!"); return;
                     }
