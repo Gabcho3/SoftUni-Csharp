@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace T02._From_Left_to_the_Right
 {
@@ -6,60 +7,45 @@ namespace T02._From_Left_to_the_Right
     {
         static void Main(string[] args)
         {
-            //WORKING ONLY WITH POSITIVE NUMBERS!
+            //SOLUTION WITH ARRAY
             int lines = int.Parse(Console.ReadLine());
-            string first = string.Empty;
-            string second = string.Empty;
-            bool nowIsFirstNum = true;
-            int firstSum = 0;
-            int secondSum = 0;
+
             for (int i = 0; i < lines; i++)
             {
-                string input = Console.ReadLine();
-                int inputLength = input.Length;
-                for (int j = 0; j < inputLength; j++)
+                long [] nums = Console.ReadLine().Split().Select(long.Parse).ToArray();
+                long sum = 0;
+
+                if (nums[0] >= nums[1])
                 {
-                    if (input[j] == '-')
+                    long digits = nums[0];
+
+                    while (digits != 0)
                     {
-                        continue;
+                        long currDigit = digits % 10;
+
+                        sum += currDigit;
+
+                        digits /= 10;
                     }
-                    if (input[j] == ' ')
-                    {
-                        nowIsFirstNum = false;
-                        continue;
-                    }
-                    if (nowIsFirstNum)
-                    {
-                        first += input[j].ToString();
-                    }
-                    if (!nowIsFirstNum)
-                    {
-                        second += input[j].ToString();
-                    }
+                    Console.WriteLine(Math.Abs(sum));
                 }
-                long firstNum = long.Parse(first);
-                long secondNum = long.Parse(second);
-                if (firstNum > secondNum)
-                {
-                    for (int k = 0; k < first.Length; k++)
-                        firstSum += int.Parse(first[k].ToString());
-                    Console.WriteLine(firstSum);
-                    first = null;
-                    second = null;
-                    firstSum = 0;
-                    nowIsFirstNum = true;
-                }
+
                 else
                 {
-                    for (int l = 0; l < second.Length; l++)
-                        secondSum += int.Parse(second[l].ToString());
-                    Console.WriteLine(secondSum);
-                    first = null;
-                    second = null;
-                    secondSum = 0;
-                    nowIsFirstNum = true;
+                    long digits = nums[1];
+
+                    while (digits != 0)
+                    {
+                        long currDigit = digits % 10;
+
+                        sum += currDigit;
+
+                        digits /= 10;
+                    }
+                    Console.WriteLine(Math.Abs(sum));
                 }
             }
         }
+
     }
 }
