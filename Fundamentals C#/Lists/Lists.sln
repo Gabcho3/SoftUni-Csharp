@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Remove Negatives and R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06. List Manipulation Basics", "T06. List Manipulation Basics\T06. List Manipulation Basics.csproj", "{0E53F88B-E400-4BE7-BA3C-962A64330553}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07. List Manipulation Advanced", "T07. List Manipulation Advanced\T07. List Manipulation Advanced.csproj", "{8A0493B3-EF4F-49E0-84CB-89FF79A4C909}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{0E53F88B-E400-4BE7-BA3C-962A64330553}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E53F88B-E400-4BE7-BA3C-962A64330553}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E53F88B-E400-4BE7-BA3C-962A64330553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A0493B3-EF4F-49E0-84CB-89FF79A4C909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A0493B3-EF4F-49E0-84CB-89FF79A4C909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A0493B3-EF4F-49E0-84CB-89FF79A4C909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A0493B3-EF4F-49E0-84CB-89FF79A4C909}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
