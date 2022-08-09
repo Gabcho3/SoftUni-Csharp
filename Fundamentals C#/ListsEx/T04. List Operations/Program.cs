@@ -20,7 +20,7 @@ namespace T04._List_Operations
 
                 if (action == "Insert")
                 {
-                    if (int.Parse(command[2]) > list.Count - 1 && int.Parse(command[2]) < 0)
+                    if (int.Parse(command[2]) > list.Count - 1 || int.Parse(command[2]) < 0)
                         Console.WriteLine("Invalid index");
 
                     else
@@ -29,7 +29,7 @@ namespace T04._List_Operations
 
                 if (action == "Remove")
                 {
-                    if (int.Parse(command[1]) > list.Count - 1 && int.Parse(command[1]) < 0)
+                    if (int.Parse(command[1]) > list.Count - 1 || int.Parse(command[1]) < 0)
                         Console.WriteLine("Invalid index");
 
                     else
