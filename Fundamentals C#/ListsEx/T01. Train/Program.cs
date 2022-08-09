@@ -32,11 +32,11 @@ namespace T01._Train
 
         static void AddPassengersToWagon(List<int> wagons, int maxCapacity, string[] command)
         {
-            for(int i = 0; i < wagons.Count; i++)
+            for (int i = 0; i < wagons.Count; i++)
             {
                 int currPasengers = wagons[i] + int.Parse(command[0]);
 
-                if(currPasengers <= maxCapacity)
+                if (currPasengers <= maxCapacity)
                 {
                     wagons[i] = currPasengers;
                     break;
