@@ -111,7 +111,7 @@ namespace T10._SoftUni_Course_Planning
         {
             string exerciseOfLesson = action[1];
 
-            if (exist)
+            if (exist && !haveEx)
             {
                 for (int i = 0; i < lessons.Count; i++)
                 {
