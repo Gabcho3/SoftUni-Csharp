@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Messaging", "T01. Mess
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Car Race", "T02. Car Race\T02. Car Race.csproj", "{6353FBF8-1E20-4D18-83A9-1A7DB3D6C771}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Take-Skip Rope", "T03. Take-Skip Rope\T03. Take-Skip Rope.csproj", "{CA28DEF1-F3C7-4BA9-BCD1-0CDE3D953484}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6353FBF8-1E20-4D18-83A9-1A7DB3D6C771}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6353FBF8-1E20-4D18-83A9-1A7DB3D6C771}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6353FBF8-1E20-4D18-83A9-1A7DB3D6C771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA28DEF1-F3C7-4BA9-BCD1-0CDE3D953484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA28DEF1-F3C7-4BA9-BCD1-0CDE3D953484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA28DEF1-F3C7-4BA9-BCD1-0CDE3D953484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA28DEF1-F3C7-4BA9-BCD1-0CDE3D953484}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
