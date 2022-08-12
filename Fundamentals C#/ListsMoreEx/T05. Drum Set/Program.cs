@@ -37,7 +37,7 @@ namespace T05._Drum_Set
                         {
                             drumSet.RemoveAt(i);
                             initialDrumSet.RemoveAt(i);
-                            i--;
+                            i--; //going one index back --> we remove one index
                         }
                     }
                 }
