@@ -27,13 +27,13 @@ namespace T01._Guinea_Pig
                     coverGrams -= weightGrams * 1.0 / 3.0;
                 }
 
-                if (foodGrams == 0)
+                if (foodGrams <= 0)
                     notEnough = true;
 
-                if (hayGrams == 0)
+                if (hayGrams <= 0)
                     notEnough = true;
 
-                if (coverGrams == 0)
+                if (coverGrams <= 0)
                     notEnough = true;
 
                 if (notEnough)
@@ -46,7 +46,7 @@ namespace T01._Guinea_Pig
             Console.WriteLine($"Everything is fine! Puppy is happy! " +
                 $"Food: {foodGrams / 1000:f2}, " +
                 $"Hay: {hayGrams / 1000:f2}, " +
-                $"Cover: {coverGrams / 1000:f2}");
+                $"Cover: {coverGrams / 1000:f2}.");
         }
     }
 }
