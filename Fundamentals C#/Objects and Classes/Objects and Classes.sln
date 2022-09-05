@@ -5,9 +5,15 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Randomize Words", "T01. Randomize Words\T01. Randomize Words.csproj", "{74883FD6-8F24-470E-BA3F-E7AE65AE417B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Big Factorial", "T02. Big Factorial\T02. Big Factorial.csproj", "{4DA1EF16-9754-4DE1-B4F1-786038538030}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02. Big Factorial", "T02. Big Factorial\T02. Big Factorial.csproj", "{4DA1EF16-9754-4DE1-B4F1-786038538030}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Songs", "T03. Songs\T03. Songs.csproj", "{820D97BB-6B5E-4949-B1E0-69648AAA25F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03. Songs", "T03. Songs\T03. Songs.csproj", "{820D97BB-6B5E-4949-B1E0-69648AAA25F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. Students", "T04. Students\T04. Students.csproj", "{8A14F3E6-084F-4769-B890-846B7526700F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Students 2.0", "T05. Students 2.0\T05. Students 2.0.csproj", "{B7888AE7-E6FD-46D5-AB69-864CD3634691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06. Store Boxes", "T06. Store Boxes\T06. Store Boxes.csproj", "{5E7009E2-5AD6-4833-81B9-6FA678B71BC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{820D97BB-6B5E-4949-B1E0-69648AAA25F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{820D97BB-6B5E-4949-B1E0-69648AAA25F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{820D97BB-6B5E-4949-B1E0-69648AAA25F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A14F3E6-084F-4769-B890-846B7526700F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A14F3E6-084F-4769-B890-846B7526700F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A14F3E6-084F-4769-B890-846B7526700F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A14F3E6-084F-4769-B890-846B7526700F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7888AE7-E6FD-46D5-AB69-864CD3634691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7888AE7-E6FD-46D5-AB69-864CD3634691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7888AE7-E6FD-46D5-AB69-864CD3634691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7888AE7-E6FD-46D5-AB69-864CD3634691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7009E2-5AD6-4833-81B9-6FA678B71BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7009E2-5AD6-4833-81B9-6FA678B71BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7009E2-5AD6-4833-81B9-6FA678B71BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7009E2-5AD6-4833-81B9-6FA678B71BC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
