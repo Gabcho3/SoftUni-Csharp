@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Randomize Words", "T01. Randomize Words\T01. Randomize Words.csproj", "{74883FD6-8F24-470E-BA3F-E7AE65AE417B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Randomize Words", "T01. Randomize Words\T01. Randomize Words.csproj", "{74883FD6-8F24-470E-BA3F-E7AE65AE417B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Big Factorial", "T02. Big Factorial\T02. Big Factorial.csproj", "{4DA1EF16-9754-4DE1-B4F1-786038538030}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Songs", "T03. Songs\T03. Songs.csproj", "{820D97BB-6B5E-4949-B1E0-69648AAA25F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{74883FD6-8F24-470E-BA3F-E7AE65AE417B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74883FD6-8F24-470E-BA3F-E7AE65AE417B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74883FD6-8F24-470E-BA3F-E7AE65AE417B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DA1EF16-9754-4DE1-B4F1-786038538030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DA1EF16-9754-4DE1-B4F1-786038538030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DA1EF16-9754-4DE1-B4F1-786038538030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DA1EF16-9754-4DE1-B4F1-786038538030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{820D97BB-6B5E-4949-B1E0-69648AAA25F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{820D97BB-6B5E-4949-B1E0-69648AAA25F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{820D97BB-6B5E-4949-B1E0-69648AAA25F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{820D97BB-6B5E-4949-B1E0-69648AAA25F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
