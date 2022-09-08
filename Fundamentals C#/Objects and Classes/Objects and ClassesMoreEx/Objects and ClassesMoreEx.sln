@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Speed Racing", "T03. S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. Raw Data", "T04. Raw Data\T04. Raw Data.csproj", "{38FDF5C3-F0B0-45A3-BFE9-A5919532189F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Shopping Spree", "T05. Shopping Spree\T05. Shopping Spree.csproj", "{34665C0E-9E59-4735-A9CD-7E42E507C4CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{38FDF5C3-F0B0-45A3-BFE9-A5919532189F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38FDF5C3-F0B0-45A3-BFE9-A5919532189F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38FDF5C3-F0B0-45A3-BFE9-A5919532189F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34665C0E-9E59-4735-A9CD-7E42E507C4CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34665C0E-9E59-4735-A9CD-7E42E507C4CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34665C0E-9E59-4735-A9CD-7E42E507C4CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34665C0E-9E59-4735-A9CD-7E42E507C4CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
