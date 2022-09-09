@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Count Chars in a String", "T01. Count Chars in a String\T01. Count Chars in a String.csproj", "{11D361F3-E53A-4FF7-AA03-A11385125598}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11D361F3-E53A-4FF7-AA03-A11385125598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D361F3-E53A-4FF7-AA03-A11385125598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D361F3-E53A-4FF7-AA03-A11385125598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D361F3-E53A-4FF7-AA03-A11385125598}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB0345A5-084E-412D-A33B-E047F5126558}
+	EndGlobalSection
+EndGlobal
