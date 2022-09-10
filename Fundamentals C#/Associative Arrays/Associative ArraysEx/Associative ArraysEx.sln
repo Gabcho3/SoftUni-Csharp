@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Count Chars in a Strin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02. A Miner Task", "T02. A Miner Task\T02. A Miner Task.csproj", "{39FBC8E2-4301-4BC9-86EB-8B6C6BEE227F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Т03. Orders", "Т03. Orders\Т03. Orders.csproj", "{A00DB88D-3B4B-44A7-9F7C-AEC2E13F8CA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Orders", "Т03. Orders\T03. Orders.csproj", "{A00DB88D-3B4B-44A7-9F7C-AEC2E13F8CA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. SoftUni Parking", "T04. SoftUni Parking\T04. SoftUni Parking.csproj", "{8CC2BCDA-311C-4676-8768-1339CB87E466}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A00DB88D-3B4B-44A7-9F7C-AEC2E13F8CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A00DB88D-3B4B-44A7-9F7C-AEC2E13F8CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A00DB88D-3B4B-44A7-9F7C-AEC2E13F8CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC2BCDA-311C-4676-8768-1339CB87E466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC2BCDA-311C-4676-8768-1339CB87E466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC2BCDA-311C-4676-8768-1339CB87E466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC2BCDA-311C-4676-8768-1339CB87E466}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
