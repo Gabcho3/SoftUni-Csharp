@@ -11,7 +11,7 @@ namespace T01._Ranking
         {
             string[] input = Console.ReadLine().Split(':');
 
-            var contestsPasswords = new Dictionary<string, string>();
+            var contestsPasswords = new SortedDictionary<string, string>();
             var pointsByUser = new SortedDictionary<string, Dictionary<string, int>>(); //Key -> name, Value -> Key: contest, Value: points
 
             while (input[0] != "end of contests")
@@ -33,7 +33,7 @@ namespace T01._Ranking
 
                 if (pointsByUser.ContainsKey(name) && pointsByUser[name].ContainsKey(contest))
                 {
-                    if (pointsByUser[name][contest] > points)
+                    if (pointsByUser[name][contest] < points)
                         pointsByUser[name][contest] = points;
                 }
 
@@ -73,14 +73,14 @@ namespace T01._Ranking
 
             Console.WriteLine($"Best candidate is {best} with total {mostPoints} points.");
 
-            Console.WriteLine("Ranking:");
+            Console.WriteLine("Ranking: ");
 
             //Printing users for each contes
             foreach(var user in pointsByUser)
             {
                 Console.WriteLine(user.Key);
 
-                Console.WriteLine(string.Join(Environment.NewLine, user.Value.OrderByDescending(p => p.Value).Select(u => $"{u.Key} -> {u.Value}")));
+                Console.WriteLine(string.Join(Environment.NewLine, user.Value.OrderByDescending(p => p.Value).Select(u => $"# {u.Key} -> {u.Value}")));
             }
         }
     }
