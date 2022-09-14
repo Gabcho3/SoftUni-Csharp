@@ -6,6 +6,8 @@ namespace T08.OnTimeForTheExam
     {
         static void Main(string[] args)
         {
+            int a = 90 % 60;
+
             int exh = int.Parse(Console.ReadLine()); //0-23
             int exm = int.Parse(Console.ReadLine()); //0-59
             int arh = int.Parse(Console.ReadLine()); //0-23
@@ -39,7 +41,7 @@ namespace T08.OnTimeForTheExam
             else if (diff < 0 && diff > -60)
             {
                 Console.WriteLine("Late");
-                Console.WriteLine($"{min - (2 * min)} minutes after the start");
+                Console.WriteLine($"{- min} minutes after the start");
             }
             else if (diff <= -60)
             {
