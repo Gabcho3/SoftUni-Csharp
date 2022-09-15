@@ -43,7 +43,7 @@ namespace T03._MOBA_Challenger
                     }
                 }
 
-                else 
+                else //player -> position -> skill"
                 {
                     string player = input[0];
                     string position = input[2];
