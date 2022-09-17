@@ -8,9 +8,13 @@ namespace T01._Reverse_Strings
         static void Main(string[] args)
         {
             string input = string.Empty;
-            while(input != "end")
+
+            while(true)
             {
                 input = Console.ReadLine();
+
+                if (input == "end")
+                    return;
 
                 string reversed = string.Empty;
 
