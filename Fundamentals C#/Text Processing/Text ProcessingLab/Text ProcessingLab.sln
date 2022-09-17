@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Reverse Strings", "T01. Reverse Strings\T01. Reverse Strings.csproj", "{D3746A4F-CBC1-4C28-8ADE-8784B895B846}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Repeat Strings", "T02. Repeat Strings\T02. Repeat Strings.csproj", "{746AE74F-1F7C-4FDD-B2D5-99D05B1B6BF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D3746A4F-CBC1-4C28-8ADE-8784B895B846}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3746A4F-CBC1-4C28-8ADE-8784B895B846}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3746A4F-CBC1-4C28-8ADE-8784B895B846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746AE74F-1F7C-4FDD-B2D5-99D05B1B6BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746AE74F-1F7C-4FDD-B2D5-99D05B1B6BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746AE74F-1F7C-4FDD-B2D5-99D05B1B6BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746AE74F-1F7C-4FDD-B2D5-99D05B1B6BF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
