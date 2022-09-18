@@ -16,7 +16,7 @@ namespace T03.TimePlus15Minutes
             }
             else 
             {
-                if (hour == 23) hour = 0;
+                if (hour == 24) hour = 0;
                 else hour += 1;
                 in15min -= 60;
                 Console.WriteLine($"{hour}:{in15min:d2}");
