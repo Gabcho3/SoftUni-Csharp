@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Match Full Name", "T01. Match Full Name\T01. Match Full Name.csproj", "{AE1C2EAC-B056-4547-B197-CD3AB7CC8C08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Match Full Name", "T01. Match Full Name\T01. Match Full Name.csproj", "{AE1C2EAC-B056-4547-B197-CD3AB7CC8C08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Match Phone Number", "T02. Match Phone Number\T02. Match Phone Number.csproj", "{1D1F5E48-FEFC-4E52-ABF7-C28F8382D4A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02. Match Phone Number", "T02. Match Phone Number\T02. Match Phone Number.csproj", "{1D1F5E48-FEFC-4E52-ABF7-C28F8382D4A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Match Dates", "T03. Match Dates\T03. Match Dates.csproj", "{8709C54F-009E-4382-BA5D-4D8AD673B87E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1D1F5E48-FEFC-4E52-ABF7-C28F8382D4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D1F5E48-FEFC-4E52-ABF7-C28F8382D4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D1F5E48-FEFC-4E52-ABF7-C28F8382D4A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8709C54F-009E-4382-BA5D-4D8AD673B87E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8709C54F-009E-4382-BA5D-4D8AD673B87E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8709C54F-009E-4382-BA5D-4D8AD673B87E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8709C54F-009E-4382-BA5D-4D8AD673B87E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
