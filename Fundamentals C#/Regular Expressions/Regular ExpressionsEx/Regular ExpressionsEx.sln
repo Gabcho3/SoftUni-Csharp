@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Furniture", "T01. Furniture\T01. Furniture.csproj", "{B9A7DFF2-BB0F-46FB-91D2-B2E3DDA9AFC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Furniture", "T01. Furniture\T01. Furniture.csproj", "{B9A7DFF2-BB0F-46FB-91D2-B2E3DDA9AFC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Race", "T02. Race\T02. Race.csproj", "{DB7F7893-BEC0-4668-80F9-FE94EB617D48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02. Race", "T02. Race\T02. Race.csproj", "{DB7F7893-BEC0-4668-80F9-FE94EB617D48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. SoftUni Bar Income", "T03. SoftUni Bar Income\T03. SoftUni Bar Income.csproj", "{FE008A59-7FE2-4595-80AF-1DF3D909092A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03. SoftUni Bar Income", "T03. SoftUni Bar Income\T03. SoftUni Bar Income.csproj", "{FE008A59-7FE2-4595-80AF-1DF3D909092A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. Star Enigma", "T04. Star Enigma\T04. Star Enigma.csproj", "{DE2BD175-939E-443F-8CA4-F9B32456EC87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{FE008A59-7FE2-4595-80AF-1DF3D909092A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE008A59-7FE2-4595-80AF-1DF3D909092A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE008A59-7FE2-4595-80AF-1DF3D909092A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE2BD175-939E-443F-8CA4-F9B32456EC87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE2BD175-939E-443F-8CA4-F9B32456EC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE2BD175-939E-443F-8CA4-F9B32456EC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE2BD175-939E-443F-8CA4-F9B32456EC87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
