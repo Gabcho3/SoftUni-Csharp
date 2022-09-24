@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Winning Ticket", "T01.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Rage Quit", "T02. Rage Quit\T02. Rage Quit.csproj", "{D773F817-6B29-47DB-9251-9A8BC824BF08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Т03. Post Office", "Т03. Post Office\Т03. Post Office.csproj", "{697B60DE-CD31-46E7-9F50-034893C66648}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D773F817-6B29-47DB-9251-9A8BC824BF08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D773F817-6B29-47DB-9251-9A8BC824BF08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D773F817-6B29-47DB-9251-9A8BC824BF08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{697B60DE-CD31-46E7-9F50-034893C66648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{697B60DE-CD31-46E7-9F50-034893C66648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{697B60DE-CD31-46E7-9F50-034893C66648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{697B60DE-CD31-46E7-9F50-034893C66648}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
