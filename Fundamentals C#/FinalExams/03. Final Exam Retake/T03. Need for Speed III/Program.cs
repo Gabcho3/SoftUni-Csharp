@@ -95,7 +95,7 @@ namespace T03._Need_for_Speed_III
             {
                 if (cars[i].Name == car)
                 {
-                    while (cars[i].Fuel < 75 && refuel <= fuel)
+                    while (cars[i].Fuel < 75 && refuel < fuel)
                     {
                         cars[i].Fuel++;
                         refuel++;
