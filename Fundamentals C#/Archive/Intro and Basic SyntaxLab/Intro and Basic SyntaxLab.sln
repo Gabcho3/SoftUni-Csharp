@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Greeting", "T01. Greeting\T01. Greeting.csproj", "{9071CD1D-ECE1-4427-BB8B-DD83F24A2CDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Add Two Numbers", "T02. Add Two Numbers\T02. Add Two Numbers.csproj", "{32F92E75-68F3-4B8C-805A-C7DF53F49BFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9071CD1D-ECE1-4427-BB8B-DD83F24A2CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9071CD1D-ECE1-4427-BB8B-DD83F24A2CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9071CD1D-ECE1-4427-BB8B-DD83F24A2CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F92E75-68F3-4B8C-805A-C7DF53F49BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F92E75-68F3-4B8C-805A-C7DF53F49BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F92E75-68F3-4B8C-805A-C7DF53F49BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F92E75-68F3-4B8C-805A-C7DF53F49BFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
