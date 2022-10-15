@@ -8,64 +8,56 @@ namespace T03._Memory_Game
     {
         static void Main(string[] args)
         {
-            List<string> sequence = Console.ReadLine()
-                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
-                .ToList();
+            List<string> sequence = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).ToList();
 
-            string[] input = Console.ReadLine().Split().ToArray();
+            string[] command = Console.ReadLine().Split();
 
             int turns = 0;
 
-            while (input[0] != "end")
+            while (command[0] != "end")
             {
+                int index1 = int.Parse(command[0]);
+                int index2 = int.Parse(command[1]);
+
+                bool cheat = index1 == index2
+                    || index1 < 0
+                    || index2 < 0
+                    || index1 >= sequence.Count
+                    || index2 >= sequence.Count
+                    ? true : false;
+
                 turns++;
 
-                int index1 = int.Parse(input[0]);
-                int index2 = int.Parse(input[1]);
-
-                if(index1 == index2 || index1 < 0 || index1 >= sequence.Count || 
-                   index2 < 0 || index2 >= sequence.Count)
+                if (cheat)
                 {
-                    sequence.Insert(sequence.Count / 2, $"-{turns}a");
-                    sequence.Insert(sequence.Count / 2, $"-{turns}a");
-
                     Console.WriteLine("Invalid input! Adding additional elements to the board");
-
-                    input = Console.ReadLine().Split().ToArray();
-                    continue;
-                }
-
-                if (sequence[index1] == sequence[index2])
-                {
-                    Console.WriteLine($"Congrats! You have found matching elements - {sequence[index1]}!");
-
-                    if(index1 < index2)
-                    {
-                        sequence.RemoveAt(index1);
-                        sequence.RemoveAt(index2 - 1);
-                    }
-
-                    else
-                    {
-                        sequence.RemoveAt(index2);
-                        sequence.RemoveAt(index1 - 1);
-                    }
+                    sequence.Insert(sequence.Count / 2, $"-{turns}a");
+                    sequence.Insert(sequence.Count / 2, $"-{turns}a");
                 }
 
                 else
-                    Console.WriteLine("Try again!");
-
-                if(sequence.Count == 0)
                 {
-                    Console.WriteLine($"You have won in {turns} turns!");
-                    return;
+                    if (sequence[index1] == sequence[index2])
+                    {
+                        string element = sequence[index1];
+                        Console.WriteLine($"Congrats! You have found matching elements - {element}!");
+                        sequence.RemoveAll(e => e == element);
+                    }
+
+                    else
+                        Console.WriteLine("Try again!");
+
+                    if (sequence.Count == 0)
+                    {
+                        Console.WriteLine($"You have won in {turns} turns!");
+                        return;
+                    }
                 }
 
-                input = Console.ReadLine().Split().ToArray();
+                command = Console.ReadLine().Split();
             }
 
-            Console.WriteLine("Sorry you lose :(");
-            Console.WriteLine(string.Join(" ", sequence));
+            Console.WriteLine($"Sorry you lose :(\n{string.Join(" ", sequence)}");
         }
     }
 }
