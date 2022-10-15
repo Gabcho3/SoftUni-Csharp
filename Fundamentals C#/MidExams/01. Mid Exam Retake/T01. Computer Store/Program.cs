@@ -8,40 +8,39 @@ namespace T01._Computer_Store
         {
             string input = Console.ReadLine();
 
-            double withoutTaxes = 0;
+            double totalPrice = 0;
 
             while (input != "special" && input != "regular")
             {
                 double price = double.Parse(input);
 
-                if (price <= 0)
+                if (price < 0)
                     Console.WriteLine("Invalid price!");
 
                 else
-                    withoutTaxes += price;
-
+                    totalPrice += price;
 
                 input = Console.ReadLine();
             }
 
-            double taxes = withoutTaxes * 0.2;
-            double total = withoutTaxes + taxes;
-
-            if (input == "special")
-                total *= 0.9;
-
-            if (total <= 0)
-                Console.WriteLine("Invalid order!");
-
-            else
+            if (totalPrice <= 0)
             {
-                Console.WriteLine("Congratulations you've just bought a new computer!");
-                Console.WriteLine($"Price without taxes: {withoutTaxes:f2}$");
-                Console.WriteLine($"Taxes: {taxes:f2}$");
-                Console.WriteLine("-----------");
-                Console.WriteLine($"Total price: {total:f2}$");
+                Console.WriteLine("Invalid order!");
+                return;
             }
 
+            double withoutTaxes = totalPrice;
+            double taxes = totalPrice * 0.20;
+            totalPrice += taxes;
+
+            if (input == "special")
+                totalPrice *= 0.90;
+
+            Console.WriteLine($"Congratulations you've just bought a new computer!" +
+                $"\nPrice without taxes: {withoutTaxes:f2}$" +
+                $"\nTaxes: {taxes:f2}$" +
+                $"\n-----------" +
+                $"\nTotal price: {totalPrice:f2}$");
         }
     }
 }
