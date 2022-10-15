@@ -13,8 +13,7 @@ The curriculum consists of several **professional** areas and **subsequent speci
 - <a href="https://softuni.bg/courses/programming-basics">Programming **Basics** with Csharp</a>
 - <a href="https://softuni.bg/courses/programming-fundamentals-csharp-java-js-python">Programming **Fundamentals** with Csharp</a>
 - <a href="https://softuni.bg/modules/58/csharp-advanced/1357">Csharp **Advanced**</a>
-- <a href="https://softuni.bg/modules/76/js-advanced/1362">**JavaScript Advanced**</a>
 - <a href="https://softuni.bg/modules/22/csharp-db/1344">Csharp **DataBases**</a>
 - <a href="https://softuni.bg/modules/108/csharp-web/1365">Csharp **Web**</a>
 - <a href="https://softuni.bg/modules/123/front-end/1308">Csharp **FulStack** Developer</a>
-
+- <a href="https://softuni.bg/modules/132/js-front-end/1387">**JS Front-End**</a>
