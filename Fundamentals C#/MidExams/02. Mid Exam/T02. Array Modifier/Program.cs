@@ -7,52 +7,46 @@ namespace T02._Array_Modifier
     {
         static void Main(string[] args)
         {
-            int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            string[] command = Console.ReadLine().Split().ToArray();
+            int[] integers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+            string[] command = Console.ReadLine().Split();
 
             while (command[0] != "end")
             {
-                string action = command[0];
+                int index1 = 0;
+                int index2 = 0;
+                int num1 = 0;
+                int num2 = 0;
 
-                switch (action)
+                if (command.Length > 1)
+                {
+                    index1 = int.Parse(command[1]);
+                    index2 = int.Parse(command[2]);
+                    num1 = integers[index1];
+                    num2 = integers[index2];
+                }
+
+                switch (command[0])
                 {
                     case "swap":
-
-                        int index1 = int.Parse(command[1]);
-                        int index2 = int.Parse(command[2]);
-
-                        Swap(input, index1, index2);
+                        integers[index1] = num2;
+                        integers[index2] = num1;
                         break;
 
                     case "multiply":
-
-                        index1 = int.Parse(command[1]);
-                        index2 = int.Parse(command[2]);
-
-                        input[index1] *= input[index2];
+                        integers[index1] *= num2;
                         break;
 
                     case "decrease":
-                        for (int i = 0; i < input.Length; i++)
-                        {
-                            input[i]--;
-                        }
+                        for (int i = 0; i < integers.Length; i++)
+                            integers[i]--;
                         break;
                 }
 
-                command = Console.ReadLine().Split().ToArray();
+                command = Console.ReadLine().Split();
             }
 
-            Console.WriteLine(string.Join(", ", input));
-        }
-
-        static void Swap(int[] input, int index1, int index2)
-        {
-            int onIndex1 = input[index1];
-            int onIndex2 = input[index2];
-
-            input[index1] = onIndex2;
-            input[index2] = onIndex1;
+            Console.WriteLine(string.Join(", ", integers));
         }
     }
 }
