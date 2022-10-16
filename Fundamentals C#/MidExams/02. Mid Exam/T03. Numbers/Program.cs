@@ -8,28 +8,26 @@ namespace T03._Numbers
     {
         static void Main(string[] args)
         {
-            List<int> nums = Console.ReadLine().Split().Select(int.Parse).ToList();
+            List<int> integers = Console.ReadLine().Split().Select(int.Parse).ToList();
 
-            double avarage = nums.Sum() / (double)nums.Count; //(double) --> we need 1 double min int calculations
+            List<int> topNumbers = new List<int>();
 
-            nums.RemoveAll(num => num <= avarage);
+            double average = integers.Average();
 
-            if (nums.Count == 0)
-            {
+            foreach (int num in integers)
+                if (num > average)
+                    topNumbers.Add(num);
+
+            topNumbers = topNumbers.OrderByDescending(n => n).ToList();
+
+            if (topNumbers.Count > 5)
+                topNumbers.RemoveRange(5, topNumbers.Count - 5);
+
+            if (topNumbers.Count == 0)
                 Console.WriteLine("No");
-                return;
-            }
 
-            nums.Sort();
-            nums.Reverse();
-
-            if(nums.Count > 5)
-            {
-                int lastNum = nums[4];
-                nums.RemoveAll(num => num < lastNum);
-            }
-
-            Console.WriteLine(string.Join(" ", nums));
+            else
+                Console.WriteLine(String.Join(" ", topNumbers));
         }
     }
 }
