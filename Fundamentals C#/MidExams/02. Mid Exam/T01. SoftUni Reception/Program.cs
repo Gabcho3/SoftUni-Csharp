@@ -6,21 +6,21 @@ namespace T01._SoftUni_Reception
     {
         static void Main(string[] args)
         {
-            int efficiency1 = int.Parse(Console.ReadLine());
-            int efficiency2 = int.Parse(Console.ReadLine());
-            int efficiency3 = int.Parse(Console.ReadLine());
-            int students = int.Parse(Console.ReadLine());
-
+            int students = 0;
             int hours = 0;
 
-            while (students > 0)
+            for (int i = 0; i < 3; i++)
+                students += int.Parse(Console.ReadLine());
+
+            int allStudents = int.Parse(Console.ReadLine());
+
+            while (allStudents > 0)
             {
                 hours++;
+                allStudents -= students;
 
                 if (hours % 4 == 0)
                     hours++;
-
-                students -= efficiency1 + efficiency2 + efficiency3;
             }
 
             Console.WriteLine($"Time needed: {hours}h.");
