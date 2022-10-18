@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 namespace T02._Shoot_for_the_Win
 {
@@ -10,37 +11,39 @@ namespace T02._Shoot_for_the_Win
             int[] targets = Console.ReadLine().Split().Select(int.Parse).ToArray();
             string input = Console.ReadLine();
 
-            int shots = 0;
+            int count = 0;
 
             while(input != "End")
             {
                 int index = int.Parse(input);
 
-                if(index < 0 || index >= targets.Length)
+                bool valid = index >= 0 && index < targets.Length && targets[index] != -1 ? true : false;
+
+                if (valid)
                 {
-                    input = Console.ReadLine();
-                    continue;
+                    int currTarger = targets[index];
+
+                    for(int i = 0; i < targets.Length; i++)
+                    {
+                        if (targets[i] == -1 || i == index)
+                            continue;
+
+                        if (targets[i] > currTarger)
+                            targets[i] -= currTarger;
+
+                        else
+                            targets[i] += currTarger;
+                    }
+
+                    targets[index] = -1;
+
+                    count++;
                 }
-
-                for(int i = 0; i < targets.Length; i++)
-                {
-                    if (targets[i] == -1 || i == index)
-                        continue;
-
-                    if (targets[i] > targets[index])
-                        targets[i] -= targets[index];
-
-                    else
-                        targets[i] += targets[index];
-                }
-
-                targets[index] = -1;
-                shots++;
 
                 input = Console.ReadLine();
             }
 
-            Console.WriteLine($"Shot targets: {shots} -> {string.Join(" ", targets)}");
+            Console.WriteLine($"Shot targets: {count} -> {string.Join(" ", targets)}");
         }
     }
 }
