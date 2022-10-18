@@ -8,41 +8,51 @@ namespace T03._Moving_Target
     {
         static void Main(string[] args)
         {
-            List <int> targets = Console.ReadLine().Split().Select(int.Parse).ToList();
-            string[] input = Console.ReadLine().Split().ToArray();
+            List<int> targets = Console.ReadLine().Split().Select(int.Parse).ToList();
 
-            while (input[0] != "End")
+            while (true)
             {
-                string action = input[0];
-                int index = int.Parse(input[1]);
-                int value = int.Parse(input[2]);
+                string[] command = Console.ReadLine().Split().ToArray();
 
-                switch(action)
+                if (command[0] == "End")
+                {
+                    Console.WriteLine(string.Join('|', targets));
+
+                    return;
+                }
+
+                int index = int.Parse(command[1]);
+                int value = int.Parse(command[2]);
+                bool valid = index >= 0 && index < targets.Count;
+
+                switch (command[0])
                 {
                     case "Shoot":
-                        Shoot(targets, index, value);
+                        if (valid)
+                            Shoot(targets, index, value);
                         break;
 
                     case "Add":
-                        Add(targets, index, value);
+                        if (valid)
+                            Add(targets, index, value);
+
+                        else
+                            Console.WriteLine("Invalid placement!");
                         break;
 
                     case "Strike":
-                        Strike(targets, index, value);
+                        if (valid)
+                            Strike(targets, index, value);
+
+                        else
+                            Console.WriteLine("Strike missed!");
                         break;
                 }
-
-                input = Console.ReadLine().Split().ToArray();
             }
-
-            Console.WriteLine(string.Join("|", targets));
         }
 
         static void Shoot(List<int> targets, int index, int power)
         {
-            if (index < 0 || index >= targets.Count)
-                return;
-
             targets[index] -= power;
 
             if (targets[index] <= 0)
@@ -51,26 +61,20 @@ namespace T03._Moving_Target
 
         static void Add(List<int> targets, int index, int value)
         {
-            if (index < 0 || index >= targets.Count)
-            {
-                Console.WriteLine("Invalid placement!");
-                return;
-            }
-
             targets.Insert(index, value);
         }
 
         static void Strike(List<int> targets, int index, int radius)
         {
-            int range = index - radius;
+            int count = 2 * radius + 1;
 
-            if (index < 0 || index >= targets.Count || range < 0 || range >= targets.Count)
+            if (index + radius >= targets.Count || index - radius < 0)
             {
                 Console.WriteLine("Strike missed!");
                 return;
             }
 
-            targets.RemoveRange(index - radius, radius * 2 + 1);
+            targets.RemoveRange(index - radius, count);
         }
     }
 }
