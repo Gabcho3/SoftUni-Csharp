@@ -11,25 +11,33 @@ namespace T05._Bomb_Numbers
             var sequense = Console.ReadLine().Split().Select(int.Parse).ToList();
             var bombAndPower = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
-            for(int i = 0; i < sequense.Count; i++)
+            int bomb = bombAndPower[0];
+            int power = bombAndPower[1];
+
+            int indexOfBomb = 0;
+
+            while (sequense.Contains(bomb))
             {
-                if(sequense[i] == bombAndPower[0])
+                for (int i = 0; i < sequense.Count; i++)
                 {
-                    int indexOfBomb = i; 
-                    for(int j = 1; j <= bombAndPower[1]; j++)
+                    if (sequense[i] == bomb)
                     {
-                        if (indexOfBomb - j >= 0)
-                            sequense.RemoveAt(i - j);
-
-                        indexOfBomb--; //sequence.Count decrease with 1
-
-                        if (indexOfBomb + j <= sequense.Count - 1)
-                            sequense.RemoveAt(indexOfBomb + j);
-
+                        indexOfBomb = i;
+                        break;
                     }
                 }
+
+                int startIndex = indexOfBomb - power;
+                int count = 2 * power + 1;
+
+                if (startIndex < 0)
+                    startIndex = 0;
+
+                if (count > sequense.Count - 1)
+                    count = sequense.Count - startIndex;
+
+                sequense.RemoveRange(startIndex, count);
             }
-            sequense.RemoveAll(num => num == bombAndPower[0]);
 
             Console.WriteLine(sequense.Sum());
         }
