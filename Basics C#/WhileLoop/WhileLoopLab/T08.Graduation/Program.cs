@@ -9,11 +9,11 @@ namespace T08.Graduation
             string nameStudent = Console.ReadLine();
             int classes = 1;
             double total = 0;
+            int excluded = 0;
             bool fail = false;
             while(classes <= 12)
             {
                 double grade = double.Parse(Console.ReadLine());
-                int excluded = 0;
                 if(grade < 4.00) 
                 {
                     excluded++;
