@@ -11,38 +11,46 @@ namespace T03._The_Pianist
         {
             int n = int.Parse(Console.ReadLine());
 
-            var pieces = new List<Piece>();
+            var pieces = new Dictionary<string, Piece>();
 
-            for(int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
-                string[] input = Console.ReadLine().Split("|");
+                string[] input = Console.ReadLine().Split('|');
 
-                Piece piece = new Piece()
-                {
-                    Name = input[0],
-                    Composer = input[1],
-                    Key = input[2]
-                };
+                Piece piece = new Piece() { Composer = input[1], Key = input[2] };
 
-                pieces.Add(piece);
+                pieces[input[0]] = piece;
             }
 
             string[] command = Console.ReadLine().Split('|');
 
             while (command[0] != "Stop")
             {
-                switch(command[0])
+                string piece = command[1];
+
+                switch (command[0])
                 {
                     case "Add":
-                        Add(command, pieces);
+                        string composer = command[2];
+                        string key = command[3];
+                        Add(pieces, piece, composer, key);
                         break;
 
                     case "Remove":
-                        Remove(command, pieces); 
+                        if (pieces.ContainsKey(piece))
+                        {
+                            pieces.Remove(piece);
+                            Console.WriteLine($"Successfully removed {piece}!");
+                        }
+
+                        else
+                            Console.WriteLine($"Invalid operation! {piece} does not exist in the collection.");
+
                         break;
 
                     case "ChangeKey":
-                        ChangeKey(command, pieces);
+                        string newKey = command[2];
+                        ChangeKey(pieces, piece, newKey);
                         break;
                 }
 
@@ -50,70 +58,40 @@ namespace T03._The_Pianist
             }
 
             foreach (var piece in pieces)
-                Console.WriteLine($"{piece.Name} -> Composer: {piece.Composer}, Key: {piece.Key}");
+                Console.WriteLine($"{piece.Key} -> Composer: {piece.Value.Composer}, Key: {piece.Value.Key}");
         }
 
-        static void Add(string[] command, List<Piece> pieces)
+        static void Add(Dictionary<string, Piece> pieces, string piece, string composer, string key)
         {
-            Piece piece = new Piece { Name = command[1], Composer = command[2], Key = command[3] };
-
-            if (pieces.Any(p => p.Name == command[1]))
-                Console.WriteLine($"{piece.Name} is already in the collection!");
+            if (pieces.ContainsKey(piece))
+                Console.WriteLine($"{piece} is already in the collection!");
 
             else
             {
-                pieces.Add(piece);
-                Console.WriteLine($"{piece.Name} by {piece.Composer} in {piece.Key} added to the collection!");
+                Piece newPiece = new Piece() { Composer = composer, Key = key };
+                pieces[piece] = newPiece;
+
+                Console.WriteLine($"{piece} by {composer} in {key} added to the collection!");
             }
-
         }
 
-        static void Remove(string[] command, List<Piece> pieces)
+        static void ChangeKey(Dictionary<string, Piece> pieces, string piece, string newKey)
         {
-            bool found = false;
-            
-            for (int i = 0; i < pieces.Count; i++)
-                if (pieces[i].Name == command[1])
-                {
-                    pieces.RemoveAt(i);
-
-                    found = true;
-
-                    Console.WriteLine($"Successfully removed {command[1]}!");
-                }
-
-            if(!found)
-                Console.WriteLine($"Invalid operation! {command[1]} does not exist in the collection.");
-        }
-
-        static void ChangeKey(string[] command, List<Piece> pieces)
-        {
-            string piece = command[1];
-            string key = command[2];
-
-            bool found = false;
-
-            for (int i = 0; i < pieces.Count; i++)
-                if (pieces[i].Name == piece)
-                {
-                    pieces[i].Key = key;
-
-                    found = true;
-
-                    Console.WriteLine($"Changed the key of {piece} to {key}!");
-                }
-
-            if (!found)
+            if (!pieces.ContainsKey(piece))
                 Console.WriteLine($"Invalid operation! {piece} does not exist in the collection.");
+
+            else
+            {
+                pieces[piece].Key = newKey;
+                Console.WriteLine($"Changed the key of {piece} to {newKey}!");
+            }
         }
-    }
 
-    class Piece
-    { 
-        public string Name { get; set; }
+        class Piece
+        {
+            public string Composer { get; set; }
 
-        public string Composer { get; set; }
-
-        public string Key { get; set; }
+            public string Key { get; set; }
+        }
     }
 }
