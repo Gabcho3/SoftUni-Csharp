@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T06. Supermarket", "T06. Su
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07. Hot Potato", "T07. Hot Potato\T07. Hot Potato.csproj", "{46DBF4E7-81BF-4439-8144-C24E7401F8B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T08. Traffic Jam", "T08. Traffic Jam\T08. Traffic Jam.csproj", "{7252547E-2A15-4CBD-92AF-E05E379C1DDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{46DBF4E7-81BF-4439-8144-C24E7401F8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46DBF4E7-81BF-4439-8144-C24E7401F8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46DBF4E7-81BF-4439-8144-C24E7401F8B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7252547E-2A15-4CBD-92AF-E05E379C1DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7252547E-2A15-4CBD-92AF-E05E379C1DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7252547E-2A15-4CBD-92AF-E05E379C1DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7252547E-2A15-4CBD-92AF-E05E379C1DDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
