@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03. Maximum and Minimum El
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. Fast Food", "T04. Fast Food\T04. Fast Food.csproj", "{955B7610-4C77-458B-941E-8EA6764D7E0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Fashion Boutique", "T05. Fashion Boutique\T05. Fashion Boutique.csproj", "{F5E4FE57-301F-43A8-9845-93CD83F4A480}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{955B7610-4C77-458B-941E-8EA6764D7E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{955B7610-4C77-458B-941E-8EA6764D7E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{955B7610-4C77-458B-941E-8EA6764D7E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E4FE57-301F-43A8-9845-93CD83F4A480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E4FE57-301F-43A8-9845-93CD83F4A480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E4FE57-301F-43A8-9845-93CD83F4A480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E4FE57-301F-43A8-9845-93CD83F4A480}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
