@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. SumColumns", "T02. Sum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. PrimaryDiag.", "T03. PrimaryDiag\T03. PrimaryDiag..csproj", "{9597573D-4E20-4632-8C69-5C0EAD35FD69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. SymbolMatrix", "T04. SymbolMatrix\T04. SymbolMatrix.csproj", "{D9FCC55C-29B9-465E-B6BD-09D03ED35ED4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9597573D-4E20-4632-8C69-5C0EAD35FD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9597573D-4E20-4632-8C69-5C0EAD35FD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9597573D-4E20-4632-8C69-5C0EAD35FD69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9FCC55C-29B9-465E-B6BD-09D03ED35ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9FCC55C-29B9-465E-B6BD-09D03ED35ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9FCC55C-29B9-465E-B6BD-09D03ED35ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9FCC55C-29B9-465E-B6BD-09D03ED35ED4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
