@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. PrimaryDiag.", "T03. P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. SymbolMatrix", "T04. SymbolMatrix\T04. SymbolMatrix.csproj", "{D9FCC55C-29B9-465E-B6BD-09D03ED35ED4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. SquareMaxSum", "T05. SquareMaxSum\T05. SquareMaxSum.csproj", "{D4591DD6-228F-4EAA-92A7-8D3F725A9341}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06. Jagged-Array", "T06. Jagged-Array\T06. Jagged-Array.csproj", "{E60A5576-1CDD-465B-BF5E-F4D2576288F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{D9FCC55C-29B9-465E-B6BD-09D03ED35ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9FCC55C-29B9-465E-B6BD-09D03ED35ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9FCC55C-29B9-465E-B6BD-09D03ED35ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4591DD6-228F-4EAA-92A7-8D3F725A9341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4591DD6-228F-4EAA-92A7-8D3F725A9341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4591DD6-228F-4EAA-92A7-8D3F725A9341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4591DD6-228F-4EAA-92A7-8D3F725A9341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E60A5576-1CDD-465B-BF5E-F4D2576288F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E60A5576-1CDD-465B-BF5E-F4D2576288F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E60A5576-1CDD-465B-BF5E-F4D2576288F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E60A5576-1CDD-465B-BF5E-F4D2576288F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
