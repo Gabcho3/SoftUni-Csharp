@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. SquareMaxSum", "T05. S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06. Jagged-Array", "T06. Jagged-Array\T06. Jagged-Array.csproj", "{E60A5576-1CDD-465B-BF5E-F4D2576288F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07. Pascal", "T07. Pascal🛆\T07. Pascal.csproj", "{9549DCC6-F231-479E-AFF3-0E56763F524C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E60A5576-1CDD-465B-BF5E-F4D2576288F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E60A5576-1CDD-465B-BF5E-F4D2576288F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E60A5576-1CDD-465B-BF5E-F4D2576288F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9549DCC6-F231-479E-AFF3-0E56763F524C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9549DCC6-F231-479E-AFF3-0E56763F524C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9549DCC6-F231-479E-AFF3-0E56763F524C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9549DCC6-F231-479E-AFF3-0E56763F524C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
