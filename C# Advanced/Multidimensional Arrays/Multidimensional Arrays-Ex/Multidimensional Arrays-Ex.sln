@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Snake Moves", "T05. Sn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06. Manipulator", "T06. Manipulator\T06. Manipulator.csproj", "{2FCA759C-55F7-429B-8669-8D6A1B7F98D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07. Knight Game", "T07. Knight Game\T07. Knight Game.csproj", "{2E80206B-265D-4E63-A142-2DAB02CFB2DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T08. Bombs", "T08. Bombs\T08. Bombs.csproj", "{9096CDF1-979F-4145-B338-9C698B8E669F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{2FCA759C-55F7-429B-8669-8D6A1B7F98D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FCA759C-55F7-429B-8669-8D6A1B7F98D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FCA759C-55F7-429B-8669-8D6A1B7F98D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E80206B-265D-4E63-A142-2DAB02CFB2DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E80206B-265D-4E63-A142-2DAB02CFB2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E80206B-265D-4E63-A142-2DAB02CFB2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E80206B-265D-4E63-A142-2DAB02CFB2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9096CDF1-979F-4145-B338-9C698B8E669F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9096CDF1-979F-4145-B338-9C698B8E669F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9096CDF1-979F-4145-B338-9C698B8E669F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9096CDF1-979F-4145-B338-9C698B8E669F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
