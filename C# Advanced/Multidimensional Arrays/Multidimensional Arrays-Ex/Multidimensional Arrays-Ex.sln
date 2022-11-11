@@ -11,15 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03. Maximal Sum", "T03. Ma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04. MatrixShuff", "T04. MatrixShuff\T04. MatrixShuff.csproj", "{CEB1F345-0775-4D64-82D3-03DE0EBD6DAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Snake Moves", "T05. Snake Moves\T05. Snake Moves.csproj", "{40F9DFCF-0FA7-4C31-967C-6841BECFBDFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T05. Snake Moves", "T05. Snake Moves\T05. Snake Moves.csproj", "{40F9DFCF-0FA7-4C31-967C-6841BECFBDFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06. Manipulator", "T06. Manipulator\T06. Manipulator.csproj", "{2FCA759C-55F7-429B-8669-8D6A1B7F98D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T06. Manipulator", "T06. Manipulator\T06. Manipulator.csproj", "{2FCA759C-55F7-429B-8669-8D6A1B7F98D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07. Knight Game", "T07. Knight Game\T07. Knight Game.csproj", "{2E80206B-265D-4E63-A142-2DAB02CFB2DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T07. Knight Game", "T07. Knight Game\T07. Knight Game.csproj", "{2E80206B-265D-4E63-A142-2DAB02CFB2DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T08. Bombs", "T08. Bombs\T08. Bombs.csproj", "{9096CDF1-979F-4145-B338-9C698B8E669F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T08. Bombs", "T08. Bombs\T08. Bombs.csproj", "{9096CDF1-979F-4145-B338-9C698B8E669F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T09. Miner", "T09. Miner\T09. Miner.csproj", "{866FBE6C-1ACB-455C-9470-365D582A3AE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T09. Miner", "T09. Miner\T09. Miner.csproj", "{866FBE6C-1ACB-455C-9470-365D582A3AE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T10. Bunnies", "T10. Bunnies\T10. Bunnies.csproj", "{DEBD99F9-5AA5-46C1-B324-485C74A0952B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{866FBE6C-1ACB-455C-9470-365D582A3AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{866FBE6C-1ACB-455C-9470-365D582A3AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{866FBE6C-1ACB-455C-9470-365D582A3AE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEBD99F9-5AA5-46C1-B324-485C74A0952B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEBD99F9-5AA5-46C1-B324-485C74A0952B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEBD99F9-5AA5-46C1-B324-485C74A0952B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEBD99F9-5AA5-46C1-B324-485C74A0952B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
