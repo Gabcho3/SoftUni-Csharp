@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. AverageGrades", "T02. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Largest 3Nums", "T03. Largest 3Nums\T03. Largest 3Nums.csproj", "{C1DCFEB4-3AE7-4113-B6EC-53E288B23752}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. Product Shop", "T04. Product Shop\T04. Product Shop.csproj", "{FCC82E36-2074-4BEE-A832-6DC477A91587}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C1DCFEB4-3AE7-4113-B6EC-53E288B23752}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1DCFEB4-3AE7-4113-B6EC-53E288B23752}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1DCFEB4-3AE7-4113-B6EC-53E288B23752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCC82E36-2074-4BEE-A832-6DC477A91587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCC82E36-2074-4BEE-A832-6DC477A91587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCC82E36-2074-4BEE-A832-6DC477A91587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCC82E36-2074-4BEE-A832-6DC477A91587}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
