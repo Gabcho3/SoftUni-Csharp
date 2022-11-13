@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Count Same Values", "T01. Count Same Values\T01. Count Same Values.csproj", "{F25FFEC1-FFD6-43B3-8D1A-844E66C2D305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Count Same Values", "T01. Count Same Values\T01. Count Same Values.csproj", "{F25FFEC1-FFD6-43B3-8D1A-844E66C2D305}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. AverageGrades", "T02. AverageGrades\T02. AverageGrades.csproj", "{66519A21-E30A-4A5D-9A7A-CEC6FFB76D91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02. AverageGrades", "T02. AverageGrades\T02. AverageGrades.csproj", "{66519A21-E30A-4A5D-9A7A-CEC6FFB76D91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Largest 3Nums", "T03. Largest 3Nums\T03. Largest 3Nums.csproj", "{C1DCFEB4-3AE7-4113-B6EC-53E288B23752}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03. Largest 3Nums", "T03. Largest 3Nums\T03. Largest 3Nums.csproj", "{C1DCFEB4-3AE7-4113-B6EC-53E288B23752}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. Product Shop", "T04. Product Shop\T04. Product Shop.csproj", "{FCC82E36-2074-4BEE-A832-6DC477A91587}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04. Product Shop", "T04. Product Shop\T04. Product Shop.csproj", "{FCC82E36-2074-4BEE-A832-6DC477A91587}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Cities", "T05. Cities\T05. Cities.csproj", "{2DE3DBC8-3463-44C0-B717-226E560CCC7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FCC82E36-2074-4BEE-A832-6DC477A91587}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCC82E36-2074-4BEE-A832-6DC477A91587}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCC82E36-2074-4BEE-A832-6DC477A91587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE3DBC8-3463-44C0-B717-226E560CCC7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE3DBC8-3463-44C0-B717-226E560CCC7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE3DBC8-3463-44C0-B717-226E560CCC7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE3DBC8-3463-44C0-B717-226E560CCC7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
