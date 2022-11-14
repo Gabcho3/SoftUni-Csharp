@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace T11._Array_Manipulator
@@ -7,332 +8,228 @@ namespace T11._Array_Manipulator
     {
         static void Main(string[] args)
         {
-            int[] input = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
-            string[] commands = Console.ReadLine().Split();
+            int[] integers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            string[] command = Console.ReadLine().Split();
 
-            while (commands[0] != "end")
+            while(command[0] != "end")
             {
-                if (commands[0] == "exchange")
+                switch(command[0])
                 {
-                    input = Exchange(commands, input);
+                    case "exchange":
+                        int index = int.Parse(command[1]);
+                        if (index >= 0 && index < integers.Length)
+                            integers = Exchange(integers, index);
+
+                        else
+                            Console.WriteLine("Invalid index");
+
+                        break;
+
+                    case "max":
+                        string input = command[1];
+                        Max(integers, input);
+                        break;
+
+                    case "min":
+                        input = command[1];
+                        Min(integers, input);
+                        break;
+
+                    case "first":
+                        int count = int.Parse(command[1]);
+                        input = command[2];
+                        if (count <= integers.Length)
+                            First(integers, count, input);
+
+                        else
+                            Console.WriteLine("Invalid count");
+                            break;
+                    case "last":
+                        count = int.Parse(command[1]);
+                        input = command[2];
+                        if (count <= integers.Length)
+                            Last(integers, count, input);
+
+                        else
+                            Console.WriteLine("Invalid count");
+                        break;
                 }
 
-                else if (commands[0] == "max" && commands[1] == "even" || commands[1] == "odd")
-                    MaxEvenOdd(commands, input);
-
-                else if (commands[0] == "min" && commands[1] == "even" || commands[1] == "odd")
-                    MinEvenOdd(commands, input);
-
-                else if (commands[0] == "first" && commands[2] == "even" || commands[2] == "odd")
-                    FirstCountEvenOdd(commands, input);
-
-                else if (commands[0] == "last" && commands[2] == "even" || commands[2] == "odd")
-                    LastCountEvenOdd(commands, input);
-
-                commands = Console.ReadLine().Split();
+                command = Console.ReadLine().Split();
             }
 
-            Console.WriteLine("[" + String.Join(", ", input) + "]");
+            Console.WriteLine($"[{string.Join(", ", integers)}]");
         }
 
-        static int[] Exchange(string[] commands, int[] input)
+        private static void Last(int[] integers, int count, string input)
         {
-            if (int.Parse(commands[1]) > input.Length - 1)
+            List<int> lastEven = new List<int>();
+            List<int> lastOdd = new List<int>();
+
+            for (int i = integers.Length - 1; i >= 0; i--)
             {
-                Console.WriteLine("Invalid index");
-                return input;
+                if (integers[i] % 2 == 0 && lastEven.Count + 1 <= count)
+                    lastEven.Add(integers[i]);
+
+                if (integers[i] % 2 == 1 && lastOdd.Count + 1 <= count)
+                    lastOdd.Add(integers[i]);
             }
 
-            int[] subArray1 = new int[int.Parse(commands[1]) + 1];
-            int[] subArray2 = new int[input.Length - 1 - int.Parse(commands[1])];
-
-            for(int i = 0; i < input.Length; i++)
+            if (lastEven.Count == 0 && input == "even")
             {
-                if (i < subArray1.Length)
-                    subArray1[i] = input[i];
-
-                else
-                    for(int j = 0; j < subArray2.Length; j++)
-                    {
-                        subArray2[j] = input[i];
-                        i++;
-                    }
-            }
-
-            for (int i = 0; i < input.Length; i++)
-            {
-                if (i < subArray2.Length)
-                    input[i] = subArray2[i];
-
-                else
-                    for(int j = 0; j < subArray1.Length; j++)
-                    {
-                        input[i] = subArray1[j];
-                        i++;
-                    }
-            }
-
-            return input;
-        }
-
-        static void MaxEvenOdd(string[] commands, int[] input)
-        {
-            int maxEven = 0;
-            int maxEvenIndex = -1;
-
-            int maxOdd = 0;
-            int maxOddIndex = -1;
-
-            for(int i = 0; i < input.Length; i++)
-            {
-                int currDigit = input[i];
-
-                if (currDigit % 2 == 0 && currDigit >= maxEven)
-                {
-                    maxEvenIndex = i;
-                    maxEven = currDigit;
-                }
-
-                if (currDigit % 2 != 0 && currDigit >= maxOdd)
-                { 
-                    maxOddIndex = i;
-                    maxOdd = currDigit;
-                }
-            }
-
-            if (commands[1] == "even" && maxEvenIndex < 0 || commands[1] == "odd" && maxOddIndex < 0)
-            {
-                Console.WriteLine("No matches");
+                Console.WriteLine("[]");
                 return;
             }
+
+            if (lastOdd.Count == 0 && input == "odd")
+            {
+                Console.WriteLine("[]");
+                return;
+            }
+
+            if (input == "even")
+                Console.WriteLine($"[{string.Join(", ", lastEven)}]");
+
             else
-                Console.WriteLine(commands[1] == "odd" ? maxOddIndex : maxEvenIndex);
+                Console.WriteLine($"[{string.Join(", ", lastOdd)}]");
         }
-        static void MinEvenOdd(string[] commands, int[] input)
+
+        private static void First(int[] integers, int count, string input)
         {
-            int minEven = int.MaxValue; ;
-            int minEvenIndex = -1;
+            List<int> firstEven = new List<int>();
+            List<int> firstOdd = new List<int>();
+
+            for(int i = 0; i < integers.Length; i++)
+            {
+                if (integers[i] % 2 == 0 && firstEven.Count + 1 <= count)
+                    firstEven.Add(integers[i]);
+
+                if (integers[i] % 2 == 1 && firstOdd.Count + 1 <= count)
+                    firstOdd.Add(integers[i]);
+            }
+
+            if (firstEven.Count == 0 && input == "even")
+            {
+                Console.WriteLine("[]");
+                return;
+            }
+
+            if (firstOdd.Count == 0 && input == "odd")
+            {
+                Console.WriteLine("[]");
+                return;
+            }
+
+            if (input == "even")
+                Console.WriteLine($"[{string.Join(", ", firstEven )}]");
+
+            else
+                Console.WriteLine($"[{string.Join(", ", firstOdd)}]");
+        }
+
+        private static void Min(int[] integers, string input)
+        {
+            int minEven = int.MaxValue;
             int minOdd = int.MaxValue;
-            int minOddIndex = -1;
-
-            for (int i = 0; i < input.Length; i++)
+            int indexEven = -1;
+            int indexOdd = -1;
+            for (int i = 0; i < integers.Length; i++)
             {
-                int currDigit = input[i];
-
-                if (currDigit % 2 == 0 && currDigit <= minEven)
+                if (integers[i] % 2 == 0 && integers[i] <= minEven)
                 {
-                    minEvenIndex = i;
-                    minEven = currDigit;
+                    minEven = integers[i];
+                    indexEven = i;
                 }
 
-                if (currDigit % 2 != 0 && currDigit <= minOdd)
+                if (integers[i] % 2 == 1 && integers[i] <= minOdd)
                 {
-                    minOddIndex = i;
-                    minOdd = currDigit;
+                    minOdd = integers[i];
+                    indexOdd = i;
                 }
             }
 
-            if (commands[1] == "even" && minEvenIndex < 0 || commands[1] == "odd" && minOddIndex < 0)
+            if (indexEven == -1 && input == "even")
             {
                 Console.WriteLine("No matches");
                 return;
             }
+
+            if (indexOdd == -1 && input == "odd")
+            {
+                Console.WriteLine("No matches");
+                return;
+            }
+
+            if (input == "even")
+                Console.WriteLine(indexEven);
+
             else
-                Console.WriteLine(commands[1] == "odd" ? minOddIndex : minEvenIndex);
+                Console.WriteLine(indexOdd);
         }
 
-        static void FirstCountEvenOdd(string[] commands, int[] input)
+        private static void Max(int[] integers, string input)
         {
-            int evenCount = 0;
-            int oddCount = 0;
-
-            int[] oddNums = null;
-            int[] evenNums = null;
-
-            if (int.Parse(commands[1]) > input.Length)
+            int maxEven = int.MinValue;
+            int maxOdd = int.MinValue;
+            int indexEven = -1;
+            int indexOdd = -1;
+            for(int i = 0; i < integers.Length; i++)
             {
-                Console.WriteLine("Invalid count");
+                if (integers[i] % 2 == 0 && integers[i] >= maxEven)
+                {
+                    maxEven = integers[i];
+                    indexEven = i;
+                }
+
+                if (integers[i] % 2 == 1 && integers[i] >= maxOdd)
+                {
+                    maxOdd = integers[i];
+                    indexOdd = i;
+                }
+            }
+
+            if(indexEven == -1 && input == "even")
+            {
+                Console.WriteLine("No matches");
                 return;
             }
 
-            for (int i = 0; i < input.Length; i++)
+            if (indexOdd == -1 && input == "odd")
             {
-                if (input[i] % 2 == 0)
-                    evenCount++;
-
-                else
-                    oddCount++;
-
-                if (oddCount == int.Parse(commands[1]) && commands[2] == "odd")
-                {
-                    oddNums = new int[oddCount];
-                    break;
-                }
-
-
-                if (evenCount == int.Parse(commands[1]) && commands[2] == "even")
-                {
-                    evenNums = new int[evenCount];
-                    break;
-                }
-
-            }
-
-            if (oddCount < int.Parse(commands[1]) && commands[2] == "odd")
-            {
-                oddNums = new int[oddCount];
-            }
-
-            if (evenCount < int.Parse(commands[1]) && commands[2] == "even")
-            {
-                evenNums = new int[evenCount];
-            }
-
-            if (commands[2] == "even" && evenCount == 0)
-            {
-                Console.WriteLine("[]");
+                Console.WriteLine("No matches");
                 return;
             }
 
-            if (commands[2] == "odd" && oddCount == 0)
-            {
-                Console.WriteLine("[]");
-                return;
-            }
+            if (input == "even" )
+                Console.WriteLine(indexEven);
 
-            for (int i = 0; i < input.Length; i++)
-            {
-                if (input[i] % 2 == 0)
-                {
-                    for (int j = 0; j < evenNums.Length; j++)
-                    {
-                        if (input[i] % 2 == 0)
-                        {
-                            evenNums[i] = input[i];
-                            i++;
-                        }
-                    }
-                }
-
-                else
-                    for (int j = 0; j < oddNums.Length; j++)
-                    {
-
-                        if (input[i] % 2 != 0)
-                        {
-                            oddNums[i] = input[i];
-                            i++;
-                        }
-                    }
-
-                if (oddCount <= int.Parse(commands[1]) && commands[2] == "odd")
-                {
-                    Console.WriteLine("[" + string.Join(", ", oddNums) + "]");
-                    break;
-                }
-
-                if (evenCount <= int.Parse(commands[1]) && commands[2] == "even")
-                {
-                    Console.WriteLine("[" + string.Join(", ", evenNums) + "]");
-                    break;
-                }
-            }
+            else if (input == "odd")
+                Console.WriteLine(indexOdd);
         }
 
-        static void LastCountEvenOdd(string[] commands, int[] input)
+        private static int[] Exchange(int[] integers, int index)
         {
-            int evenCount = 0;
-            int oddCount = 0;
+            int[] sub1 = new int[index + 1];
+            int[] sub2 = new int[integers.Length - 1 - index];
 
-            int[] oddNums = null;
-            int[] evenNums = null;
+            for (int i = 0; i < sub1.Length; i++)
+                sub1[i] = integers[i];
 
-            if (int.Parse(commands[1]) > input.Length)
+            int indexSub2 = sub1.Length;
+            for (int i = 0; i < sub2.Length; i++)
+                sub2[i] = integers[indexSub2++];
+
+            int j = 0;
+            for (int i = 0; i < integers.Length; i++)
             {
-                Console.WriteLine("Invalid count");
-                return;
-            }
-
-            for (int i = input.Length - 1; i >= 0; i--)
-            {
-                if (input[i] % 2 == 0)
-                    evenCount++;
+                if (i < sub2.Length)
+                    integers[i] = sub2[i];
 
                 else
-                    oddCount++;
-
-                if (oddCount == int.Parse(commands[1]) && commands[2] == "odd")
-                {
-                    oddNums = new int[oddCount];
-                    break;
-                }
-
-                if (evenCount == int.Parse(commands[1]) && commands[2] == "even")
-                {
-                    evenNums = new int[evenCount];
-                    break;
-                }
+                    integers[i] = sub1[j++];
             }
 
-            if (commands[2] == "even" && evenCount == 0)
-            {
-                Console.WriteLine("[]");
-                return;
-            }
-
-            if (commands[2] == "odd" && oddCount == 0)
-            {
-                Console.WriteLine("[]");
-                return;
-            }
-
-            for (int i = input.Length - 1; i >= 0; i--)
-            {
-                if (input[i] % 2 == 0)
-                {
-                    for (int j = 0; j < evenNums.Length; j++)
-                    {
-                        if (input[i] % 2 == 0)
-                        {
-                            evenNums[i] = input[i];
-                            i++;
-                        }
-                    }
-                }
-
-                else
-                    for (int j = 0; j < oddNums.Length; j++)
-                    {
-
-                        if (input[i] % 2 != 0)
-                        {
-                            oddNums[i] = input[i];
-                            i++;
-                        }
-                    }
-
-                if (oddCount < int.Parse(commands[1]) && commands[2] == "odd")
-                {
-                    oddNums = new int[oddCount];
-                }
-
-                if (evenCount < int.Parse(commands[1]) && commands[2] == "even")
-                {
-                    evenNums = new int[evenCount];
-                }
-
-                if (oddCount <= int.Parse(commands[1]) && commands[2] == "odd")
-                {
-                    Console.WriteLine("[" + string.Join(", ", oddNums) + "]");
-                    break;
-                }
-
-                if (evenCount <= int.Parse(commands[1]) && commands[2] == "even")
-                {
-                    Console.WriteLine("[" + string.Join(", ", evenNums) + "]");
-                    break;
-                }
-            }
+            return integers;
         }
     }
 }
