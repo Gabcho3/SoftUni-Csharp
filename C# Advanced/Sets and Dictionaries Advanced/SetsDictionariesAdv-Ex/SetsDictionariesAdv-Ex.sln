@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Unique Usernames", "T01. Unique Usernames\T01. Unique Usernames.csproj", "{31804C94-6DEF-4857-A81B-4905694C066C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Unique Usernames", "T01. Unique Usernames\T01. Unique Usernames.csproj", "{31804C94-6DEF-4857-A81B-4905694C066C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. SetsofElements", "T02. SetsofElements\T02. SetsofElements.csproj", "{4496D859-B9E0-45CB-B06F-03C9033ABB7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02. SetsofElements", "T02. SetsofElements\T02. SetsofElements.csproj", "{4496D859-B9E0-45CB-B06F-03C9033ABB7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Periodic Table", "T03. Periodic Table\T03. Periodic Table.csproj", "{4B428865-21C7-45BE-B885-EA0C82F88EE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03. Periodic Table", "T03. Periodic Table\T03. Periodic Table.csproj", "{4B428865-21C7-45BE-B885-EA0C82F88EE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. Even Times", "T04. Even Times\T04. Even Times.csproj", "{2C5245C6-FEA6-49DA-AE84-27D822D85954}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04. Even Times", "T04. Even Times\T04. Even Times.csproj", "{2C5245C6-FEA6-49DA-AE84-27D822D85954}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Count Symbols", "T05. Count Symbols\T05. Count Symbols.csproj", "{A1B2AA82-9D95-4087-89B2-E96207759C57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T05. Count Symbols", "T05. Count Symbols\T05. Count Symbols.csproj", "{A1B2AA82-9D95-4087-89B2-E96207759C57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06. Wardrobe", "T06. Wardrobe\T06. Wardrobe.csproj", "{D11CED2F-C355-489C-8509-B28FC50779F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A1B2AA82-9D95-4087-89B2-E96207759C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1B2AA82-9D95-4087-89B2-E96207759C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1B2AA82-9D95-4087-89B2-E96207759C57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D11CED2F-C355-489C-8509-B28FC50779F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11CED2F-C355-489C-8509-B28FC50779F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11CED2F-C355-489C-8509-B28FC50779F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11CED2F-C355-489C-8509-B28FC50779F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
