@@ -9,163 +9,120 @@ namespace T03._Heroes_of_Code_and_Logic_VII
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-
-            List<Hero> heroes = new List<Hero>();
-
-            for(int i = 0; i < n; i++)
+            var heroes = new Dictionary<string, Hero>();
+            for (int i = 0; i < n; i++)
             {
                 string[] data = Console.ReadLine().Split();
+                string name = data[0];
+                int hp = int.Parse(data[1]);
+                int mp = int.Parse(data[2]);
 
-                Hero hero = new Hero { Name = data[0], Hp = int.Parse(data[1]), Mp = int.Parse(data[2]) };
+                hp = hp > 100 ? 100 : hp;
+                mp = mp > 200 ? 200 : mp;
 
-                if (hero.Hp > 100)
-                    hero.Hp = 100;
-
-                if (hero.Mp > 200)
-                    hero.Mp = 200;
-
-                heroes.Add(hero);
+                heroes.Add(name, new Hero() { HP = hp, MP = mp });
             }
 
             string[] command = Console.ReadLine().Split(" - ");
-
             while (command[0] != "End")
             {
                 string heroName = command[1];
-
-                switch(command[0])
+                switch (command[0])
                 {
                     case "CastSpell":
-                        heroes = CastSpell(heroes, command, heroName);
+                        int mpNeed = int.Parse(command[2]);
+                        string spellName = command[3];
+                        CastSpell(heroes, heroName, mpNeed, spellName);
                         break;
 
                     case "TakeDamage":
-                        heroes = TakeDamage(heroes, command, heroName);
+                        int damage = int.Parse(command[2]);
+                        string attacker = command[3];
+                        TakeDamage(heroes, heroName, damage, attacker);
                         break;
 
                     case "Recharge":
-                        heroes = Recharge(heroes, command, heroName);
+                        int amount = int.Parse(command[2]);
+                        Recharge(heroes, heroName, amount);
                         break;
 
                     case "Heal":
-                        heroes = Heal(heroes, command, heroName);
+                        amount = int.Parse(command[2]);
+                        Heal(heroes, heroName, amount);
                         break;
                 }
 
                 command = Console.ReadLine().Split(" - ");
             }
 
-            foreach(var hero in heroes)
+            foreach (var (hero, stats) in heroes)
+                Console.WriteLine($"{hero}\n  HP: {stats.HP}\n  MP: {stats.MP}");
+        }
+
+        private static void Heal(Dictionary<string, Hero> heroes, string heroName, int amount)
+        {
+            int firstHp = heroes[heroName].HP;
+            heroes[heroName].HP += amount;
+            int recovered;
+            if (heroes[heroName].HP > 100)
             {
-                Console.WriteLine(hero.Name);
-                Console.WriteLine("  HP: " + hero.Hp);
-                Console.WriteLine("  MP: " + hero.Mp);
+                recovered = 100 - firstHp;
+                heroes[heroName].HP = 100;
+            }
+
+            else
+                recovered = amount;
+
+            Console.WriteLine($"{heroName} healed for {recovered} HP!");
+        }
+
+        private static void Recharge(Dictionary<string, Hero> heroes, string heroName, int amount)
+        {
+            int firstMp = heroes[heroName].MP;
+            heroes[heroName].MP += amount;
+            int recovered;
+            if (heroes[heroName].MP > 200)
+            {
+                recovered = 200 - firstMp;
+                heroes[heroName].MP = 200;
+            }
+
+            else
+                recovered = amount;
+
+            Console.WriteLine($"{heroName} recharged for {recovered} MP!");
+        }
+
+        private static void TakeDamage(Dictionary<string, Hero> heroes, string heroName, int damage, string attacker)
+        {
+            heroes[heroName].HP -= damage;
+            if (heroes[heroName].HP > 0)
+                Console.WriteLine($"{heroName} was hit for {damage} HP by {attacker} and now has {heroes[heroName].HP} HP left!");
+
+            else
+            {
+                Console.WriteLine($"{heroName} has been killed by {attacker}!");
+                heroes.Remove(heroName);
             }
         }
 
-        static List<Hero> CastSpell(List<Hero> heroes, string[] command, string heroName)
+        private static void CastSpell(Dictionary<string, Hero> heroes, string heroName, int mpNeed, string spellName)
         {
-            int mpNeed = int.Parse(command[2]);
-            string spell = command[3];
-
-            for(int i = 0; i < heroes.Count; i++)
+            if (heroes[heroName].MP >= mpNeed)
             {
-                if (heroes[i].Name == heroName)
-                {
-                    if (heroes[i].Mp >= mpNeed)
-                    {
-                        heroes[i].Mp -= mpNeed;
-
-                        Console.WriteLine($"{heroName} has successfully cast {spell} and now has {heroes[i].Mp} MP!");
-                    }
-
-                    else
-                        Console.WriteLine($"{heroName} does not have enough MP to cast {spell}!");
-                }
+                heroes[heroName].MP -= mpNeed;
+                Console.WriteLine($"{heroName} has successfully cast {spellName} and now has {heroes[heroName].MP} MP!");
             }
 
-            return heroes;
-        }
-
-        static List<Hero> TakeDamage(List<Hero> heroes, string[] command, string heroName)
-        {
-            int damage = int.Parse(command[2]);
-            string attacker = command[3];
-
-            for (int i = 0; i < heroes.Count; i++)
-            {
-                if (heroes[i].Name == heroName)
-                {
-                    heroes[i].Hp -= damage;
-
-                    if (heroes[i].Hp > 0)
-                        Console.WriteLine($"{heroName} was hit for {damage} HP by {attacker} and now has {heroes[i].Hp} HP left!");
-
-                    else
-                    {
-                        Console.WriteLine($"{heroName} has been killed by {attacker}!");
-                        heroes.RemoveAt(i);
-                    }
-                }
-            }
-
-            return heroes;
-        }
-
-        static List<Hero> Recharge(List<Hero> heroes, string[] command, string heroName)
-        {
-            int amount = int.Parse(command[2]);
-
-            for (int i = 0; i < heroes.Count; i++)
-            {
-                if (heroes[i].Name == heroName)
-                {
-                    int rechared = 0;
-
-                    while (heroes[i].Mp < 200 && rechared < amount)
-                    {
-                        heroes[i].Mp++;
-                        rechared++;
-                    }
-
-                    Console.WriteLine($"{heroName} recharged for {rechared} MP!");
-                }
-            }
-
-            return heroes;
-        }
-
-        static List<Hero> Heal(List<Hero> heroes, string[] command, string heroName)
-        {
-            int amount = int.Parse(command[2]);
-
-            for (int i = 0; i < heroes.Count; i++)
-            {
-                if (heroes[i].Name == heroName)
-                {
-                    int healed = 0;
-
-                    while(heroes[i].Hp < 100 && healed < amount)
-                    {
-                        heroes[i].Hp++;
-                        healed++;
-                    }
-
-                    Console.WriteLine($"{heroName} healed for {healed} HP!");
-                }
-            }
-
-            return heroes;
+            else
+                Console.WriteLine($"{heroName} does not have enough MP to cast {spellName}!");
         }
     }
 
     class Hero
     {
-        public string Name { get; set; }
+        public int HP { get; set; }
 
-        public int Hp { get; set; }
-
-        public int Mp { get; set; }
+        public int MP { get; set; }
     }
-        
 }
