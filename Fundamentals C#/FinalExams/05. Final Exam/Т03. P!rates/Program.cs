@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Т03._P_rates
 {
@@ -8,33 +7,25 @@ namespace Т03._P_rates
     {
         static void Main(string[] args)
         {
+            var towns = new Dictionary<string, Town>();
             string[] input = Console.ReadLine().Split("||");
-
-            List<City> cities = new List<City>();
 
             while (input[0] != "Sail")
             {
-                City city = new City() 
-                { 
-                    Name = input[0],
-                    Population = int.Parse(input[1]),
-                    Gold = int.Parse(input[2]) 
-                };
+                string name = input[0];
+                int population = int.Parse(input[1]);
+                int gold = int.Parse(input[2]);
 
-                if (cities.Any(c => c.Name == city.Name))
+                if (towns.ContainsKey(name))
                 {
-                    for (int i = 0; i < cities.Count; i++)
-                    {
-                        if (city.Name == cities[i].Name)
-                        {
-                            cities[i].Population += city.Population;
-                            cities[i].Gold += city.Gold;
-                        }
-                    }
+                    towns[name].Population += population;
+                    towns[name].Gold += gold;
                 }
 
                 else
-                    cities.Add(city);
+                {
+                    towns.Add(name, new Town() { Population = population, Gold = gold });
+                }
 
                 input = Console.ReadLine().Split("||");
             }
@@ -43,66 +34,65 @@ namespace Т03._P_rates
 
             while (input[0] != "End")
             {
-                string town = input[1];
+                string name = input[1];
 
-                for (int i = 0; i < cities.Count; i++)
+                switch (input[0])
                 {
-                    if (cities[i].Name == town)
-                    {
-                        if (input[0] == "Plunder")
-                        {
-                            cities[i].Population -= int.Parse(input[2]);
-                            cities[i].Gold -= int.Parse(input[3]);
+                    case "Plunder":
+                        int population = int.Parse(input[2]);
+                        int gold = int.Parse(input[3]);
+                        Plunder(towns, name, population, gold);
+                        break;
 
-                            Console.WriteLine($"{town} plundered! {int.Parse(input[3])} gold stolen, {int.Parse(input[2])} citizens killed.");
-
-                            if (cities[i].Population == 0 || cities[i].Gold == 0)
-                            {
-                                cities.RemoveAt(i);
-
-                                Console.WriteLine($"{town} has been wiped off the map!");
-                            }
-                        }
-
-                        else
-                        {
-                            int gold = int.Parse(input[2]);
-
-                            if (gold > 0)
-                            {
-                                cities[i].Gold += gold;
-
-                                Console.WriteLine($"{gold} gold added to the city treasury. {town} now has {cities[i].Gold} gold.");
-                            }
-
-                            else
-                                Console.WriteLine("Gold added cannot be a negative number!");
-                        }
-                    }
+                    case "Prosper":
+                        gold = int.Parse(input[2]);
+                        Prosper(towns, name, gold);
+                        break;
                 }
 
                 input = Console.ReadLine().Split("=>");
             }
 
-            if (cities.Count > 0)
-            {
-                Console.WriteLine($"Ahoy, Captain! There are {cities.Count} wealthy settlements to go to:");
-
-                foreach (var town in cities)
-                    Console.WriteLine($"{town.Name} -> Population: {town.Population} citizens, Gold: {town.Gold} kg");
-            }
+            if (towns.Count == 0)
+                Console.WriteLine("Ahoy, Captain! All targets have been plundered and destroyed!");
 
             else
-                Console.WriteLine("Ahoy, Captain! All targets have been plundered and destroyed!");
+            {
+                Console.WriteLine($"Ahoy, Captain! There are {towns.Count} wealthy settlements to go to:");
+                foreach (var (town, stats) in towns)
+                    Console.WriteLine($"{town} -> Population: {stats.Population} citizens, Gold: {stats.Gold} kg");
+            }
         }
 
-        class City
+        private static void Prosper(Dictionary<string, Town> towns, string name, int gold)
         {
-            public string Name { get; set; }
+            if (gold < 0)
+            {
+                Console.WriteLine("Gold added cannot be a negative number!");
+                return;
+            }
 
-            public int Population { get; set; }
-
-            public int Gold { get; set; }
+            towns[name].Gold += gold;
+            Console.WriteLine($"{gold} gold added to the city treasury. {name} now has {towns[name].Gold} gold.");
         }
+
+        private static void Plunder(Dictionary<string, Town> towns, string name, int population, int gold)
+        {
+            towns[name].Population -= population;
+            towns[name].Gold -= gold;
+            Console.WriteLine($"{name} plundered! {gold} gold stolen, {population} citizens killed.");
+            if (towns[name].Population == 0 || towns[name].Gold == 0)
+            {
+                Console.WriteLine($"{name} has been wiped off the map!");
+                towns.Remove(name);
+            }
+        }
+    }
+
+    class Town
+    {
+        public int Population { get; set; }
+
+        public int Gold { get; set; }
     }
 }
