@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Odd Lines", "T01. Odd Lines\T01. Odd Lines.csproj", "{E4023FB2-36C8-497E-8AD4-C8FA42073659}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. LineNum", "T02. LineNum\T02. LineNum.csproj", "{42166168-4F42-4A8D-A7C8-ED8E37DD9BEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02. LineNum", "T02. LineNum\T02. LineNum.csproj", "{42166168-4F42-4A8D-A7C8-ED8E37DD9BEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Words", "T03. Words\T03. Words.csproj", "{8C9D4898-065A-4FDE-80EB-7C87BAD6C2A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{42166168-4F42-4A8D-A7C8-ED8E37DD9BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42166168-4F42-4A8D-A7C8-ED8E37DD9BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42166168-4F42-4A8D-A7C8-ED8E37DD9BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C9D4898-065A-4FDE-80EB-7C87BAD6C2A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C9D4898-065A-4FDE-80EB-7C87BAD6C2A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C9D4898-065A-4FDE-80EB-7C87BAD6C2A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C9D4898-065A-4FDE-80EB-7C87BAD6C2A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
