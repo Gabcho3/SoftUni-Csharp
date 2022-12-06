@@ -17,3 +17,5 @@ The basics of **web development** are covered, as well as one of the **most comm
 - Working with **different structures (arrays, lists, methods, objects, classes)**
 
 ### <h2> 📸My Certificate</h2>
+![Programming Fundamentals with C# - September 2022 - Certificate](https://user-images.githubusercontent.com/109502170/206028517-0a4fd0a8-0c0e-472c-ad39-0dfc6c992757.jpeg)
+
