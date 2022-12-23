@@ -8,49 +8,27 @@ namespace T01._Basic_Stack_Operations
     {
         static void Main(string[] args)
         {
-            int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            int[] nums = Console.ReadLine().Split().Select(int.Parse).ToArray();
-
             Stack<int> stack = new Stack<int>();
+            int[] commands = Console.ReadLine().Split().Select(x => int.Parse(x)).ToArray();
+            int[] integers = Console.ReadLine().Split().Select(x => int.Parse(x)).ToArray();
 
-            for (int i = 0; i < input.Length; i++)
+            int toPush = commands[0]; int toPop = commands[1]; int toFind = commands[2];
+
+            foreach (int num in integers)
             {
-                int value = input[i];
-
-                if (i == 0)
-                {
-                    for (int f = 0; f < nums.Length; f++)
-                    {
-                        stack.Push(nums[f]);
-
-                        if (f == value - 1)
-                            break;
-                    }
-                }
-
-                else if (i == 1)
-                {
-                    while (value >= 1)
-                    {
-                        stack.Pop();
-                        value--;
-                    }
-                }
-
-                else
-                {
-                    if (stack.Contains(value))
-                        Console.WriteLine("true");
-
-                    else if (stack.Count == 0)
-                        Console.WriteLine(0);
-
-
-                    else if (!stack.Contains(value))
-                        Console.WriteLine(stack.Min());
-                }
+                stack.Push(num);
+                toPush--;
+                if (toPush == 0)
+                    break;
             }
-            
+
+            while (toPop > 0)
+            {
+                stack.Pop();
+                toPop--;
+            }
+
+            Console.WriteLine(stack.Contains(toFind) ? "true" : stack.Count == 0 ? "0" : stack.Min().ToString());
         }
     }
 }
