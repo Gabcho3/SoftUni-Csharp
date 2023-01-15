@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace T10._Bunnies
@@ -7,158 +8,219 @@ namespace T10._Bunnies
     {
         static void Main(string[] args)
         {
-            int[] size = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            char[,] lair = new char[size[0], size[1]];
+            int[] sizes = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            int rows = sizes[0];
+            int cols = sizes[1];
 
-            int rowOfPlayer = 0;
-            int colOfPlayer = 0;
+            char[][] lair = new char[rows][];
 
-            for (int row = 0; row < size[0]; row++)
+            for (int row = 0; row < rows; row++)
             {
-                string arr = Console.ReadLine();
-
-                for (int col = 0; col < size[1]; col++)
-                {
-                    lair[row, col] = arr[col];
-
-                    if (arr[col] == 'P')
-                    {
-                        rowOfPlayer = row;
-                        colOfPlayer = col;
-                    }
-                }
+                lair[row] = Console.ReadLine().ToCharArray();
             }
+
+            int[] playerCoordinates = FindPlayerCoordinates(lair, rows, cols);
+            int playerRow = playerCoordinates[0];
+            int playerCol = playerCoordinates[1];
+            lair[playerRow][playerCol] = '.';
 
             string commands = Console.ReadLine();
 
+            MovePlayer(commands, playerRow, playerCol, lair);
+        }
+
+        private static void MovePlayer(string? commands, int playerRow, int playerCol, char[][] lair)
+        {
+
             for (int i = 0; i < commands.Length; i++)
             {
-                char ch = commands[i];
+                char currCommand = commands[i];
 
-                lair[rowOfPlayer, colOfPlayer] = '.';
-
-                if (ch == 'U')
-                    rowOfPlayer--;
-
-                else if (ch == 'R')
-                    colOfPlayer++;
-
-                else if (ch == 'D')
-                    rowOfPlayer++;
-
-                else
-                    colOfPlayer--;
-
-                bool won = false;
-
-                if (rowOfPlayer < 0 || colOfPlayer < 0 || rowOfPlayer >= size[0] || colOfPlayer >= size[1])
-                    won = true;
-
-                else
-                    lair[rowOfPlayer, colOfPlayer] = 'P';
-
-                bool lost = false;
-
-                char[,] newLair = CopyMatrix(lair);
-
-                for (int row = 0; row < lair.GetLength(0); row++)
+                if (currCommand == 'U')
                 {
-                    for (int col = 0; col < lair.GetLength(1); col++)
+                    if (CheckCoordinates(playerRow - 1, playerCol, lair))
                     {
-                        if (lair[row, col] == 'B')
+                        playerRow--;
+                    }
+
+                    else
+                    {
+                        FindBunniesLocation(lair);
+
+                        if (lair[playerRow][playerCol] != 'B')
                         {
-                            if (row - 1 >= 0)
-                            {
-                                if (lair[row - 1, col] == 'P')
-                                    lost = true;
-
-                                newLair[row - 1, col] = 'B';
-                            }
-
-                            if (col - 1 >= 0)
-                            {
-                                if (lair[row, col - 1] == 'P')
-                                    lost = true;
-
-                                newLair[row, col - 1] = 'B';
-                            }
-
-                            if (row + 1 < size[0])
-                            {
-                                if (lair[row + 1, col] == 'P')
-                                    lost = true;
-
-                                newLair[row + 1, col] = 'B';
-                            }
-
-                            if (col + 1 < size[1])
-                            {
-                                if (lair[row, col + 1] == 'P')
-                                    lost = true;
-
-                                newLair[row, col + 1] = 'B';
-                            }
+                            PrintingLair(lair);
+                            Console.WriteLine("won: {0} {1}", playerRow, playerCol);
+                            return;
                         }
                     }
                 }
 
-                lair = newLair;
-
-                if (won)
+                if (currCommand == 'R')
                 {
-                    if (rowOfPlayer < 0)
-                        rowOfPlayer = 0;
-
-                    if (colOfPlayer < 0)
-                        colOfPlayer = 0;
-
-                    if (rowOfPlayer >= size[0])
-                        rowOfPlayer = size[0] - 1;
-
-                    if (colOfPlayer >= size[1])
-                        colOfPlayer = size[1] - 1;
-
-                    int count = 0;
-                    foreach (var value in lair)
+                    if (CheckCoordinates(playerCol, playerCol + 1, lair))
                     {
-                        count++;
-                        Console.Write(value);
-
-                        if (count % size[1] == 0)
-                            Console.WriteLine();
+                        playerCol++;
                     }
 
-                    Console.WriteLine($"won: {rowOfPlayer} {colOfPlayer}");
-                    return;
+                    else
+                    {
+                        FindBunniesLocation(lair);
+
+                        if (lair[playerRow][playerCol] != 'B')
+                        {
+                            PrintingLair(lair);
+                            Console.WriteLine("won: {0} {1}", playerRow, playerCol);
+                            return;
+                        }
+                    }
                 }
 
-                if (lost)
+                if (currCommand == 'D')
                 {
-                    int count = 0;
-                    foreach (var value in lair)
+                    if (CheckCoordinates(playerRow + 1, playerCol, lair))
                     {
-                        count++;
-                        Console.Write(value);
-
-                        if (count % size[1] == 0)
-                            Console.WriteLine();
+                        playerRow++;
                     }
 
-                    Console.WriteLine($"dead: {rowOfPlayer} {colOfPlayer}");
+                    else
+                    {
+                        FindBunniesLocation(lair);
+
+                        if (lair[playerRow][playerCol] != 'B')
+                        {
+                            PrintingLair(lair);
+                            Console.WriteLine("won: {0} {1}", playerRow, playerCol);
+                            return;
+                        }
+                    }
+                }
+
+                if (currCommand == 'L')
+                {
+                    if (CheckCoordinates(playerRow, playerCol - 1, lair))
+                    {
+                        playerCol--;
+                    }
+
+                    else
+                    {
+                        FindBunniesLocation(lair);
+
+                        if (lair[playerRow][playerCol] != 'B')
+                        {
+
+                            PrintingLair(lair);
+                            Console.WriteLine("won: {0} {1}", playerRow, playerCol);
+                            return;
+                        }
+                    }
+                }
+
+                FindBunniesLocation(lair);
+
+                if (lair[playerRow][playerCol] == 'B')
+                {
+                    PrintingLair(lair);
+                    Console.WriteLine("dead: {0} {1}", playerRow, playerCol);
                     return;
                 }
             }
         }
 
-        static char[,] CopyMatrix(char[,] lair)
+        private static void FindBunniesLocation(char[][] lair)
         {
-            char[,] newLair = new char[lair.GetLength(0), lair.GetLength(1)];
+            List<int[]> coordinatesOfBunnies = new List<int[]>();
 
-            for(int row = 0; row < lair.GetLength(0); row++)
-                for(int col = 0; col < lair.GetLength(1); col++)
-                    newLair[row, col] = lair[row, col];
+            for (int r = 0; r < lair.GetLength(0); r++)
+            {
+                for (int c = 0; c < lair[r].Length; c++)
+                {
+                    if (lair[r][c] == 'B')
+                    {
+                        coordinatesOfBunnies.Add(new int[] { r, c });
+                    }
+                }
+            }
 
-            return newLair;
+            MultiplyBunnies(coordinatesOfBunnies, lair);
+        }
+
+        private static void MultiplyBunnies(List<int[]> coordinatesOfBunnies, char[][] lair)
+        {
+            List<int[]> coordinatesToMuliply = new List<int[]>();
+            for (int i = 0; i < coordinatesOfBunnies.Count; i++)
+            {
+                int row = coordinatesOfBunnies[i][0];
+                int col = coordinatesOfBunnies[i][1];
+
+                if (CheckCoordinates(row - 1, col, lair))
+                {
+                    coordinatesToMuliply.Add(new int[] { row - 1, col });
+                }
+
+                if (CheckCoordinates(row + 1, col, lair))
+                {
+                    coordinatesToMuliply.Add(new int[] { row + 1, col });
+                }
+
+                if (CheckCoordinates(row, col - 1, lair))
+                {
+                    coordinatesToMuliply.Add(new int[] { row, col - 1 });
+                }
+
+                if (CheckCoordinates(row, col + 1, lair))
+                {
+                    coordinatesToMuliply.Add(new int[] { row, col + 1 });
+                }
+            }
+
+            for (int i = 0; i < coordinatesToMuliply.Count; i++)
+            {
+                int row = coordinatesToMuliply[i][0];
+                int col = coordinatesToMuliply[i][1];
+
+                lair[row][col] = 'B';
+            }
+        }
+
+        private static void PrintingLair(char[][] lair)
+        {
+            foreach (var col in lair)
+            {
+                foreach (var element in col)
+                {
+                    Console.Write(element);
+                }
+                Console.WriteLine();
+            }
+        }
+
+        private static bool CheckCoordinates(int playerRow, int playerCol, char[][] lair)
+        {
+            if (playerRow >= 0 && playerRow < lair.GetLength(0))
+            {
+                if (playerCol >= 0 && playerCol < lair[playerRow].Length)
+                    return true;
+            }
+
+            return false;
+        }
+
+        private static int[] FindPlayerCoordinates(char[][] lair, int rows, int cols)
+        {
+            for (int row = 0; row < rows; row++)
+            {
+                for (int col = 0; col < cols; col++)
+                {
+                    if (lair[row][col] == 'P')
+                    {
+                        return new int[] { row, col };
+                    }
+                }
+            }
+
+            return new int[] { };
         }
     }
 }
