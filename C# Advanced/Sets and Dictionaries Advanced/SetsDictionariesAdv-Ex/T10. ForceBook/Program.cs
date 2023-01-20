@@ -8,71 +8,81 @@ namespace T10._ForceBook
     {
         static void Main(string[] args)
         {
-            string[] input = Console.ReadLine().Split();
-            var forceSides = new Dictionary<string, List<string>>();
+            var sides = new Dictionary<string, List<string>>();
+            string side, user;
 
-            while(input[0] != "Lumpawaroo")
+            while (true)
             {
-                string forceUser = string.Empty;
-                string forceSide = string.Empty;
+                string[] cmd = Console.ReadLine().Split(" | ", StringSplitOptions.RemoveEmptyEntries);
 
-                if (input[1] == "|")
+                if (cmd[0] == "Lumpawaroo")
                 {
-                    string input1 = string.Join("", input);
-                    string[] split = input1.Split('|');
+                    PrintSides(sides);
+                    return;
+                }
 
-                    forceUser = split[1];
-                    forceSide = split[0];
+                if (cmd.Length == 1)
+                {
+                    cmd = cmd[0].Split(" -> ", StringSplitOptions.RemoveEmptyEntries);
 
-                    if (!forceSides.ContainsKey(forceSide))
-                        forceSides.Add(forceSide, new List<string>());
+                    user = cmd[0];
+                    side = cmd[1];
 
-                    if (!forceSides[forceSide].Contains(forceUser))
-                        forceSides[forceSide].Add(forceUser);
+                    if (!sides.ContainsKey(side))
+                    {
+                        sides.Add(side, new List<string>());
+                    }
+
+                    string oldSide = string.Empty;
+                    foreach (var (sideName, usersData) in sides)
+                    {
+                        foreach (var username in usersData)
+                        {
+                            if (username == user)
+                            {
+                                oldSide = sideName;
+                                break;
+                            }
+                        }
+                    }
+                    sides[side].Add(user);
+
+                    if (oldSide != "")
+                    {
+                        sides[oldSide].Remove(user);
+                    }
+
+                    Console.WriteLine("{0} joins the {1} side!", user, side);
                 }
 
                 else
                 {
-                    string input1 = string.Join(" ", input);
-                    string[] split = input1.Split(" -> ");
+                    side = cmd[0];
+                    user = cmd[1];
 
-                    forceUser = split[0];
-                    forceSide = split[1];
-
-                    if (!forceSides.ContainsKey(forceSide))
-                        forceSides.Add(forceSide, new List<string>());
-
-                    string currSide = string.Empty;
-                    foreach(var side in forceSides)
+                    if (!sides.ContainsKey(side))
                     {
-                        if (side.Value.Contains(forceUser))
-                        {
-                            currSide = side.Key; 
-                        }
+                        sides.Add(side, new List<string>());
                     }
 
-                    if (currSide != "")
-                    {
-                        forceSides[currSide].Remove(forceUser);
-                        forceSides[forceSide].Add(forceUser);
-                    }
+                    if (!sides[side].Contains(user))
+                        sides[side].Add(user);
+                }
+            }
+        }
 
-                    else
-                        forceSides[forceSide].Add(forceUser);
-
-                    Console.WriteLine($"{forceUser} joins the {forceSide} side!");
+        private static void PrintSides(Dictionary<string, List<string>> sides)
+        {
+            foreach (var (side, members) in sides.OrderByDescending(x => x.Value.Count).ThenBy(x => x.Key))
+            {
+                if (members.Count > 0)
+                {
+                    Console.WriteLine("Side: {0}, Members: {1}", side, members.Count);
                 }
 
-                input = Console.ReadLine().Split();
-            }
-
-            foreach(var (side, users) in forceSides.OrderByDescending(x => x.Value.Count).ThenBy(x => x.Key))
-            {
-                if (users.Count > 0)
+                foreach (var member in members.OrderBy(x => x))
                 {
-                    Console.WriteLine($"Side: {side}, Members: {users.Count}");
-                    foreach (var user in users.OrderBy(x => x))
-                        Console.WriteLine("! " + user);
+                    Console.WriteLine("! " + member);
                 }
             }
         }
