@@ -7,7 +7,15 @@ The professional program aims to build all the **fundamental knowledge** and **p
 
 ### <h2> 📚Curriculum  </h2>
 
-The curriculum consists of several **professional** areas and **subsequent specializations**, built from **specially selected** training modules. Each training module contains courses with a **strong focus on practice**.
+The curriculum consists of several **professional** areas and **subsequent specializations**, built from **specially selected** training modules. Each training module contains courses with a **strong focus on practice**. 
+
+Every exercise is evaluated **by System** named "Judge" from **0 to 100**. 
+
+*Link to Judge System and my profile:*
+
+-> https://judge.softuni.org/
+
+-> https://judge.softuni.org/Users/Gabcho333
 
 ### <h3> 📜All Modules from Csharp path </h3>
 - <a href="https://softuni.bg/courses/programming-basics">Programming **Basics** with Csharp</a>
