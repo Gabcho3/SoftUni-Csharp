@@ -18,57 +18,46 @@ namespace WordCount
 
         public static void CalculateWordCounts(string wordsFilePath, string textFilePath, string outputFilePath)
         {
-            var counter = new Dictionary<string, int>(); //word, counter
-            List<string> words = new List<string>();
-            List<string> texts = new List<string>();
-
-            var readerOfWord = new StreamReader(wordsFilePath);
-            var readerOfText = new StreamReader(textFilePath);
+            var readerWords = new StreamReader(wordsFilePath);
+            var readerText = new StreamReader(textFilePath);
             var writer = new StreamWriter(outputFilePath);
 
-            string[] lineInWords = readerOfWord.ReadLine().Split();
-            using (readerOfWord)
+            List<string> words = readerWords.ReadLine().Split().ToList();
+
+            var wordsCounter = new Dictionary<string, int>();
+            for (int i = 0; i < words.Count; i++)
             {
-                for (int i = 0; i < lineInWords.Length; i++)
-                {
-                    words.Add(lineInWords[i]);
-                }
+                wordsCounter.Add(words[i], 0);
             }
-
-            using (readerOfText)
+            using (readerText)
             {
-                while (!readerOfText.EndOfStream)
+                while (true)
                 {
-                    string[] lineInTexts = readerOfText.ReadLine().Split(',', ' ', '-', '?', '!', '.').Select(x => x.ToLower()).ToArray();
+                    string text = readerText.ReadLine();
 
-                    foreach (var word in lineInTexts)
-                        texts.Add(word);
+                    if (text == null)
+                        break;
 
-                }
-            }
+                    string[] array = text.Split('-', ' ', '?', '!', '.').Select(x => x.ToLower()).ToArray();
 
-            foreach(var word in words)
-            {
-                foreach(var txt in texts)
-                {
-                    if(word.ToLower() == txt.ToLower())
+                    foreach (var word in array)
                     {
-                        if (!counter.ContainsKey(word))
-                            counter.Add(word, 0);
-
-                        counter[word]++;
+                        foreach (var w in words)
+                        {
+                            if (word == w)
+                                wordsCounter[w]++;
+                        }
                     }
                 }
             }
 
-            counter = counter.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
-
             using (writer)
             {
-                foreach (var (word, count) in counter)
-                    writer.WriteLine($"{word} - {count}");
+                foreach (var (word, times) in wordsCounter)
+                {
+                    writer.WriteLine("{0} - {1}", word, times);
+                }
             }
         }
     }
 }
-
