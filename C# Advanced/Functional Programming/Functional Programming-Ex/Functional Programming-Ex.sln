@@ -5,13 +5,15 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Action Print", "T01. Action Print\T01. Action Print.csproj", "{1B95820F-D25A-4711-8BF2-9D1FCDB8F4AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Knights of Honor", "T02. Knights of Honor\T02. Knights of Honor.csproj", "{7F9241D3-E46F-4AE4-8815-79848402CA8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02. Knights of Honor", "T02. Knights of Honor\T02. Knights of Honor.csproj", "{7F9241D3-E46F-4AE4-8815-79848402CA8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. CustomMinFunction", "T03. CustomMinFunction\T03. CustomMinFunction.csproj", "{35B0D129-4FB5-4783-A099-CDF9904309DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03. CustomMinFunction", "T03. CustomMinFunction\T03. CustomMinFunction.csproj", "{35B0D129-4FB5-4783-A099-CDF9904309DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. Find EvensOROdds", "T04. Find EvensOROdds\T04. Find EvensOROdds.csproj", "{3A627386-D0BA-49A7-A00D-FCB9BB54934F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04. Find EvensOROdds", "T04. Find EvensOROdds\T04. Find EvensOROdds.csproj", "{3A627386-D0BA-49A7-A00D-FCB9BB54934F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Arithmetics", "T05. Arithmetics\T05. Arithmetics.csproj", "{E8FD7C0F-2331-4FC6-BDE3-5B11FA04D8FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T05. Arithmetics", "T05. Arithmetics\T05. Arithmetics.csproj", "{E8FD7C0F-2331-4FC6-BDE3-5B11FA04D8FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06. ReverseAndExclude", "T06. ReverseAndExclude\T06. ReverseAndExclude.csproj", "{4D215A40-99D3-4197-81E9-FC7AAE2EF39F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E8FD7C0F-2331-4FC6-BDE3-5B11FA04D8FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8FD7C0F-2331-4FC6-BDE3-5B11FA04D8FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8FD7C0F-2331-4FC6-BDE3-5B11FA04D8FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D215A40-99D3-4197-81E9-FC7AAE2EF39F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D215A40-99D3-4197-81E9-FC7AAE2EF39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D215A40-99D3-4197-81E9-FC7AAE2EF39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D215A40-99D3-4197-81E9-FC7AAE2EF39F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
