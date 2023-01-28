@@ -19,7 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07. PredicateForNames", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T08. ListOfPredicates", "T08. ListOfPredicates\T08. ListOfPredicates.csproj", "{1E46F714-148A-46FA-83F3-FF732C5BCB7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Т09. Predicate Party!", "Т09. Predicate Party!\Т09. Predicate Party!.csproj", "{2F1D5AC4-246A-4894-AF07-F27CD40139BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T09. Predicate Party!", "Т09. Predicate Party!\T09. Predicate Party!.csproj", "{2F1D5AC4-246A-4894-AF07-F27CD40139BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T10. Party Reservation", "T10. Party Reservation\T10. Party Reservation.csproj", "{BFF7E500-A06C-4DDD-9449-23CE89ECB2AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{2F1D5AC4-246A-4894-AF07-F27CD40139BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F1D5AC4-246A-4894-AF07-F27CD40139BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F1D5AC4-246A-4894-AF07-F27CD40139BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF7E500-A06C-4DDD-9449-23CE89ECB2AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF7E500-A06C-4DDD-9449-23CE89ECB2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF7E500-A06C-4DDD-9449-23CE89ECB2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF7E500-A06C-4DDD-9449-23CE89ECB2AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
