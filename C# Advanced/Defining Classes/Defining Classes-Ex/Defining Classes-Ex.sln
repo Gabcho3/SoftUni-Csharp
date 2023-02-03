@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01.DefineAClassPerson", "T01. Define a Class Person\T01.DefineAClassPerson.csproj", "{618C3087-B30F-4214-AC51-763A4892A814}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01.DefineAClassPerson", "T01. Define a Class Person\T01.DefineAClassPerson.csproj", "{618C3087-B30F-4214-AC51-763A4892A814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02.CreatingConstructors", "T02. Creating Constructors\T02.CreatingConstructors.csproj", "{64F7BC2E-E9A6-4122-9ADE-59D5A67B4DEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02.CreatingConstructors", "T02. Creating Constructors\T02.CreatingConstructors.csproj", "{64F7BC2E-E9A6-4122-9ADE-59D5A67B4DEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.OldestFamilyMember", "T03.OldestFamilyMember\T03.OldestFamilyMember.csproj", "{1331DD12-2884-4A23-82B5-AAF1766FC0EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03.OldestFamilyMember", "T03.OldestFamilyMember\T03.OldestFamilyMember.csproj", "{1331DD12-2884-4A23-82B5-AAF1766FC0EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04.OpinionPoll", "T04.OpinionPoll\T04.OpinionPoll.csproj", "{B248CED8-F412-4E28-806C-5A992A95C35D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04.OpinionPoll", "T04.OpinionPoll\T04.OpinionPoll.csproj", "{B248CED8-F412-4E28-806C-5A992A95C35D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05.DateModifier", "T05.DateModifier\T05.DateModifier.csproj", "{570937E1-55BD-4895-91A9-AB0A8BA51D7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T05.DateModifier", "T05.DateModifier\T05.DateModifier.csproj", "{570937E1-55BD-4895-91A9-AB0A8BA51D7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Т06.SpeedRacing", "Т06. Speed Racing\Т06.SpeedRacing.csproj", "{9A0C1DCF-FFCA-4292-9747-18D26E60693A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{570937E1-55BD-4895-91A9-AB0A8BA51D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{570937E1-55BD-4895-91A9-AB0A8BA51D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{570937E1-55BD-4895-91A9-AB0A8BA51D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A0C1DCF-FFCA-4292-9747-18D26E60693A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A0C1DCF-FFCA-4292-9747-18D26E60693A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A0C1DCF-FFCA-4292-9747-18D26E60693A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A0C1DCF-FFCA-4292-9747-18D26E60693A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
