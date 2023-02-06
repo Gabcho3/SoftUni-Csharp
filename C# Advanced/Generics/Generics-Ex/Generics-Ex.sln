@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01.GenericBoxofString", "GenericBoxofString\T01.GenericBoxofString.csproj", "{7E50EE92-A9F5-4EE3-8CFA-BC565AA39503}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericBoxofString", "GenericBoxofString\GenericBoxofString.csproj", "{DB1E5275-B0F9-4D07-95BE-55112FC12D8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBoxofInteger", "GenericBoxofInteger\GenericBoxofInteger.csproj", "{9AC98294-A018-41A8-B23F-1B1D34730479}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7E50EE92-A9F5-4EE3-8CFA-BC565AA39503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E50EE92-A9F5-4EE3-8CFA-BC565AA39503}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E50EE92-A9F5-4EE3-8CFA-BC565AA39503}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E50EE92-A9F5-4EE3-8CFA-BC565AA39503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB1E5275-B0F9-4D07-95BE-55112FC12D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1E5275-B0F9-4D07-95BE-55112FC12D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1E5275-B0F9-4D07-95BE-55112FC12D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB1E5275-B0F9-4D07-95BE-55112FC12D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC98294-A018-41A8-B23F-1B1D34730479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC98294-A018-41A8-B23F-1B1D34730479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC98294-A018-41A8-B23F-1B1D34730479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC98294-A018-41A8-B23F-1B1D34730479}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
