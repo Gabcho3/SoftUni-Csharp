@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01.ClimbThePeaks", "T01.Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02.NavyBattle", "T02.NavyBattle\T02.NavyBattle.csproj", "{3998C7B4-DC83-4516-ABFD-E08B930E5C14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.ShoeStore", "T03.ShoeStore\T03.ShoeStore.csproj", "{6FA50418-DD7D-4CEC-811F-BCF20D6B59B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3998C7B4-DC83-4516-ABFD-E08B930E5C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3998C7B4-DC83-4516-ABFD-E08B930E5C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3998C7B4-DC83-4516-ABFD-E08B930E5C14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA50418-DD7D-4CEC-811F-BCF20D6B59B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA50418-DD7D-4CEC-811F-BCF20D6B59B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA50418-DD7D-4CEC-811F-BCF20D6B59B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA50418-DD7D-4CEC-811F-BCF20D6B59B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
