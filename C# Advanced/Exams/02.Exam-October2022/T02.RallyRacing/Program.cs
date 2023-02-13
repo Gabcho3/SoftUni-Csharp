@@ -61,7 +61,7 @@ namespace T02.RallyRacing
 
                 if (tunnelPositions.Any(x => x[0] == carRow && x[1] == carCol))
                 {
-                    int[] endOfTunnel = tunnelPositions.Find(x => x[0] != carRow && x[1] != carCol);
+                    int[] endOfTunnel = tunnelPositions.Find(x => x[0] != carRow || x[1] != carCol);
                     carRow = endOfTunnel[0];
                     carCol = endOfTunnel[1];
 
