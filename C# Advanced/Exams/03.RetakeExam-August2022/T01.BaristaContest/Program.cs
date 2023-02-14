@@ -64,10 +64,10 @@ namespace T01.BaristaContest
                 Console.WriteLine("Nina needs to exercise more! She didn't use all the coffee and milk!");
             }
 
-            Console.WriteLine(cofeeQuantities.Count > 0 ? $"Coffee left: {string.Join(", ", cofeeQuantities)}" : "Cofee left: none");
+            Console.WriteLine(cofeeQuantities.Count > 0 ? $"Coffee left: {string.Join(", ", cofeeQuantities)}" : "Coffee left: none");
             Console.WriteLine(milkQuantities.Count > 0 ? $"Milk left: {string.Join(", ", milkQuantities)}" : "Milk left: none");
 
-            foreach(var (drink, ammount) in beverages.OrderBy(x => x.Value).ThenBy(x => x.Key))
+            foreach(var (drink, ammount) in beverages.OrderBy(x => x.Value).ThenByDescending(x => x.Key))
             {
                 Console.WriteLine(drink + ": " + ammount);
             }
