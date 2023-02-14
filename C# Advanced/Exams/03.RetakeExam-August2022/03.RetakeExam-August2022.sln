@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01.BaristaContest", "T01.BaristaContest\T01.BaristaContest.csproj", "{2341EC37-CBBE-4F96-98A6-E1D973B6DFFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01.BaristaContest", "T01.BaristaContest\T01.BaristaContest.csproj", "{2341EC37-CBBE-4F96-98A6-E1D973B6DFFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Т02.Help-A-Mole", "Т02.Help-A-Mole\Т02.Help-A-Mole.csproj", "{BD1A72BE-3AEF-49A7-B786-D928B4039C71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02.Help-A-Mole", "Т02.Help-A-Mole\T02.Help-A-Mole.csproj", "{BD1A72BE-3AEF-49A7-B786-D928B4039C71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.Basketball", "T03.Basketball\T03.Basketball.csproj", "{2ED3CFF6-C2FE-4D5F-9308-96E19B8EC877}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BD1A72BE-3AEF-49A7-B786-D928B4039C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD1A72BE-3AEF-49A7-B786-D928B4039C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD1A72BE-3AEF-49A7-B786-D928B4039C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED3CFF6-C2FE-4D5F-9308-96E19B8EC877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED3CFF6-C2FE-4D5F-9308-96E19B8EC877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED3CFF6-C2FE-4D5F-9308-96E19B8EC877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED3CFF6-C2FE-4D5F-9308-96E19B8EC877}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
