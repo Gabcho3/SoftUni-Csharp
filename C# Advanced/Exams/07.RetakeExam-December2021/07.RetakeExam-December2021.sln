@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01.Blacksmith", "T01.Black
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02.Armory", "T02.Armory\T02.Armory.csproj", "{7D8C4254-0F3F-43E4-9BCC-44786EA9C94A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.Drones", "T03.Drones\T03.Drones.csproj", "{62674774-0152-49B6-8CFA-7A8EF2B8C0F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7D8C4254-0F3F-43E4-9BCC-44786EA9C94A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D8C4254-0F3F-43E4-9BCC-44786EA9C94A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D8C4254-0F3F-43E4-9BCC-44786EA9C94A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62674774-0152-49B6-8CFA-7A8EF2B8C0F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62674774-0152-49B6-8CFA-7A8EF2B8C0F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62674774-0152-49B6-8CFA-7A8EF2B8C0F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62674774-0152-49B6-8CFA-7A8EF2B8C0F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
