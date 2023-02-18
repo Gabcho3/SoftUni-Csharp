@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01.ApocalypsePreparation",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02.BlindMan'sBuff", "T02.BlindMan'sBuff\T02.BlindMan'sBuff.csproj", "{D3DFADA7-AAA7-4DE4-908D-0E64ED5E7A64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03.SoftUniKindergarten", "T03.SoftUniKindergarten\T03.SoftUniKindergarten.csproj", "{18F5A86A-A1D7-436E-A447-04244C8EB419}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D3DFADA7-AAA7-4DE4-908D-0E64ED5E7A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3DFADA7-AAA7-4DE4-908D-0E64ED5E7A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3DFADA7-AAA7-4DE4-908D-0E64ED5E7A64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18F5A86A-A1D7-436E-A447-04244C8EB419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F5A86A-A1D7-436E-A447-04244C8EB419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F5A86A-A1D7-436E-A447-04244C8EB419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F5A86A-A1D7-436E-A447-04244C8EB419}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
