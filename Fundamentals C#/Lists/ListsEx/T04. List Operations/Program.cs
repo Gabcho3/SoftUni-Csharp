@@ -8,7 +8,7 @@ namespace T04._List_Operations
     {
         static void Main(string[] args)
         {
-            List<int> list = Console.ReadLine().Split(" ").Select(int.Parse).ToList();
+            List<int> list = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
             string[] command = Console.ReadLine().Split(" ").ToArray();
 
             string action = command[0].ToString();
