@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Telephony", "03.Telephon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.BorderControl", "04.BorderControl\04.BorderControl.csproj", "{0BB41A9A-0B06-455D-BE68-D93CCBD9C78E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.BirthdayCelebrations", "05. Birthday Celebrations\05.BirthdayCelebrations.csproj", "{903AA15F-3213-4663-8163-FF1C50751020}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0BB41A9A-0B06-455D-BE68-D93CCBD9C78E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BB41A9A-0B06-455D-BE68-D93CCBD9C78E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BB41A9A-0B06-455D-BE68-D93CCBD9C78E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{903AA15F-3213-4663-8163-FF1C50751020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903AA15F-3213-4663-8163-FF1C50751020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{903AA15F-3213-4663-8163-FF1C50751020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903AA15F-3213-4663-8163-FF1C50751020}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
