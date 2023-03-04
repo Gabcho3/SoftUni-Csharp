@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.BorderControl", "04.Bord
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.BirthdayCelebrations", "05. Birthday Celebrations\05.BirthdayCelebrations.csproj", "{903AA15F-3213-4663-8163-FF1C50751020}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.FoodShortage", "06.FoodShortage\06.FoodShortage.csproj", "{ABADE827-37A0-4C31-AF48-667B5428BD2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{903AA15F-3213-4663-8163-FF1C50751020}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{903AA15F-3213-4663-8163-FF1C50751020}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{903AA15F-3213-4663-8163-FF1C50751020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABADE827-37A0-4C31-AF48-667B5428BD2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABADE827-37A0-4C31-AF48-667B5428BD2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABADE827-37A0-4C31-AF48-667B5428BD2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABADE827-37A0-4C31-AF48-667B5428BD2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
