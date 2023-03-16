@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Collector", "04.Collecto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Attribute", "05.Attribute\05.Attribute.csproj", "{27535AF1-4F6D-4B77-AB0F-C3A3DE8B8EC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.CodeTracker", "06.CodeTracker\06.CodeTracker.csproj", "{E8E1C623-488C-4924-91E3-F87BF1C88657}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{27535AF1-4F6D-4B77-AB0F-C3A3DE8B8EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27535AF1-4F6D-4B77-AB0F-C3A3DE8B8EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27535AF1-4F6D-4B77-AB0F-C3A3DE8B8EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E1C623-488C-4924-91E3-F87BF1C88657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E1C623-488C-4924-91E3-F87BF1C88657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E1C623-488C-4924-91E3-F87BF1C88657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E1C623-488C-4924-91E3-F87BF1C88657}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
