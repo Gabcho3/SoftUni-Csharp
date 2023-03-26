@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace UniversityCompetition.Models.Contracts.Universities
 {
@@ -41,7 +42,7 @@ namespace UniversityCompetition.Models.Contracts.Universities
             {
                 if (!categories.Contains(value))
                 {
-                    throw new ArgumentException("University category {0} is not allowed in the application!", value);
+                    throw new ArgumentException($"University category {value} is not allowed in the application!");
                 }
                 category = value;
             }
@@ -50,7 +51,7 @@ namespace UniversityCompetition.Models.Contracts.Universities
         public int Capacity
         {
             get { return capacity; }
-            private set
+            set
             {
                 if (value < 0)
                 {

@@ -9,7 +9,7 @@ namespace UniversityCompetition.Models.Contracts.Students
         private string lastName;
         private List<int> coveredExams = new List<int>();
 
-        public Student(string firstName, string lastName, int id)
+        public Student(int id, string firstName, string lastName)
         {
             Id = id;
             FirstName = firstName;

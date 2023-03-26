@@ -9,9 +9,9 @@ namespace UniversityCompetition.Repositories.Contracts
         private List<IUniversity> models = new List<IUniversity>();
         public IReadOnlyCollection<IUniversity> Models => models;
 
-        public void AddModel(IUniversity student)
+        public void AddModel(IUniversity university)
         {
-            models.Add(student);
+            models.Add(university);
         }
 
         public IUniversity FindById(int id)
