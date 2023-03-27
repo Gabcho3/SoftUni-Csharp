@@ -17,8 +17,9 @@ namespace ChristmasPastryShop.Core
     public class Controller : IController
     {
         private BoothRepository booths = new BoothRepository();
-        private List<string> delicacieTypes = new List<string>() { "Gingerbread", "Stolen" };
-        private List<string> cocktailTypes = new List<string>() { "Hibernation", "MulledWine" };
+        private  List<string> allAvailableTypes = Assembly.GetExecutingAssembly().GetExportedTypes()
+                .Where(t => t.IsClass && (t.Namespace == "ChristmasPastryShop.Models.Delicacies"
+                || t.Namespace == "ChristmasPastryShop.Models.Cocktails")).Select(t => t.Name).ToList();
         private List<string> coctailSizes = new List<string>() { "Small", "Middle", "Large" };
 
         public string AddBooth(int capacity)
@@ -30,7 +31,7 @@ namespace ChristmasPastryShop.Core
 
         public string AddCocktail(int boothId, string cocktailTypeName, string cocktailName, string size)
         {
-            if (!cocktailTypes.Contains(cocktailTypeName))
+            if (!allAvailableTypes.Contains(cocktailTypeName))
             {
                 return $"Cocktail type {cocktailTypeName} is not supported in our application!";
             }
@@ -57,9 +58,9 @@ namespace ChristmasPastryShop.Core
 
         public string AddDelicacy(int boothId, string delicacyTypeName, string delicacyName)
         {
-            if (!delicacieTypes.Contains(delicacyTypeName))
+            if (!allAvailableTypes.Contains(delicacyTypeName))
             {
-                return $"Delicacy type {delicacieTypes} is not supported in our application!";
+                return $"Delicacy type {delicacyTypeName} is not supported in our application!";
             }
 
             if (booths.Models.FirstOrDefault(b => b.DelicacyMenu.Models.FirstOrDefault(d => d.Name == delicacyName) != null) != null)
@@ -112,9 +113,6 @@ namespace ChristmasPastryShop.Core
         {
             IBooth booth;
             double price;
-            //var classes = Assembly.GetExecutingAssembly().GetExportedTypes()
-            //    .Where(t => t.IsClass && t.Namespace == "ChristmasPastryShop.Models.Delicacies;"
-            //    && t.Namespace == "ChristmasPastryShop.Models.Cocktails;").ToList();
 
             string[] splittedOrder = order.Split('/', StringSplitOptions.RemoveEmptyEntries);
             string itemTypeName = splittedOrder[0];
@@ -127,24 +125,20 @@ namespace ChristmasPastryShop.Core
                 size = splittedOrder[3];
             }
 
-            if (!cocktailTypes.Contains(itemTypeName) && !delicacieTypes.Contains(itemTypeName))
+            if (!allAvailableTypes.Contains(itemTypeName) && !allAvailableTypes.Contains(itemTypeName))
             {
                 return $"{itemTypeName} is not recognized type!";
             }
 
-            if (booths.Models.Any(b => b.CocktailMenu.Models.All(c => c.Name != itemName)))
+            if (booths.Models.Any(b => b.CocktailMenu.Models.All(c => c.Name != itemName) && b.DelicacyMenu.Models.All(d => d.Name != itemName)))
             {
-                if (cocktailTypes.Contains(itemTypeName))
+                switch (itemTypeName)
                 {
-                    return $"There is no {size} {itemName} available!";
-                }
-            }
-
-            if(booths.Models.Any(b => b.DelicacyMenu.Models.All(d => d.Name != itemName)))
-            {
-                if (delicacieTypes.Contains(itemTypeName))
-                {
-                    return $"There is no {itemTypeName} {itemName} available!";
+                    case "Hibernation":
+                    case "MulledWine":
+                        return $"There is no {size} {itemName} available!";
+                    default: //Delicacies Types
+                        return $"There is no {itemTypeName} {itemName} available!";
                 }
             }
 
