@@ -5,6 +5,12 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingApp", "01. Structure and Business Logic\BookingApp.csproj", "{08ACD8DA-894C-4C0F-ACCD-7D9775A5FE0B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Unit Tests", "02. Unit Tests", "{2F3D4F94-F39A-4489-970A-B3557268D469}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontDeskApp", "02. Unit Tests\FrontDeskApp\FrontDeskApp.csproj", "{8D894265-7EA4-45E9-88C2-A3F74D11E13A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookigApp.Tests", "02. Unit Tests\BookigApp.Tests\BookigApp.Tests.csproj", "{DD5C120A-E027-4655-99C6-10FCDD96679B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,21 @@ Global
 		{08ACD8DA-894C-4C0F-ACCD-7D9775A5FE0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08ACD8DA-894C-4C0F-ACCD-7D9775A5FE0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08ACD8DA-894C-4C0F-ACCD-7D9775A5FE0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D894265-7EA4-45E9-88C2-A3F74D11E13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D894265-7EA4-45E9-88C2-A3F74D11E13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D894265-7EA4-45E9-88C2-A3F74D11E13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D894265-7EA4-45E9-88C2-A3F74D11E13A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD5C120A-E027-4655-99C6-10FCDD96679B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD5C120A-E027-4655-99C6-10FCDD96679B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD5C120A-E027-4655-99C6-10FCDD96679B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD5C120A-E027-4655-99C6-10FCDD96679B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8D894265-7EA4-45E9-88C2-A3F74D11E13A} = {2F3D4F94-F39A-4489-970A-B3557268D469}
+		{DD5C120A-E027-4655-99C6-10FCDD96679B} = {2F3D4F94-F39A-4489-970A-B3557268D469}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B947137D-6F81-402A-B186-202FBEA1D660}
