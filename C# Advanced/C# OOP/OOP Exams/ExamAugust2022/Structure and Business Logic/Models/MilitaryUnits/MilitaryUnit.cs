@@ -8,7 +8,7 @@ namespace PlanetWars.Models.MilitaryUnits
 {
     public abstract class MilitaryUnit : IMilitaryUnit
     {
-        private int enduranceLevel;
+        private int enduranceLevel = 1;
 
         public MilitaryUnit(double cost)
         {
@@ -22,16 +22,17 @@ namespace PlanetWars.Models.MilitaryUnits
             get { return enduranceLevel; }
             private set
             {
-                if (enduranceLevel > 20)
+                if (value > 20)
                 {
                     throw new ArgumentException(ExceptionMessages.EnduranceLevelExceeded);
                 }
+                enduranceLevel = value;
             }
         }
 
         public void IncreaseEndurance()
         {
-            enduranceLevel++;
+            EnduranceLevel++;
         }
     }
 }

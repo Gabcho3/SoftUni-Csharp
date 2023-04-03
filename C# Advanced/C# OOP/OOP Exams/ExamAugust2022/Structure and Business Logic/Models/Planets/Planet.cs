@@ -2,6 +2,7 @@
 using PlanetWars.Models.MilitaryUnits.Contracts;
 using PlanetWars.Models.Planets.Contracts;
 using PlanetWars.Models.Weapons.Contracts;
+using PlanetWars.Repositories;
 using PlanetWars.Repositories.Contracts;
 using PlanetWars.Utilities.Messages;
 using System;
@@ -16,8 +17,8 @@ namespace PlanetWars.Models.Planets
         private string name;
         private double budget;
         private double militaryPower;
-        private IRepository<IMilitaryUnit> units;
-        private IRepository<IWeapon> weapons;
+        private UnitRepository units = new UnitRepository();
+        private WeaponRepository weapons = new WeaponRepository();
 
         public Planet(string name, double budget)
         {
@@ -51,26 +52,7 @@ namespace PlanetWars.Models.Planets
             }
         }
 
-        public double MilitaryPower
-        {
-            get { return militaryPower; }
-            private set
-            {
-                militaryPower = units.Models.Select(u => u.EnduranceLevel).Sum() + weapons.Models.Select(w => w.DestructionLevel).Sum();
-
-                if (units.Models.Any(u => u.GetType().Name == "AnonymousImpactUnit"))
-                {
-                    militaryPower *= 0.7;
-                }
-
-                if (weapons.Models.Any(w => w.GetType().Name == "NuclearWeapon"))
-                {
-                    militaryPower *= 55;
-                }
-
-                militaryPower = Math.Round(militaryPower, 3);
-            }
-        }
+        public double MilitaryPower => GetMilitaryPower();
 
         public IReadOnlyCollection<IMilitaryUnit> Army => units.Models;
 
@@ -90,10 +72,12 @@ namespace PlanetWars.Models.Planets
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.Append($"Planet: {Name}");
+            sb.AppendLine($"Planet: {Name}");
             sb.AppendLine($"--Budget: {Budget} billion QUID");
-            sb.AppendLine(units.Models.Count > 0 ? $"--Forces: {string.Join("  ", units.Models)}" : "No units");
-            sb.AppendLine(weapons.Models.Count > 0 ? $"--Combat equipment: {string.Join("  ", weapons.Models)}" : "No weapons");
+            sb.AppendLine(units.Models.Count > 0 ? $"--Forces: " + string.Join(", ", units.Models.Select(u => u.GetType().Name))
+                : "--Forces: No units");
+            sb.AppendLine(weapons.Models.Count > 0 ? $"--Combat equipment: " + string.Join(", ", weapons.Models.Select(w => w.GetType().Name))
+                : "--Combat equipment: No weapons");
             sb.AppendLine($"--Military Power: {MilitaryPower}");
 
             return sb.ToString().TrimEnd();
@@ -106,19 +90,39 @@ namespace PlanetWars.Models.Planets
 
         public void Spend(double amount)
         {
-            try
-            {
-                Budget -= amount;
-            }
-            catch (ArgumentException)
+            if (Budget < amount)
             {
                 throw new InvalidOperationException(ExceptionMessages.UnsufficientBudget);
+            }
+
+            else
+            {
+                Budget -= amount;
             }
         }
 
         public void TrainArmy()
         {
             units.Models.ToList().ForEach(u => u.IncreaseEndurance());
+        }
+
+        private double GetMilitaryPower()
+        {
+            militaryPower = units.Models.Select(u => u.EnduranceLevel).Sum() + weapons.Models.Select(w => w.DestructionLevel).Sum();
+
+            if (units.Models.Any(u => u.GetType().Name == "AnonymousImpactUnit"))
+            {
+                militaryPower *= 1.3;
+            }
+
+            if (weapons.Models.Any(w => w.GetType().Name == "NuclearWeapon"))
+            {
+                militaryPower *= 1.45;
+            }
+
+            militaryPower = Math.Round(militaryPower, 3);
+
+            return militaryPower;
         }
     }
 }

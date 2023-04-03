@@ -30,6 +30,8 @@ namespace PlanetWars.Models.Weapons
                 {
                     throw new ArgumentException(ExceptionMessages.TooHighDestructionLevel);
                 }
+
+                destructionLevel = value;
             }
         }
     }
