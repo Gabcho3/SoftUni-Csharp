@@ -2,49 +2,48 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace T01.ApocalypsePreparation
+namespace Training
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Queue<int> textiles = new Queue<int>(Console.ReadLine().Split().Select(int.Parse));
-            Stack<int> medicaments = new Stack<int>(Console.ReadLine().Split().Select(int.Parse));
+            Queue<int> textile = new Queue<int>(Console.ReadLine().Split(" ",
+                StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray());
+            Stack<int> medicaments = new Stack<int>(Console.ReadLine().Split(" ",
+                StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray());
 
-            var healingItems = new Dictionary<string, int>()
+            Dictionary<string, int> healings = new Dictionary<string, int>()
             {
-                ["Patch"] = 30,
-                ["Bandage"] = 40,
-                ["MedKit"] = 100
+                {"Patch", 30 },
+                {"Bandage", 40 },
+                {"MedKit", 100 }
             };
-            var itemsCreated = new Dictionary<string, int>();
 
-            while (textiles.Count > 0 && medicaments.Count > 0)
+            Dictionary<string, int> itemsCreated = new Dictionary<string, int>();
+            while (textile.Count > 0 && medicaments.Count > 0)
             {
-                int sum = textiles.Dequeue() + medicaments.Peek();
+                int currTextile = textile.Dequeue();
+                int currMedicament = medicaments.Peek();
+                int sum = currTextile + currMedicament;
 
-                if (healingItems.Any(x => x.Value == sum))
+                KeyValuePair<string, int> currhealing = healings.FirstOrDefault(x => x.Value == sum);
+
+                if (currhealing.Key != null)
                 {
-                    var item = healingItems.Where(x => x.Value == sum).First();
-                    if (!itemsCreated.ContainsKey(item.Key))
-                    {
-                        itemsCreated.Add(item.Key, 0);
-                    }
-                    itemsCreated[item.Key]++;
+                    itemsCreated = AddItem(currhealing.Key, itemsCreated);
                     medicaments.Pop();
                 }
 
                 else
                 {
-                    if (sum > healingItems["MedKit"])
+                    int medKitValue = healings.FirstOrDefault(x => x.Key == "MedKit").Value;
+                    if (sum > medKitValue)
                     {
-                        if (!itemsCreated.ContainsKey("MedKit"))
-                        {
-                            itemsCreated.Add("MedKit", 0);
-                        }
-                        itemsCreated["MedKit"]++;
+                        itemsCreated = AddItem("MedKit", itemsCreated);
+                        int remainingResource = sum - medKitValue;
                         medicaments.Pop();
-                        medicaments.Push(medicaments.Pop() + sum - healingItems["MedKit"]);
+                        medicaments.Push(medicaments.Pop() + remainingResource);
                     }
 
                     else
@@ -53,33 +52,35 @@ namespace T01.ApocalypsePreparation
                     }
                 }
             }
-
-            Console.WriteLine(textiles.Count == 0 && medicaments.Count > 0 ? "Textiles are empty." 
-                : textiles.Count > 0 && medicaments.Count == 0 ? "Medicaments are empty." 
+            Console.WriteLine(medicaments.Count == 0 && textile.Count > 0 ? "Medicaments are empty."
+                : medicaments.Count > 0 && textile.Count == 0 ? "Textiles are empty."
                 : "Textiles and medicaments are both empty.");
-            PrintCreatedItems(itemsCreated);
-            PrintRemainingItems(textiles, medicaments);
-        }
 
-        private static void PrintRemainingItems(Queue<int> textiles, Stack<int> medicaments)
-        {
+            foreach (var (item, amount) in itemsCreated.OrderByDescending(x => x.Value).ThenBy(x => x.Key))
+            {
+                Console.WriteLine(item + " - " + amount);
+            }
+
             if (medicaments.Count > 0)
             {
                 Console.WriteLine($"Medicaments left: {string.Join(", ", medicaments)}");
             }
 
-            if (textiles.Count > 0)
+            if (textile.Count > 0)
             {
-                Console.WriteLine($"Textiles left: {string.Join(", ", textiles)}");
+                Console.WriteLine($"Textiles left: {string.Join(", ", textile)}");
             }
         }
 
-        private static void PrintCreatedItems(Dictionary<string, int> itemsCreated)
+        public static Dictionary<string, int> AddItem(string key, Dictionary<string, int> itemsCreated)
         {
-            foreach(var (item, amount) in itemsCreated.OrderByDescending(x => x.Value).ThenBy(x => x.Key))
+            if (!itemsCreated.ContainsKey(key))
             {
-                Console.WriteLine($"{item} - {amount}");
+                itemsCreated.Add(key, 0);
             }
+            itemsCreated[key]++;
+
+            return itemsCreated;
         }
     }
 }
