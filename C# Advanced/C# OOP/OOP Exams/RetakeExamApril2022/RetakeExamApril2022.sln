@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepairShop", "Unit Testing\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepairShop.Tests", "Unit Testing\RepairShop\RepairShop.Tests\RepairShop.Tests.csproj", "{7B39B1E1-94C1-439D-B9C6-CACF1E9211A8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heroes", "Structure and Business Logic\Heroes\Heroes.csproj", "{D0E8B43F-BE19-4BB5-8507-2BD8B89035FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{7B39B1E1-94C1-439D-B9C6-CACF1E9211A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B39B1E1-94C1-439D-B9C6-CACF1E9211A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B39B1E1-94C1-439D-B9C6-CACF1E9211A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E8B43F-BE19-4BB5-8507-2BD8B89035FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E8B43F-BE19-4BB5-8507-2BD8B89035FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E8B43F-BE19-4BB5-8507-2BD8B89035FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E8B43F-BE19-4BB5-8507-2BD8B89035FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
