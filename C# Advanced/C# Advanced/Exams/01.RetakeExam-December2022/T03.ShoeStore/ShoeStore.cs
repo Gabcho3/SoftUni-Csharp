@@ -4,68 +4,67 @@ namespace ShoeStore
 {
     public class ShoeStore
     {
+        private readonly List<Shoe> shoes;
+
         public ShoeStore(string name, int storageCapacity)
         {
             Name = name;
             StorageCapacity = storageCapacity;
-            Shoes = new List<Shoe>();
+            shoes = new List<Shoe>();
         }
 
-        public string Name { get; set; }
+        public string Name { get; }
 
-        public int StorageCapacity { get; set; }
+        public int StorageCapacity { get; }
 
-        public List<Shoe> Shoes { get; set; }
+        IReadOnlyCollection<Shoe> Shoes => shoes;
 
-        public int Count()
-        {
-            return Shoes.Count;
-        }
+        public int Count => shoes.Count;
 
         public string AddShoe(Shoe shoe)
         {
-            if (Shoes.Count == StorageCapacity)
+            if (Count == StorageCapacity)
             {
-                return "No more space in the storage room.";
+                return "No more space in the storage room";
             }
 
-            Shoes.Add(shoe);
+            shoes.Add(shoe);
             return $"Successfully added {shoe.Type} {shoe.Material} pair of shoes to the store.";
         }
 
         public int RemoveShoes(string material)
         {
-            int currCount = Shoes.Count;
-            Shoes.RemoveAll(x => x.Material == material);
-            return currCount - Shoes.Count;
+            return shoes.RemoveAll(s => s.Material == material);
         }
 
         public List<Shoe> GetShoesByType(string type)
         {
-            return Shoes.Where(x => x.Type == type.ToLower()).ToList();
+            return shoes.Where(s => s.Type.ToLower() == type.ToLower()).ToList();
         }
 
         public Shoe GetShoeBySize(double size)
         {
-            return Shoes.Where(x => x.Size == size).First();
+            return shoes.FirstOrDefault(s => s.Size == size);
         }
 
         public string StockList(double size, string type)
         {
-            List<Shoe> matches = Shoes.Where(x => x.Size == size && x.Type == type).ToList();
+            StringBuilder sb = new StringBuilder();
+            List<Shoe> matchedShoes = shoes.Where(s => s.Size == size && s.Type == type).ToList();
 
-            if (matches.Count == 0)
-                return "No matches found!";
-
-            StringBuilder output = new StringBuilder();
-
-            output.Append($"Stock list for size {size} - {type} shoes");
-            foreach (var shoe in matches)
+            if (matchedShoes.Count > 0)
             {
-                output.Append(Environment.NewLine + shoe.ToString());
+                sb.AppendLine($"Stock list for size {size} - {type} shoes:");
+                foreach (var shoe in matchedShoes)
+                    sb.AppendLine(shoe.ToString());
             }
 
-            return output.ToString();
+            else
+            {
+                sb.AppendLine("No matches found!");
+            }
+
+            return sb.ToString().Trim();
         }
     }
 }

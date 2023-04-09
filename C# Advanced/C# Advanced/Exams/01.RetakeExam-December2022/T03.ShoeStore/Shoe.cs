@@ -1,12 +1,7 @@
 ﻿namespace ShoeStore
 {
     public class Shoe
-    {
-        private string brand;
-        private string type;
-        private double size;
-        private string material;
-
+    { 
         public Shoe(string brand, string type, double size, string material)
         {
             Brand = brand;
@@ -15,17 +10,15 @@
             Material = material;
         }
 
-        public string Brand { get { return brand; } set { brand = value; } }
+        public string Brand { get;  }
 
-        public string Type { get { return type; } set { type = value; } }
+        public string Type { get; }
 
-        public double Size { get { return size; } set { size = value; } }
+        public double Size { get; }
 
-        public string Material { get { return material; } set { material = value; } }
+        public string Material { get; }
 
         public override string ToString()
-        {
-            return $"Size {Size}, {Material} {Brand} {Type} shoe.";
-        }
+            => $"Size {Size}, {Material} {Brand} {Type} shoe.";
     }
 }
