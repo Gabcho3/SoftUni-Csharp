@@ -5,122 +5,94 @@
         static void Main(string[] args)
         {
             int size = int.Parse(Console.ReadLine());
-            string[,] battlefield = new string[size, size];
+            char[,] battlefield = new char[size, size];
+
+            int subRow = 0;
+            int subCol = 0;
 
             for (int row = 0; row < size; row++)
             {
-                string rowValues = Console.ReadLine();
+                string rowData = Console.ReadLine();
                 for (int col = 0; col < size; col++)
                 {
-                    battlefield[row, col] = rowValues[col].ToString();
+                    char elemenet = rowData[col];
+
+                    if (elemenet == 'S')
+                    {
+                        subRow = row;
+                        subCol = col;
+                        battlefield[row, col] = '-';
+                        continue;
+                    }
+
+                    battlefield[row, col] = elemenet;
                 }
             }
 
-            int[] coordinates = FindSubmarinePosition(battlefield);
-            int subRow = coordinates[0];
-            int subCol = coordinates[1];
-            battlefield[subRow, subCol] = "-"; //we will move submarine
-
-            int mineHits = 0;
-            int targetHits = 0;
-
+            int hits = 0;
+            int destroyed = 0;
             while (true)
             {
                 string cmd = Console.ReadLine();
 
-                if (cmd == "up")
+                switch (cmd)
                 {
-                    if (CheckCoordinates(battlefield, --subRow, subCol))
-                    {
-                        if (battlefield[subRow, subCol] == "*")
-                            mineHits++;
-
-                        else if (battlefield[subRow, subCol] == "C")
-                            targetHits++;
-
-                        battlefield[subRow, subCol] = "-";
-                    }
-
-                    else
-                        subRow++;
-                }
-
-                else if (cmd == "right")
-                {
-                    if (CheckCoordinates(battlefield, subRow, ++subCol))
-                    {
-                        if (battlefield[subRow, subCol] == "*")
-                            mineHits++;
-
-                        else if (battlefield[subRow, subCol] == "C")
-                            targetHits++;
-
-                        battlefield[subRow, subCol] = "-";
-                    }
-
-                    else
-                        subCol++;
-                }
-
-                else if (cmd == "down")
-                {
-                    if (CheckCoordinates(battlefield, ++subRow, subCol))
-                    {
-                        if (battlefield[subRow, subCol] == "*")
-                            mineHits++;
-
-                        else if (battlefield[subRow, subCol] == "C")
-                            targetHits++;
-
-                        battlefield[subRow, subCol] = "-";
-                    }
-
-                    else
+                    case "up":
                         subRow--;
-                }
+                        if (OutOfRange(subRow, subCol, size))
+                            subRow++;
+                        break;
 
-                else if (cmd == "left")
-                {
-                    if (CheckCoordinates(battlefield, subRow, --subCol))
-                    {
-                        if (battlefield[subRow, subCol] == "*")
-                            mineHits++;
-
-                        else if (battlefield[subRow, subCol] == "C")
-                        {
-                            targetHits++;
-                        }
-
-                        battlefield[subRow, subCol] = "-";
-                    }
-
-                    else
+                    case "right":
                         subCol++;
+                        if (OutOfRange(subRow, subCol, size))
+                            subCol--;
+                        break;
+
+                    case "down":
+                        subRow++;
+                        if (OutOfRange(subRow, subCol, size))
+                            subRow--;
+                        break;
+
+                    case "left":
+                        subCol--;
+                        if (OutOfRange(subRow, subCol, size))
+                            subCol++;
+                        break;
                 }
 
-                if (mineHits == 3)
+                char currPosition = battlefield[subRow, subCol];
+
+                if (currPosition == '*')
+                    hits++;
+
+                else if (currPosition == 'C')
+                    destroyed++;
+
+                battlefield[subRow, subCol] = '-';
+
+                if (hits == 3)
                 {
                     Console.WriteLine($"Mission failed, U-9 disappeared! Last known coordinates [{subRow}, {subCol}]!");
-                    battlefield[subRow, subCol] = "S";//we are printing battlefield
-                    PrintBattlefield(battlefield);
-                    return;
+                    break;
                 }
 
-                if (targetHits == 3)
+                if (destroyed == 3)
                 {
                     Console.WriteLine("Mission accomplished, U-9 has destroyed all battle cruisers of the enemy!");
-                    battlefield[subRow, subCol] = "S";//we are printing battlefield
-                    PrintBattlefield(battlefield);
-                    return;
+                    break;
                 }
             }
+            battlefield[subRow, subCol] = 'S';
+            PrintBattlefield(battlefield);
         }
 
-        private static void PrintBattlefield(string[,] battlefield)
+        private static void PrintBattlefield(char[,] battlefield)
         {
             for (int row = 0; row < battlefield.GetLength(0); row++)
             {
-                for (int col = 0; col < battlefield.GetLength(1); col++)
+                for (int col = 0; col < battlefield.GetLength(0); col++)
                 {
                     Console.Write(battlefield[row, col]);
                 }
@@ -128,23 +100,9 @@
             }
         }
 
-        private static bool CheckCoordinates(string[,] wall, int subRow, int subCol)
+        private static bool OutOfRange(int row, int col, int size)
         {
-            return subRow < wall.GetLength(0) && subCol < wall.GetLength(1);
-        }
-
-        private static int[] FindSubmarinePosition(string[,] wall)
-        {
-            for (int row = 0; row < wall.GetLength(0); row++)
-            {
-                for (int col = 0; col < wall.GetLength(1); col++)
-                {
-                    if (wall[row, col] == "S")
-                        return new int[2] { row, col };
-                }
-            }
-
-            return new int[2];
+            return row < 0 || row >= size || col < 0 || col >= size;
         }
     }
 }
