@@ -24,3 +24,4 @@ applying popular methodologies and good practices for writing code.
 - Data **encapsulation**
 - **Unit** Testing
 ### <h2> 📸My Certificate</h2>
+![C# OOP - February 2023 - Certificate](https://user-images.githubusercontent.com/109502170/231195083-684440e3-1746-4f2a-8cfc-1f29c8aafd10.jpeg)
