@@ -6,56 +6,41 @@ namespace T01.EnergyDrinks
 {
     internal class Program
     {
+        public const int maxCaffeine = 300;
         static void Main(string[] args)
         {
-            Stack<int> coffeine = new Stack<int>(Console.ReadLine()
-                .Split(", ", StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse)
-                .ToArray());
-            Queue<int> drinks = new Queue<int>(Console.ReadLine()
-                .Split(", ", StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse)
-                .ToArray());
+            int initial = 0;
 
-            int limit = 300;
-            int mgDrank = 0;
+            Stack<int> miligrams = new Stack<int>(Console.ReadLine().Split(", ").Select(int.Parse).ToArray());
+            Queue<int> drinks = new Queue<int>(Console.ReadLine().Split(", ").Select(int.Parse).ToArray());
 
             while (true)
             {
-                int sum = coffeine.Pop() * drinks.Peek();
+                int currCaffeine = miligrams.Pop() * drinks.Peek();
 
-                if (sum < limit && mgDrank < 300)
+                if (currCaffeine + initial <= maxCaffeine)
                 {
-                    mgDrank += sum;
-                    limit -= sum;
+                    initial += currCaffeine;
                     drinks.Dequeue();
                 }
 
                 else
                 {
-                    int currDrink = drinks.Dequeue();
-                    drinks.Enqueue(currDrink);
+                    drinks.Enqueue(drinks.Dequeue());
 
-                    if (mgDrank >= 30)
-                    {
-                        mgDrank -= 30;
-                    }
-                    limit += 30;
+                    initial = initial - 30 > 0 ? initial - 30 : 0;
                 }
 
-                if (drinks.Count == 0)
+                if (miligrams.Count == 0 || drinks.Count == 0)
                 {
-                    Console.WriteLine("At least Stamat wasn't exceeding the maximum caffeine.");
-                    break;
-                }
-
-                if (coffeine.Count == 0)
-                {
-                    Console.WriteLine($"Drinks left: {string.Join(", ", drinks)}");
                     break;
                 }
             }
-            Console.WriteLine($"Stamat is going to sleep with {mgDrank} mg caffeine.");
+
+            string output = drinks.Count > 0 ? $"Drinks left: {string.Join(", ", drinks)}"
+                : "At least Stamat wasn't exceeding the maximum caffeine.";
+            Console.WriteLine(output);
+            Console.WriteLine($"Stamat is going to sleep with {initial} mg caffeine.");
         }
     }
 }
