@@ -8,50 +8,58 @@ namespace ComputerArchitecture
 {
     public class Computer
     {
-        public Computer(string model, int capacity) 
+        private List<CPU> multiprocessor;
+
+        public Computer(string model, int capacity)
         {
             Model = model;
             Capacity = capacity;
-            Multiprocessor = new List<CPU>();
+            multiprocessor = new List<CPU>();
         }
 
-        public string Model { get;set; }
+        public string Model { get; }
 
-        public int Capacity { get; set; }
+        public int Capacity { get; }
 
-        public List<CPU> Multiprocessor { get; set; }
+        public List<CPU> Multiprocessor => multiprocessor;
 
-        public int Count => Multiprocessor.Count;
+        public int Count => multiprocessor.Count;
 
         public void Add(CPU cpu)
         {
-            if (Multiprocessor.Count < Capacity)
+            if(Capacity > Count)
             {
-                Multiprocessor.Add(cpu);
+                multiprocessor.Add(cpu);
             }
         }
 
         public bool Remove(string brand)
         {
-            bool exist = Multiprocessor.Any(x => x.Brand == brand);
-            Multiprocessor.RemoveAll(x => x.Brand == brand);
-            return exist;
+            CPU toRemove = multiprocessor.FirstOrDefault(p => p.Brand == brand);
+            return multiprocessor.Remove(toRemove);
         }
 
-        public CPU MostPowerful() => Multiprocessor.OrderByDescending(x => x.Frequency).First();
+        public CPU MostPowerful()
+        {
+            return multiprocessor.OrderByDescending(p => p.Frequency).FirstOrDefault();
+        }
 
-        public CPU GetCPU(string brand) => Multiprocessor.Find(x => x.Brand == brand);
+        public CPU GetCPU(string brand)
+        {
+            return multiprocessor.FirstOrDefault(p => p.Brand == brand);
+        }
 
         public string Report()
         {
-            StringBuilder output = new StringBuilder();
-            output.Append($"CPUs in the Computer {Model}:");
-            foreach (var cpu in Multiprocessor)
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"CPUs in the Computer {Model}:");
+            foreach(var cpu in multiprocessor)
             {
-                output.Append(Environment.NewLine + cpu.ToString());
+                sb.AppendLine(cpu.ToString());
             }
 
-            return output.ToString();
+            return sb.ToString().TrimEnd();
         }
     }
 }

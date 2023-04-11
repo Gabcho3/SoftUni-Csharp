@@ -6,10 +6,6 @@ namespace ComputerArchitecture
 {
     public class CPU
     {
-        private string brand;
-        private int cores;
-        private double frequency;
-
         public CPU(string brand, int cores, double frequency)
         {
             Brand = brand;
@@ -17,15 +13,20 @@ namespace ComputerArchitecture
             Frequency = frequency;
         }
 
-        public string Brand { get { return brand; } set { brand = value; } }
+        public string Brand { get; }
 
-        public int Cores { get { return cores; } set { cores = value; } }
+        public int Cores { get; }
 
-        public double Frequency { get { return frequency; } set { frequency = value; } }
+        public double Frequency { get; }
 
         public override string ToString()
         {
-            return $"{brand} CPU:\nCores: {cores}\nFrequency: {Frequency:f1} GHz";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{Brand} CPU:");
+            sb.AppendLine($"Cores: {Cores}");
+            sb.AppendLine($"Frequency: {Frequency:f1} GHz");
+
+            return sb.ToString().TrimEnd();
         }
     }
 }
