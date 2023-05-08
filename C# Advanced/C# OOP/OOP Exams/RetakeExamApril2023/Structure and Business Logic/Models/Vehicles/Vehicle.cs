@@ -76,7 +76,7 @@ namespace EDriveRent.Models.Vehicles
 
         public void Drive(double mileage)
         {
-            int percentage = (int)(this.MaxMileage / mileage);
+            int percentage = (int)(100 / (this.MaxMileage / mileage));
             batteryLevel -= percentage;
         }
 
@@ -87,7 +87,10 @@ namespace EDriveRent.Models.Vehicles
 
         public override string ToString()
         {
-            return $"{Brand} {Model} License plate: {LicensePlateNumber} Battery: {BatteryLevel}% Status: OK/damaged";
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"{Brand} {Model} License plate: {LicensePlateNumber} Battery: {BatteryLevel}% " + $"Status: ");
+            sb.Append(isDamaged == false ? "OK" : "damaged");
+            return sb.ToString().TrimEnd();
         }
     }
 }

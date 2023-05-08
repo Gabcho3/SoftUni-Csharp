@@ -7,7 +7,7 @@ using System.Text;
 
 namespace EDriveRent.Repositories
 {
-    internal class UserRepository : IRepository<IUser>
+    public class UserRepository : IRepository<IUser>
     {
         private List<IUser> users = new List<IUser>();
 
