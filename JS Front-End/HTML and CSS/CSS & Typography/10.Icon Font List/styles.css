@@ -1,0 +1,20 @@
+/* TODO: style the html */
+@import 'https://use.fontawesome.com/releases/v5.10.2/css/all.css';
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+}
+ul{
+    list-style-type: none;
+    font-size: 25px;
+}
+ul.check{
+    color: #2fcc71;
+}
+ul.star{
+    color: coral;
+}
+ul.contact{
+    color: #3498da;
+}
