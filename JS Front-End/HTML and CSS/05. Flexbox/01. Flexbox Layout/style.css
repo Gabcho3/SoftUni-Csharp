@@ -1,0 +1,43 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.site{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.site > * {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 10px 40px;
+    padding: 20px;
+}
+
+.site-header, .site-footer {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;   
+}
+
+.site-header {
+    margin-top: 40px;
+    height: 100px;
+}
+
+.site-main {
+    flex: 1 1 70%;
+    margin-right: 5px;
+    height: 275px;
+}
+
+.site-aside{
+    flex: 1 1 auto;
+    margin-left: 5px;
+}
+
+.site-footer {
+    height: 50px;
+}
