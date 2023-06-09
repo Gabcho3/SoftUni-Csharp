@@ -1,0 +1,29 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #b9b6b6;
+    margin: 40px;
+}
+body, ul, li{
+    display: flex;
+}
+ul{ 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+li{
+    background-color: white;
+    border: 6px solid black;
+    flex: 0 0 10em;
+    align-items: center;
+    padding: 10px 20px;
+}
+img{
+    width: 100%;
+    height: auto;
+}
