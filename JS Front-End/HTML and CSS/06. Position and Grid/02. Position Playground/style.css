@@ -1,0 +1,35 @@
+@import 'https://use.fontawesome.com/releases/v5.15.4/css/all.css';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.viewport{
+    height: 50vh;
+    position: relative; 
+    overflow: hidden;
+}
+.card{
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card img{
+    width: 100%;
+}
+body .viewport:first-child{
+    background-color: rgb(25, 201, 119);
+}
+body .viewport:nth-child(2){
+    background-color: rgb(108, 29, 235);
+}
+i{
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    color: white;
+    font-size: 20px;
+}
+
