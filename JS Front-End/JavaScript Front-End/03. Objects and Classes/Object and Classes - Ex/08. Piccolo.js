@@ -1,18 +1,16 @@
 function registerCarOnParkingLot(input){
     let carsOnParking = new Set();
-    for (let i = 0; i < input.length; i++) {
-        const element = input[i];
-        const [direction, carNumber] = element.split(', ');
+    input.forEach(entry => {
+        const [direction, carNumber] = entry.split(', ');
         switch(direction){
             case 'IN': carsOnParking.add(carNumber); break;
             case 'OUT': 
                 carsOnParking.delete(carNumber);
                 break;
         }
-    }
+    });
     carsOnParking = Array.from(carsOnParking).sort();
-    const output = carsOnParking.length > 0 ? carsOnParking.join('\n') : 'Parking Lot is Empty';
-    console.log(output);
+    console.log(carsOnParking.length > 0 ? carsOnParking.join('\n') : 'Parking Lot is Empty');
 }
 registerCarOnParkingLot(['IN, CA2844AA',
 'IN, CA1234TA',
