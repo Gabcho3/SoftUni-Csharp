@@ -3,7 +3,7 @@ function validate() {
 
   input.addEventListener("mouseout", (e) => {
     const inputText = input.value;
-    const regex = /([a-z]+\d+)(@[a-z]+)([.][a-z]+)/;
+    const regex = /([a-z]+|\d+)(@[a-z]+)([.][a-z]+)/;
 
     if (!regex.test(inputText)) {
       input.classList.add("error");
