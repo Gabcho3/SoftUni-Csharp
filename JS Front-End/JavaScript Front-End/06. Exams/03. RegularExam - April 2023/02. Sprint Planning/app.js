@@ -49,9 +49,17 @@ function solve() {
         } else if (key === "description") {
           element = createElement("p", ["task-card-description"], value);
         } else if (key === "points") {
-          element = createElement("div", ["task-card-points"], value);
+          element = createElement(
+            "div",
+            ["task-card-points"],
+            `Estimated at ${value} pts`
+          );
         } else if (key === "assignee") {
-          element = createElement("p", ["task-card-assignee"], value);
+          element = createElement(
+            "p",
+            ["task-card-assignee"],
+            `Assigned to: ${value}`
+          );
         }
         article.appendChild(element);
       }
