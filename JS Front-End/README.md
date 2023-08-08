@@ -23,4 +23,6 @@ It will be possible to work with the **DOM tree**, make manipulations on it and 
 - Basic **knowledge of building web pages**
 - Learning the **basics of typography**
 ### <h2> 📸My HTML & CSS Certificate</h2>
-### <h2> 📸My JavaScript Certificate</h2>
+### <h2> 📸My JavaScript Front-End Certificate</h2>
+![05  JS Front-End - June 2023 - Certificate](https://github.com/Gabcho3/SoftUni-Csharp/assets/109502170/f0a3d3a1-74ad-4286-90ed-44823830439b)
+
