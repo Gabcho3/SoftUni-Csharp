@@ -1,0 +1,38 @@
+.header-article{
+  background-color: #85DCFF;
+  display: flex;
+  gap: 30px;
+}
+.header-content{
+  margin: auto 140px;
+}
+.header-content *{
+  margin-bottom: 20px;
+}
+.header-content h1{
+  font-size: 1.4em;
+}
+.header-content p{
+  font-size: 10px;
+  line-height: 1.4em;
+}
+.header-buttons{
+  display: flex;
+  gap: 25px
+}
+.header-buttons a{
+  font-size: 12px;
+  padding: 10px 35px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.header-buttons a:first-child{
+  background-color: white;
+}
+.header-buttons a:last-child{
+  background-color: black;
+  color: white;
+}
+.header-article img{
+  margin-right: 50px;
+}

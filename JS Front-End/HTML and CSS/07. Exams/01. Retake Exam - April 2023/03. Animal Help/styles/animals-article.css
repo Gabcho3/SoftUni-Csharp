@@ -1,0 +1,45 @@
+.header-animals{
+  text-align: center;
+}
+.header-animals ul{
+  display: flex;
+  gap: 50px;
+  margin-inline: 50px;
+}
+.header-animals h1{
+  font-size: 30px;
+  font-weight: 900;
+}
+.header-animals p{
+  font-size: 12px;
+}
+.header-animals ul li img{
+  width: 100%;
+  height: auto;
+}
+
+.ourWork-cards h2{
+  text-align: center;
+  font-size: 18px;
+}
+.ourWork-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-inline: 70px;
+}
+.ourWork-card{
+  border: 1px solid #D2E8F1;
+  border-radius: 10px;
+}
+.ourWork-card h1{
+  background-color: #85DCFF;
+  font-size: 1.1em;
+  padding: 15px 20px;
+}
+.ourWork-card p{
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-inline: 20px;
+  line-height: 1.2em;
+}

@@ -1,0 +1,17 @@
+footer{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-inline: 40px;
+}
+footer ul{
+  display: flex;
+  gap: 10px;
+}
+footer i::before{
+  font-size: large;
+}
+footer p{
+  font-weight: 700;
+  font-size: 10px;
+}

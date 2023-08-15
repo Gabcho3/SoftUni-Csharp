@@ -1,0 +1,54 @@
+.main-article1{
+  margin-top: 15px;
+  text-align: center;
+}
+.main-header p{
+  font-size: 12px;
+  font-weight: 550;
+}
+main *{
+  margin-bottom: 30px;
+}
+.main-cards{
+  display: flex;
+  gap: 60px;
+  margin-inline: 60px;
+}
+.main-card i::before{
+  font-size: 7em;
+}
+
+.main-article2{
+  display: flex;
+  background-color: #85DCFF;
+  flex-direction: column;
+  align-items: center;
+}
+.main-article2 h1{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 16px;
+}
+.main-list{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+.main-list li{
+  display: flex;
+  width: 45%;;
+  font-size: 12px;
+}
+.main-list li i::before{
+  margin-right: 6px;
+}
+#work-btn{
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  font-weight: 100;
+  padding: 10px 35px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
