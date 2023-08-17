@@ -1,0 +1,59 @@
+#header-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 50px 10px;
+  font-size: 14px;
+  background-color: #D9D9D9;
+  align-items: center;
+
+  position: relative;
+  z-index: 2;
+}
+#header-nav ul{
+  display: flex;
+  gap: 20px;
+}
+#buy-btn{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 7px;
+}
+
+#site-header{
+  position: relative;
+  z-index: 1;
+}
+#site-header img{
+  position: absolute;
+  width: 100%;
+  top: -225px;
+}
+
+#header-content{
+  padding-top: 120px;
+  padding-left: 230px;
+}
+#header-content h1, #header-content p, #header-content a{
+  position: relative;
+}
+#header-content h1{
+  font-size: 38px;
+  padding-right: 700px;
+}
+#header-content p{
+  padding-top: 85px;
+  padding-right: 600px;
+  padding-bottom: 50px;
+  font-size: 16px;
+  color: white;
+}
+#header-content a{
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  padding: 15px 20px;
+}
+
+

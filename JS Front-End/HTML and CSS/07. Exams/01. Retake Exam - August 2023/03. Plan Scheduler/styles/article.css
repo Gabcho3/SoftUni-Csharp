@@ -1,0 +1,40 @@
+#main{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 35px 50px;
+  background-color: #D9D9D9;
+}
+.article-card{
+  display: flex;
+  gap: 20px;
+}
+
+#main img{
+  width: 455px;
+  height: 240px;
+}
+
+.article-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.article-content h2{
+  font-size: 14px;
+  color: #595959;
+}
+.article-content h3{
+  font-size: 24px;
+}
+.article-content p:nth-child(3){
+  font-size: 12px;
+}
+.article-content a{
+  margin-top: -30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.article-content p:last-child{
+  font-size: 12px;
+}
