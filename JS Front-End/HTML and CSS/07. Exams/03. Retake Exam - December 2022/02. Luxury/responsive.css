@@ -1,0 +1,75 @@
+@media(width <= 600px) {
+    body{width: 150%;}
+    div.div-header {display: none;}
+    header h3 {font-size: 13px;}
+    header h1 {font-size: 30px;}
+    button.button-header{
+      font-size: 10px;
+    }
+
+    section.options{flex-direction: column;}
+    section.options article{
+      width: 100%;
+      text-align: center;
+    }
+    section.options a{display: none;}
+    section.gallery{
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      width: 50%;
+    }
+    section.gallery a{display: none;}
+
+    div.blog-title h4 span, div.blog-title a{display: none;}
+    div.blog-title h4{
+      font-size: 28px;
+      margin-left: 20px;
+    }
+    section.blog img{display: none;}
+    section.blog article{display: block;}
+    section.blog #about-blog{
+      width: 80%;
+      margin-inline: 50px;
+    }
+    section.blog #about-blog p{font-size: 11.5px;}
+
+    div.magazine-title{padding-left: 60px;}
+    div.magazine-title a{display: none;}
+    div.magazine-title h4{
+      font-size: 18px;
+    }
+    section.magazine article{
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    div.magazine-info{
+      margin-inline: 60px;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    div.magazine-info h2{
+      font-size: 26px;
+      font-weight: 900;
+    }
+    div.magazine-info img{
+      width: 100%;
+    }
+    div.magazine-info p{
+      margin-top: 40px;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    footer{
+      flex-direction: column; 
+      gap: 5px;
+    }
+    div.icons{
+      display: flex;
+      gap: 3px;
+      flex-direction: column;
+    }
+}
