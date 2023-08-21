@@ -1,0 +1,106 @@
+.fees{
+  background-color: #54546D;
+  padding-top: 60px;
+}
+.fees svg{
+  position: absolute;
+  left: -80px;
+}
+.fees-content>h2{
+  text-align: center;
+  color: white;
+  font-weight: 200;
+  font-size: 26px;
+}
+
+.programs{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  position: relative;
+  top: 60px;
+}
+.program{
+  flex: 0 0 28.5%;
+  padding-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+.program h2{
+  font-size: 20px;
+}
+.program>p{
+  font-size: 14px;
+}
+.program>a{
+  background-color: #9A5DC6;
+  color: white;
+
+  width: 33%;
+  padding: 10px;
+  border-radius: 20px;
+  margin-block: 40px;
+  
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.program .free{
+  background-image: linear-gradient(#049C3E,#4AD57F);
+  color: white;
+  width: 100%;
+  padding-block: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+.program .free p:first-child{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.program .free p:last-child{
+  font-size: 14px;
+}
+
+
+.program.special h2{
+  margin-bottom: 20px;
+}
+.program.special .fee{
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+
+  border-radius: 0px 0px 10px 10px;
+}
+
+.program.special .card{
+  padding: 20px;
+}
+.program.special .card:first-child{
+  border-right: 2px solid white ;
+}
+.program.special .card p:first-child{
+  font-size: 18px;
+}
+.program.special .card p:last-child{
+  font-size: 12px;
+}
+
+#fee1{
+  background-image: linear-gradient(#4D6D8A, #6199CD);
+}
+#fee2{
+  background-image: linear-gradient(#4C39A7, #8677DC);
+}

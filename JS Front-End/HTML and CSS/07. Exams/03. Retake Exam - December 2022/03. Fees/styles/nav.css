@@ -1,0 +1,20 @@
+.home-nav{
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px 70px 10px;
+}
+.home-nav img{
+  width: 8%;
+  height: auto;
+  position: relative;
+  top: -10px;
+}
+.home-nav ul{
+  display: flex;
+  gap: 20px;
+}
+.home-nav li{
+  font-size: 12px;
+}
+

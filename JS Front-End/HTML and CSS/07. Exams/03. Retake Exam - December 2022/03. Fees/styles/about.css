@@ -1,0 +1,18 @@
+.about{
+  margin-inline: 80px;
+  margin-bottom: 100px;
+
+  display: flex;
+  gap: 20px
+}
+.about p:nth-child(2){
+  margin-bottom: 20px;
+}
+.about h3{
+  font-weight: 200;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.about img{
+  padding-top: 40px;
+}

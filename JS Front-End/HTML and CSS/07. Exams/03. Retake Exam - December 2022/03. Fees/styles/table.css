@@ -1,0 +1,38 @@
+main{
+  margin-inline: 160px;
+  margin-block: 150px 100px;
+}
+main p{
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+table{
+  margin-top: 40px;
+}
+table tr{
+  display: flex;
+  gap: 200px;
+
+  padding: 10px;
+}
+
+table tr:nth-child(odd){
+  background-color: #E6E6E6;
+}
+table tr:nth-child(even){
+  background-color: #F8F8F8;
+}
+
+table tr th{
+  font-weight: 200;
+}
+table tr th:first-child{
+  font-size: 14px;
+  width: 100%;
+  text-align: justify;
+}
+
+table tr th:last-child{
+  padding-right: 60px;
+}
