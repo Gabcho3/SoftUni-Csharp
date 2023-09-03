@@ -101,7 +101,7 @@ namespace VendingRetail.Tests
             coffeeMat.AddDrink("juice", 1);
             coffeeMat.BuyDrink("juice");
 
-            Assert.AreEqual(1, coffeeMat.Income);
+            Assert.AreEqual(1, coffeeMat.CollectIncome());
         }
     }
 }
