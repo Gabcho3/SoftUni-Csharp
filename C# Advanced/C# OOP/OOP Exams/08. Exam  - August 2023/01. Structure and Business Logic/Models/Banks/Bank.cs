@@ -11,8 +11,8 @@ namespace BankLoan.Models.Banks
     public abstract class Bank : IBank
     {
         private string name;
-        private List<ILoan> loans;
-        private List<IClient> clients;
+        private List<ILoan> loans = new();
+        private List<IClient> clients = new();
 
         protected Bank(string name,  int capacity)
         {
@@ -61,10 +61,10 @@ namespace BankLoan.Models.Banks
             sb.AppendLine($"Name: {this.Name}, Type: {this.GetType().Name}");
 
             string clientsOutput = clients.Count > 0
-                ? string.Join(',', clients.Select(c => c.Name).ToArray()) 
+                ? string.Join(", ", clients.Select(c => c.Name).ToArray()) 
                 : "none";
 
-            sb.AppendLine("Clients " +  clientsOutput);
+            sb.AppendLine("Clients: " +  clientsOutput);
 
             double sumOfRates = loans.Select(l => l.InterestRate).Sum();
             sb.AppendLine($"Loans: {loans.Count}, Sum of Rates: {sumOfRates}");

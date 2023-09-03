@@ -8,6 +8,7 @@ namespace BankLoan.Models.Clients
 {
     public class Adult : Client
     {
+        //This class will be only accepted in combination with CentralBank
         private const int interest = 4;
         public Adult(string name, string id, double income)
             : base(name, id, interest, income) { }
