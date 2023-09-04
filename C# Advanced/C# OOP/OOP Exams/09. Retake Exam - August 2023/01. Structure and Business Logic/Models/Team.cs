@@ -36,8 +36,17 @@ namespace Handball.Models
 
         public int PointsEarned { get; private set; }
 
-        public double OverallRating 
-            => Math.Round(players.Select(p => p.Rating).Average(), 2);
+        public double OverallRating
+        {
+            get
+            {
+                if (players.Count == 0)
+                {
+                    return 0; 
+                }
+                return Math.Round(players.Select(p => p.Rating).Average(), 1);
+            }
+        }
 
         public IReadOnlyCollection<IPlayer> Players => players;
 
@@ -63,8 +72,8 @@ namespace Handball.Models
             string playersNames = players.Count > 0 ? string.Join(", ", players.Select(p => p.Name)) : "none";
 
             sb.AppendLine($"Team: {Name} Points: {PointsEarned}");
-            sb.AppendLine($"--Overall rating + {OverallRating}");
-            sb.AppendLine("Players: " + playersNames);
+            sb.AppendLine($"--Overall rating: {OverallRating}");
+            sb.AppendLine("--Players: " + playersNames);
 
             return sb.ToString().Trim();
         }

@@ -19,6 +19,10 @@ namespace Handball.Models.Players
             {
                 this.Rating += 1.25;
             }
+            else
+            {
+                this.Rating = 10;
+            }
         }
 
         public override void DecreaseRating()
@@ -26,6 +30,10 @@ namespace Handball.Models.Players
             if (this.Rating - 0.75 >= 1)
             {
                 this.Rating -= 0.75;
+            }
+            else
+            {
+                this.Rating = 1;
             }
         }
     }

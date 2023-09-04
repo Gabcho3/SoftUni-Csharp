@@ -46,7 +46,7 @@ namespace Handball.Models.Players
         {
             return $"{this.GetType().Name}: {Name}" 
                    + Environment.NewLine 
-                   + $"Rating: {Rating}";
+                   + $"--Rating: {Rating}";
         }
     }
 }
