@@ -1,11 +1,14 @@
 CREATE TABLE [Users] (
-	Id INT PRIMARY KEY IDENTITY,
+	Id INT IDENTITY,
 	Username VARCHAR(30) NOT NULL,
-	Password CHAR(26) NOT NULL,
+	Password VARCHAR(26) NOT NULL,
 	ProfilePicture IMAGE,
 	LastLoginTime DATETIME,
-	IsDeleated BIT,
+	IsDeleated BIT
 );
+
+ALTER TABLE [Users]
+	ADD CONSTRAINT PK_Users PRIMARY KEY(Id);
 
 INSERT INTO [Users] VALUES
 	('user1', 'pass1', NULL, NULL, 'False'),
