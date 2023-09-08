@@ -100,7 +100,7 @@ CREATE TABLE [Payments](
 	LastDateOccupied DATE NOT NULL, 
 	TotalDays INT NOT NULL, 
 	AmountCharged DECIMAL(6, 2) NOT NULL, 
-	TaxRate INT DEFAULT(0.20), 
+	TaxRate DECIMAL(3, 2) DEFAULT(0.20), 
 	TaxAmount DECIMAL(6, 2),
 	PaymentTotal DECIMAL(6, 2),
 	Notes TEXT,
