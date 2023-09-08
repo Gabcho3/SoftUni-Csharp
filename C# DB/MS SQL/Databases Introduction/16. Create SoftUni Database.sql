@@ -1,0 +1,41 @@
+CREATE DATABASE [SoftUni];
+
+GO
+
+USE [SoftUni]
+
+CREATE TABLE [Towns](
+	Id INT IDENTITY,
+	Name VARCHAR(20) NOT NULL
+
+	CONSTRAINT PK_Towns PRIMARY KEY(Id)
+);
+
+CREATE TABLE [Addresses](
+	Id INT IDENTITY,
+	AddressText TEXT, 
+	TownId INT REFERENCES [Towns]([Id])
+
+	CONSTRAINT PK_Addresses PRIMARY KEY(Id)
+);
+
+CREATE TABLE [Departments](
+	Id INT IDENTITY,
+	Name VARCHAR(20) NOT NULL
+
+	CONSTRAINT PK_Departments PRIMARY KEY(Id)
+);
+
+CREATE TABLE [Employees](
+	Id INT IDENTITY, 
+	FirstName VARCHAR(20) NOT NULL, 
+	MiddleName VARCHAR(20) NOT NULL, 
+	LastName VARCHAR(20) NOT NULL, 
+	JobTitle VARCHAR(20) NOT NULL, 
+	DepartmentId INT REFERENCES [Departments]([Id]), 
+	HireDate DATE NOT NULL, 
+	Salary DECIMAL(6, 2) NOT NULL, 
+	--AddressId INT REFERENCES [Addresses]([Id])
+
+	CONSTRAINT PK_Employees PRIMARY KEY(Id)
+);
