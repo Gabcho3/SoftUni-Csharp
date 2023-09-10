@@ -1,6 +1,6 @@
 CREATE TABLE Passports(
 	PassportId INT PRIMARY KEY IDENTITY(101, 1),
-	PassportNumber CHAR(8)
+	PassportNumber CHAR(8) UNIQUE
 );
 
 INSERT INTO Passports 
@@ -10,9 +10,9 @@ VALUES
 	('ZE657QP2');
 
 CREATE TABLE Persons(
-	PersonId INT PRIMARY KEY IDENTITY,
+	PersonId INT IDENTITY,
 	FirstName VARCHAR(20),
-	Salary DECIMAL(7, 2),
+	Salary DECIMAL(7, 2) NOT NULL,
 	PassportId INT REFERENCES [Passports](PassportId)
 );
 
