@@ -1,0 +1,4 @@
+SELECT COUNT(EmployeeId)
+FROM Employees
+WHERE ManagerID IS NULL
+GROUP BY ManagerID;
