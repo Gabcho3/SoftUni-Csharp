@@ -1,6 +1,6 @@
 CREATE DATABASE Accounting;
 
-GO;
+GO
 
 CREATE TABLE Countries(
 	Id INT PRIMARY KEY IDENTITY,
