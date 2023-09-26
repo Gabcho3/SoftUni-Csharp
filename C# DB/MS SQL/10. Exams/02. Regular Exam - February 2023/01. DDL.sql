@@ -2,6 +2,8 @@ CREATE DATABASE Boardgames;
 
 GO
 
+USE Boardgames;
+
 CREATE TABLE Categories(
 	Id INT PRIMARY KEY IDENTITY,
 	[Name] VARCHAR(50) NOT NULL
@@ -26,8 +28,8 @@ CREATE TABLE Publishers(
 
 CREATE TABLE PlayersRanges(
 	Id INT PRIMARY KEY IDENTITY,
-	PlayerMin INT NOT NULL,
-	PlayerMax INT NOT NULL
+	PlayersMin INT NOT NULL,
+	PlayersMax INT NOT NULL
 );
 
 CREATE TABLE Boardgames(
