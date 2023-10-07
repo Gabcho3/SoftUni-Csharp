@@ -75,6 +75,9 @@ SELECT Name FROM Villains WHERE Id = @villainId
 DELETE FROM MinionsVillains 
       WHERE VillainId = @villainId
 
+SELECT COUNT(MinionId) FROM MinionsVillains 
+	WHERE VillainId = @villainId
+
 DELETE FROM Villains
       WHERE Id = @villainId
 
