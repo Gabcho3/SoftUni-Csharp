@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Entity Framework Introduction", "02. Entity Framework Introduction\02. Entity Framework Introduction.csproj", "{935C6F42-08DE-48DB-963E-BE283C604CD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Employees Full Information", "03. Employees Full Information\03. Employees Full Information.csproj", "{3A15CF2E-F6FC-40BC-A9B5-6E1612EE9ED6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Employees Full Information", "03. Employees Full Information\03. Employees Full Information.csproj", "{3A15CF2E-F6FC-40BC-A9B5-6E1612EE9ED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Employees with Salary Over 50 000", "04. Employees with Salary Over 50 000\04. Employees with Salary Over 50 000.csproj", "{700094FA-1DC4-4BDB-8F5A-98EF29685F4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3A15CF2E-F6FC-40BC-A9B5-6E1612EE9ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A15CF2E-F6FC-40BC-A9B5-6E1612EE9ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A15CF2E-F6FC-40BC-A9B5-6E1612EE9ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{700094FA-1DC4-4BDB-8F5A-98EF29685F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700094FA-1DC4-4BDB-8F5A-98EF29685F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700094FA-1DC4-4BDB-8F5A-98EF29685F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700094FA-1DC4-4BDB-8F5A-98EF29685F4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
