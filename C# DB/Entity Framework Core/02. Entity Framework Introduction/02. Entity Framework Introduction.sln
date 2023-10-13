@@ -9,19 +9,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Employees with Salary O
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Database First", "02. Database First\02. Database First.csproj", "{BCCC2545-061F-4CC6-A0B4-52D12E453185}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Employees", "05. Employees\05. Employees.csproj", "{26397A99-5A8E-4F75-A20D-5EF8CFE6ABF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Employees from Research and Development", "05. Employees\05. Employees from Research and Development.csproj", "{26397A99-5A8E-4F75-A20D-5EF8CFE6ABF5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Adding", "06. Adding\06. Adding.csproj", "{60AB384C-86D2-4893-B4D3-6E1DAAC3A548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Adding a New Address and Updating Employee", "06. Adding\06. Adding a New Address and Updating Employee.csproj", "{60AB384C-86D2-4893-B4D3-6E1DAAC3A548}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Projects", "07. Projects\07. Projects.csproj", "{10965B46-A72C-4CBD-8CF1-9C16D3A6065A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Employees and Projects", "07. Projects\07. Employees and Projects.csproj", "{10965B46-A72C-4CBD-8CF1-9C16D3A6065A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Addresses", "08. Addresses\08. Addresses.csproj", "{8BFE8BD5-4F5A-4A18-B45E-87FCD1A22176}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Addresses by Town", "08. Addresses\08. Addresses by Town.csproj", "{8BFE8BD5-4F5A-4A18-B45E-87FCD1A22176}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Employee 147", "09. Employee 147\09. Employee 147.csproj", "{A5A22558-BEC8-4649-B7F2-6F69EF51BE41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Employee 147", "09. Employee 147\09. Employee 147.csproj", "{A5A22558-BEC8-4649-B7F2-6F69EF51BE41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Departments", "10. Departments\10. Departments.csproj", "{44F69ED4-4F2A-410D-A46A-549B1D471FB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10. Departments with More Than 5 Employees", "10. Departments\10. Departments with More Than 5 Employees.csproj", "{44F69ED4-4F2A-410D-A46A-549B1D471FB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Last10 Projects", "11. Last10 Projects\11. Last10 Projects.csproj", "{5C71270B-F4C2-4E36-85AB-2F7D1D9890C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11. Find Latest 10 Projects", "11. Last10 Projects\11. Find Latest 10 Projects.csproj", "{5C71270B-F4C2-4E36-85AB-2F7D1D9890C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. Increase Salaries", "12. Salaries\12. Increase Salaries.csproj", "{13B4A5FB-DB5A-429C-A295-1605407514D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{5C71270B-F4C2-4E36-85AB-2F7D1D9890C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C71270B-F4C2-4E36-85AB-2F7D1D9890C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C71270B-F4C2-4E36-85AB-2F7D1D9890C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13B4A5FB-DB5A-429C-A295-1605407514D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13B4A5FB-DB5A-429C-A295-1605407514D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13B4A5FB-DB5A-429C-A295-1605407514D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13B4A5FB-DB5A-429C-A295-1605407514D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
