@@ -13,15 +13,14 @@ namespace SoftUni
         {
             var context = new SoftUniContext();
             string output = GetEmployeesByFirstNameStartingWithSa(context);
-;            Console.WriteLine(output);
+;           Console.WriteLine(output);
         }
 
         public static string GetEmployeesByFirstNameStartingWithSa(SoftUniContext context)
         {
-            string startsWithString = "sa";
-
+            string stringStartWith = "Sa";
             var employees = context.Employees
-                .Where(e => e.FirstName.StartsWith(startsWithString))
+                .Where(e => e.FirstName.StartsWith(stringStartWith))
                 .Select(e => new
                 {
                     FirstName = e.FirstName!,
