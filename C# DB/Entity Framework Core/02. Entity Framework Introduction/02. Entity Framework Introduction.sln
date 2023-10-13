@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Employees from Research
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12. Increase Salaries", "12. Increase Salaries\12. Increase Salaries.csproj", "{A5046822-C471-4937-9A66-473B46EF5343}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13. Starts With Sa", "13. Starts With Sa\13. Starts With Sa.csproj", "{CD83F798-151A-4140-8D9C-DBFFA6C599A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13. Starts With Sa", "13. Starts With Sa\13. Starts With Sa.csproj", "{CD83F798-151A-4140-8D9C-DBFFA6C599A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14. Delete by Id", "14. Delete by Id\14. Delete by Id.csproj", "{3BA391E5-AC9D-4F7F-9724-10C7A7B23394}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14. Delete by Id", "14. Delete by Id\14. Delete by Id.csproj", "{3BA391E5-AC9D-4F7F-9724-10C7A7B23394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15. Remove Town", "15. Remove Town\15. Remove Town.csproj", "{2169CF87-A117-4736-84D4-5C3849854EF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{3BA391E5-AC9D-4F7F-9724-10C7A7B23394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BA391E5-AC9D-4F7F-9724-10C7A7B23394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BA391E5-AC9D-4F7F-9724-10C7A7B23394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2169CF87-A117-4736-84D4-5C3849854EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2169CF87-A117-4736-84D4-5C3849854EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2169CF87-A117-4736-84D4-5C3849854EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2169CF87-A117-4736-84D4-5C3849854EF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
