@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Student System", "01. S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Football Betting", "02. Football Betting\02. Football Betting.csproj", "{19803C59-81BB-4BCD-B7A2-CB2D46DD5119}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_StudentSystem (With Attributes)", "P01_StudentSystem (With Attributes)\P01_StudentSystem (With Attributes).csproj", "{C8B8B457-3584-4E8E-8F48-5A309C93CFBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{19803C59-81BB-4BCD-B7A2-CB2D46DD5119}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19803C59-81BB-4BCD-B7A2-CB2D46DD5119}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19803C59-81BB-4BCD-B7A2-CB2D46DD5119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8B8B457-3584-4E8E-8F48-5A309C93CFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8B8B457-3584-4E8E-8F48-5A309C93CFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8B8B457-3584-4E8E-8F48-5A309C93CFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8B8B457-3584-4E8E-8F48-5A309C93CFBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
