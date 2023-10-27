@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Age Restriction", "02. Age Restriction\02. Age Restriction.csproj", "{D93C4E36-62E7-4892-8250-5E070D3202C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Age Restriction", "02. Age Restriction\02. Age Restriction.csproj", "{D93C4E36-62E7-4892-8250-5E070D3202C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Golden Books", "03. Golden Books\03. Golden Books.csproj", "{5163FB5C-03C8-44CC-84D0-768367D5F2D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D93C4E36-62E7-4892-8250-5E070D3202C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D93C4E36-62E7-4892-8250-5E070D3202C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D93C4E36-62E7-4892-8250-5E070D3202C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5163FB5C-03C8-44CC-84D0-768367D5F2D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5163FB5C-03C8-44CC-84D0-768367D5F2D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5163FB5C-03C8-44CC-84D0-768367D5F2D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5163FB5C-03C8-44CC-84D0-768367D5F2D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
