@@ -5,13 +5,15 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Age Restriction", "02. Age Restriction\02. Age Restriction.csproj", "{D93C4E36-62E7-4892-8250-5E070D3202C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Golden Books", "03. Golden Books\03. Golden Books.csproj", "{5163FB5C-03C8-44CC-84D0-768367D5F2D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Golden Books", "03. Golden Books\03. Golden Books.csproj", "{5163FB5C-03C8-44CC-84D0-768367D5F2D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Books by Price", "04. Books by Price\04. Books by Price.csproj", "{573F4979-2F4E-4FE2-887C-035BA3A14716}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Books by Price", "04. Books by Price\04. Books by Price.csproj", "{573F4979-2F4E-4FE2-887C-035BA3A14716}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Not Released In", "05. Not Released In\05. Not Released In.csproj", "{27BDB872-893F-45AA-867A-D459490C1821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Not Released In", "05. Not Released In\05. Not Released In.csproj", "{27BDB872-893F-45AA-867A-D459490C1821}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Book Titles by Category", "06. Book Titles by Category\06. Book Titles by Category.csproj", "{2B7889D8-2FAF-4ABC-8842-31F2484EE6A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Book Titles by Category", "06. Book Titles by Category\06. Book Titles by Category.csproj", "{2B7889D8-2FAF-4ABC-8842-31F2484EE6A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Released Before Date", "07. Released Before Date\07. Released Before Date.csproj", "{48078A5F-5EA8-4E2F-B683-02BA58757850}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2B7889D8-2FAF-4ABC-8842-31F2484EE6A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B7889D8-2FAF-4ABC-8842-31F2484EE6A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B7889D8-2FAF-4ABC-8842-31F2484EE6A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48078A5F-5EA8-4E2F-B683-02BA58757850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48078A5F-5EA8-4E2F-B683-02BA58757850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48078A5F-5EA8-4E2F-B683-02BA58757850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48078A5F-5EA8-4E2F-B683-02BA58757850}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
