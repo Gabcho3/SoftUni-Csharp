@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13. Profit by Category", "1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14. Most Recent Books", "14. Most Recent Books\14. Most Recent Books.csproj", "{074087B7-6A97-429C-8284-6BA19DCE73B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15. Increase Prices", "15. Increase Prices\15. Increase Prices.csproj", "{46BE5129-9C86-4C7C-BAB6-09656D387ECC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{074087B7-6A97-429C-8284-6BA19DCE73B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{074087B7-6A97-429C-8284-6BA19DCE73B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{074087B7-6A97-429C-8284-6BA19DCE73B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46BE5129-9C86-4C7C-BAB6-09656D387ECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46BE5129-9C86-4C7C-BAB6-09656D387ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46BE5129-9C86-4C7C-BAB6-09656D387ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46BE5129-9C86-4C7C-BAB6-09656D387ECC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
