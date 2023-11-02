@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Import Users", "01. Import Users\01. Import Users.csproj", "{FF66428C-6421-4112-90AC-7FD3CCC34900}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Import Products", "02. Import Products\02. Import Products.csproj", "{F0F07C91-AFAC-4950-9CED-860F8A0CDB74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FF66428C-6421-4112-90AC-7FD3CCC34900}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF66428C-6421-4112-90AC-7FD3CCC34900}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF66428C-6421-4112-90AC-7FD3CCC34900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0F07C91-AFAC-4950-9CED-860F8A0CDB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0F07C91-AFAC-4950-9CED-860F8A0CDB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0F07C91-AFAC-4950-9CED-860F8A0CDB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0F07C91-AFAC-4950-9CED-860F8A0CDB74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
