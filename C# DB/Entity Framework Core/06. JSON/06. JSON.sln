@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Import Products", "02. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Import Categories", "03. Import Categories\03. Import Categories.csproj", "{EC83AEDD-32E9-4248-9B4C-08703E49DB41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Import Categories and Products", "04. Import Categories and Products\04. Import Categories and Products.csproj", "{37C1593E-2DAE-4CA5-8D34-1315900E2653}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EC83AEDD-32E9-4248-9B4C-08703E49DB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC83AEDD-32E9-4248-9B4C-08703E49DB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC83AEDD-32E9-4248-9B4C-08703E49DB41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37C1593E-2DAE-4CA5-8D34-1315900E2653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C1593E-2DAE-4CA5-8D34-1315900E2653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C1593E-2DAE-4CA5-8D34-1315900E2653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C1593E-2DAE-4CA5-8D34-1315900E2653}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
