@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Export Sold Products", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Export Categories By Products Count", "07. Export Categories By Products Count\07. Export Categories By Products Count.csproj", "{D458A7D7-FF08-4FAD-9601-2207AC75299A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Export Users and Products", "08. Export Users and Products\08. Export Users and Products.csproj", "{F98DDC6C-B412-40F2-A855-515F7E455C20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{D458A7D7-FF08-4FAD-9601-2207AC75299A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D458A7D7-FF08-4FAD-9601-2207AC75299A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D458A7D7-FF08-4FAD-9601-2207AC75299A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F98DDC6C-B412-40F2-A855-515F7E455C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F98DDC6C-B412-40F2-A855-515F7E455C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F98DDC6C-B412-40F2-A855-515F7E455C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F98DDC6C-B412-40F2-A855-515F7E455C20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
