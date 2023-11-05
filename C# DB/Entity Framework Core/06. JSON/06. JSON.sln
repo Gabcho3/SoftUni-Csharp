@@ -15,15 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Export Products In Rang
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Export Sold Products", "06. Export Sold Products\06. Export Sold Products.csproj", "{50B471B2-EA04-405B-9255-FD20F4B6656E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Export Categories By Products Count", "07. Export Categories By Products Count\07. Export Categories By Products Count.csproj", "{D458A7D7-FF08-4FAD-9601-2207AC75299A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Export Categories By Products Count", "07. Export Categories By Products Count\07. Export Categories By Products Count.csproj", "{D458A7D7-FF08-4FAD-9601-2207AC75299A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Export Users and Products", "08. Export Users and Products\08. Export Users and Products.csproj", "{F98DDC6C-B412-40F2-A855-515F7E455C20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Export Users and Products", "08. Export Users and Products\08. Export Users and Products.csproj", "{F98DDC6C-B412-40F2-A855-515F7E455C20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Import Suppliers", "09. Import Suppliers\09. Import Suppliers.csproj", "{D49B07BE-58D2-466F-BAEC-EE2131D222E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Import Suppliers", "09. Import Suppliers\09. Import Suppliers.csproj", "{D49B07BE-58D2-466F-BAEC-EE2131D222E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Import Parts", "10. Import Parts\10. Import Parts.csproj", "{735B4BA7-E6B2-4DF8-9E66-1DFCDE9F119E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10. Import Parts", "10. Import Parts\10. Import Parts.csproj", "{735B4BA7-E6B2-4DF8-9E66-1DFCDE9F119E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Import Cars", "11. Import Cars\11. Import Cars.csproj", "{8F4F2736-00FF-4FAC-A36B-E480E667768C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11. Import Cars", "11. Import Cars\11. Import Cars.csproj", "{8F4F2736-00FF-4FAC-A36B-E480E667768C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. Import Customers", "12. Import Customers\12. Import Customers.csproj", "{A09EFF9E-3AEA-4CB8-8EC6-16A63527F65A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{8F4F2736-00FF-4FAC-A36B-E480E667768C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F4F2736-00FF-4FAC-A36B-E480E667768C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F4F2736-00FF-4FAC-A36B-E480E667768C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A09EFF9E-3AEA-4CB8-8EC6-16A63527F65A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A09EFF9E-3AEA-4CB8-8EC6-16A63527F65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A09EFF9E-3AEA-4CB8-8EC6-16A63527F65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A09EFF9E-3AEA-4CB8-8EC6-16A63527F65A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
