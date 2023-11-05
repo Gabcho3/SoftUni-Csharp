@@ -73,7 +73,7 @@ namespace CarDealer
             }
             context.SaveChanges();
 
-            return $"Successfully imported {context.PartsCars.Count()}.";
+            return $"Successfully imported {context.Cars.Count()}.";
         }
     }
 }
