@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. Import Customers", "12.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13. Import Sales", "13. Import Sales\13. Import Sales.csproj", "{28E77249-2220-489F-BF34-21CD8AEADB95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14. Export Ordered Customers", "14. Export Ordered Customers\14. Export Ordered Customers.csproj", "{26CE2DDA-5134-4826-8A94-913C498E278B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{28E77249-2220-489F-BF34-21CD8AEADB95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28E77249-2220-489F-BF34-21CD8AEADB95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28E77249-2220-489F-BF34-21CD8AEADB95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26CE2DDA-5134-4826-8A94-913C498E278B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26CE2DDA-5134-4826-8A94-913C498E278B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26CE2DDA-5134-4826-8A94-913C498E278B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26CE2DDA-5134-4826-8A94-913C498E278B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
