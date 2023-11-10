@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Import Users", "01. Import Users\01. Import Users.csproj", "{CC212752-75AB-40C7-8904-DEF5F95F1D71}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Import Products", "02. Import Products\02. Import Products.csproj", "{942DEA0F-953C-44F3-B083-ABFF1FADF406}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC212752-75AB-40C7-8904-DEF5F95F1D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC212752-75AB-40C7-8904-DEF5F95F1D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC212752-75AB-40C7-8904-DEF5F95F1D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC212752-75AB-40C7-8904-DEF5F95F1D71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{942DEA0F-953C-44F3-B083-ABFF1FADF406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{942DEA0F-953C-44F3-B083-ABFF1FADF406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{942DEA0F-953C-44F3-B083-ABFF1FADF406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{942DEA0F-953C-44F3-B083-ABFF1FADF406}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D38C5D55-E7B8-4E4B-B9A0-03193D9B5D04}
+	EndGlobalSection
+EndGlobal
