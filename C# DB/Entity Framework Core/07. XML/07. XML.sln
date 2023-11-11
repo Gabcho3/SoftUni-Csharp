@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Import Users", "01. Imp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Import Products", "02. Import Products\02. Import Products.csproj", "{942DEA0F-953C-44F3-B083-ABFF1FADF406}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Import Categories", "03. Import Categories\03. Import Categories.csproj", "{70D52C60-A3D2-4957-A81E-C4F937E3539B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Import Categories", "03. Import Categories\03. Import Categories.csproj", "{70D52C60-A3D2-4957-A81E-C4F937E3539B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Import Categories and Products", "04. Import Categories and Products\04. Import Categories and Products.csproj", "{675B7E5C-FBF4-4E60-9458-449459E2A67B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Import Categories and Products", "04. Import Categories and Products\04. Import Categories and Products.csproj", "{675B7E5C-FBF4-4E60-9458-449459E2A67B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Export Products In Range", "05. Export Products In Range\05. Export Products In Range.csproj", "{31F3A5CF-8D99-41EA-BCB3-8EF529A07240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Export Products In Range", "05. Export Products In Range\05. Export Products In Range.csproj", "{31F3A5CF-8D99-41EA-BCB3-8EF529A07240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Export Sold Products", "06. Export Sold Products\06. Export Sold Products.csproj", "{98BE1050-599D-4B34-91C5-CDA4A4B7D279}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Export Sold Products", "06. Export Sold Products\06. Export Sold Products.csproj", "{98BE1050-599D-4B34-91C5-CDA4A4B7D279}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Export Categories By Products Count", "07. Export Categories By Products Count\07. Export Categories By Products Count.csproj", "{1843B030-39D2-46F5-BEC6-04714A9FEFD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{98BE1050-599D-4B34-91C5-CDA4A4B7D279}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98BE1050-599D-4B34-91C5-CDA4A4B7D279}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98BE1050-599D-4B34-91C5-CDA4A4B7D279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1843B030-39D2-46F5-BEC6-04714A9FEFD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1843B030-39D2-46F5-BEC6-04714A9FEFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1843B030-39D2-46F5-BEC6-04714A9FEFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1843B030-39D2-46F5-BEC6-04714A9FEFD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
