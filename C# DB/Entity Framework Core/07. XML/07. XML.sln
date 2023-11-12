@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Export Categories By Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Export Users and Products", "08. Export Users and Products\08. Export Users and Products.csproj", "{2C28501B-7261-4F05-A5A0-5ECB14037842}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Import Suppliers", "09. Import Suppliers\09. Import Suppliers.csproj", "{7C7AB8A5-1A13-4239-81EA-A5679FAB47A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Import Suppliers", "09. Import Suppliers\09. Import Suppliers.csproj", "{7C7AB8A5-1A13-4239-81EA-A5679FAB47A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Import Parts", "10. Import Parts\10. Import Parts.csproj", "{BACD924E-FAEA-4927-8486-C094B0B82C56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10. Import Parts", "10. Import Parts\10. Import Parts.csproj", "{BACD924E-FAEA-4927-8486-C094B0B82C56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Import Cars", "11. Import Cars\11. Import Cars.csproj", "{9AC66D75-343C-466D-B5BC-B129CC18D683}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{BACD924E-FAEA-4927-8486-C094B0B82C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BACD924E-FAEA-4927-8486-C094B0B82C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BACD924E-FAEA-4927-8486-C094B0B82C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC66D75-343C-466D-B5BC-B129CC18D683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC66D75-343C-466D-B5BC-B129CC18D683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC66D75-343C-466D-B5BC-B129CC18D683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC66D75-343C-466D-B5BC-B129CC18D683}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
