@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Export Products In Rang
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Export Sold Products", "06. Export Sold Products\06. Export Sold Products.csproj", "{98BE1050-599D-4B34-91C5-CDA4A4B7D279}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Export Categories By Products Count", "07. Export Categories By Products Count\07. Export Categories By Products Count.csproj", "{1843B030-39D2-46F5-BEC6-04714A9FEFD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Export Categories By Products Count", "07. Export Categories By Products Count\07. Export Categories By Products Count.csproj", "{1843B030-39D2-46F5-BEC6-04714A9FEFD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Export Users and Products", "08. Export Users and Products\08. Export Users and Products.csproj", "{2C28501B-7261-4F05-A5A0-5ECB14037842}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Export Users and Products", "08. Export Users and Products\08. Export Users and Products.csproj", "{2C28501B-7261-4F05-A5A0-5ECB14037842}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Import Suppliers", "09. Import Suppliers\09. Import Suppliers.csproj", "{7C7AB8A5-1A13-4239-81EA-A5679FAB47A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{2C28501B-7261-4F05-A5A0-5ECB14037842}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C28501B-7261-4F05-A5A0-5ECB14037842}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C28501B-7261-4F05-A5A0-5ECB14037842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C7AB8A5-1A13-4239-81EA-A5679FAB47A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7AB8A5-1A13-4239-81EA-A5679FAB47A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7AB8A5-1A13-4239-81EA-A5679FAB47A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7AB8A5-1A13-4239-81EA-A5679FAB47A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
