@@ -25,6 +25,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10. Import Parts", "10. Imp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Import Cars", "11. Import Cars\11. Import Cars.csproj", "{9AC66D75-343C-466D-B5BC-B129CC18D683}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. Import Customers", "12. Import Customers\12. Import Customers.csproj", "{E970CF0E-D042-43E2-81A2-D1BB832347DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13. Import Sales", "13. Import Sales\13. Import Sales.csproj", "{DF940F9D-45DE-4A0E-8CA6-3B61C3715FE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{9AC66D75-343C-466D-B5BC-B129CC18D683}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AC66D75-343C-466D-B5BC-B129CC18D683}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AC66D75-343C-466D-B5BC-B129CC18D683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E970CF0E-D042-43E2-81A2-D1BB832347DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E970CF0E-D042-43E2-81A2-D1BB832347DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E970CF0E-D042-43E2-81A2-D1BB832347DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E970CF0E-D042-43E2-81A2-D1BB832347DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF940F9D-45DE-4A0E-8CA6-3B61C3715FE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF940F9D-45DE-4A0E-8CA6-3B61C3715FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF940F9D-45DE-4A0E-8CA6-3B61C3715FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF940F9D-45DE-4A0E-8CA6-3B61C3715FE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
