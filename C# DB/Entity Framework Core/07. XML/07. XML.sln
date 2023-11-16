@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "16. Export Local Suppliers"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "17. Export Cars With Their List Of Parts", "17. Export Cars With Their List Of Parts\17. Export Cars With Their List Of Parts.csproj", "{01C2248C-00E3-4C33-9216-773BA51317B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18. Export Total Sales By Customer", "18. Export Total Sales By Customer\18. Export Total Sales By Customer.csproj", "{0C871600-4EFF-4CA7-B39C-B981FB87724E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18. Export Total Sales By Customer", "18. Export Total Sales By Customer\18. Export Total Sales By Customer.csproj", "{0C871600-4EFF-4CA7-B39C-B981FB87724E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19. Export Sales With Applied Discount", "19. Export Sales With Applied Discount\19. Export Sales With Applied Discount.csproj", "{C6AB70E1-3034-4A3A-8F03-5225C0929CC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{0C871600-4EFF-4CA7-B39C-B981FB87724E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C871600-4EFF-4CA7-B39C-B981FB87724E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C871600-4EFF-4CA7-B39C-B981FB87724E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6AB70E1-3034-4A3A-8F03-5225C0929CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6AB70E1-3034-4A3A-8F03-5225C0929CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6AB70E1-3034-4A3A-8F03-5225C0929CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AB70E1-3034-4A3A-8F03-5225C0929CC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
