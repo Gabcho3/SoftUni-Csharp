@@ -16,16 +16,12 @@ namespace Invoices
 
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
 
-            //ExportEntities(context, projectDir + @"ExportResults/");
+            ExportEntities(context, projectDir + @"ExportResults/");
 
             using (var transaction = context.Database.BeginTransaction())
             {
                 transaction.Rollback();
             }
-
-            //string output = File.ReadAllText(@"../../../ImportResults/Actual Result - ImportClients.txt");
-            //string expectedOutput = File.ReadAllText(@"../../../ImportResults/Expected Result - ImportClients.txt");
-            //Console.WriteLine(output == expectedOutput);
         }
 
         private static void ImportEntities(InvoicesContext context, string baseDir, string exportDir)
