@@ -5,6 +5,11 @@ VisualStudioVersion = 17.7.34302.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Model Definition", "01. Model Definition\01. Model Definition.csproj", "{5391FE01-D5BA-43A6-8268-1C130383D8EA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Data Import", "02. Data Import\02. Data Import.csproj", "{00AB7DA2-8FCA-4CD8-B834-15A6535457C9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5391FE01-D5BA-43A6-8268-1C130383D8EA} = {5391FE01-D5BA-43A6-8268-1C130383D8EA}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{5391FE01-D5BA-43A6-8268-1C130383D8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5391FE01-D5BA-43A6-8268-1C130383D8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5391FE01-D5BA-43A6-8268-1C130383D8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00AB7DA2-8FCA-4CD8-B834-15A6535457C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00AB7DA2-8FCA-4CD8-B834-15A6535457C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00AB7DA2-8FCA-4CD8-B834-15A6535457C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00AB7DA2-8FCA-4CD8-B834-15A6535457C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
