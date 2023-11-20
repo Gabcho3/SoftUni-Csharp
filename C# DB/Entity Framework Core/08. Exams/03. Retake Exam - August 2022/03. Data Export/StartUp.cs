@@ -46,9 +46,9 @@
 
         private static void ExportEntities(TrucksContext context, string exportDir)
         {
-            //var ExportDespatchersWithTheirTrucks = DataProcessor.Serializer.ExportDespatchersWithTheirTrucks(context);
-            //Console.WriteLine(ExportDespatchersWithTheirTrucks);
-            //File.WriteAllText(exportDir + "Actual Result - ExportDespatchersWithTheirTrucks.xml", ExportDespatchersWithTheirTrucks);
+            var ExportDespatchersWithTheirTrucks = DataProcessor.Serializer.ExportDespatchersWithTheirTrucks(context);
+            Console.WriteLine(ExportDespatchersWithTheirTrucks);
+            File.WriteAllText(exportDir + "Actual Result - ExportDespatchersWithTheirTrucks.xml", ExportDespatchersWithTheirTrucks);
 
             int tankCapacity = 1000;
             var ExportClientsWithMostTrucks = DataProcessor.Serializer.ExportClientsWithMostTrucks(context, tankCapacity);
