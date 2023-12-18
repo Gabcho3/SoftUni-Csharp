@@ -25,4 +25,6 @@ applying popular methodologies and **good** practices for writing code.
 ### <h2> 📸My MS SQL Certificate</h2>
 ![MS SQL - September 2023 - Certificate](https://github.com/Gabcho3/SoftUni-Csharp/assets/109502170/3a04214d-6606-4cd6-8db9-008cf26304c8)
 ### <h2> 📸My Entity Framework Core Certificate</h2>
+![07  Entity Framework Core October 2023](https://github.com/Gabcho3/SoftUni-Csharp/assets/109502170/c09bbcfe-7eb2-484d-b52e-e4d8a0fdaf78)
+
 
