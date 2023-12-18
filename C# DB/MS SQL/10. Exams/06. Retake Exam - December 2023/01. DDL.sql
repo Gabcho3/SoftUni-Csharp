@@ -49,3 +49,4 @@ CREATE TABLE Tickets(
 	TrainId INT REFERENCES Trains(Id),
 	PassengerId INT REFERENCES Passengers(Id)
 );
+
