@@ -4,7 +4,6 @@ using AutoMapper;
 using Footballers.Data.Models;
 using Footballers.DataProcessor.ImportDto;
 using Footballers.Utilities;
-using Microsoft.Data.SqlClient.Server;
 using Newtonsoft.Json;
 
 namespace Footballers.DataProcessor
@@ -25,33 +24,31 @@ namespace Footballers.DataProcessor
         public static string ImportCoaches(FootballersContext context, string xmlString)
         {
             var coachesDtos = XmlHelper.Deserialize<ImportCoachesDto[]>(xmlString, "Coaches");
-            var validCoaches = new HashSet<Coach>();
+            var validCoachesWithFootballers = new HashSet<Coach>();
 
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb  = new StringBuilder();
             foreach (var coachDto in coachesDtos)
             {
                 if (!IsValid(coachDto))
                 {
-                    sb.AppendLine(ErrorMessage);
+                    sb.AppendLine("Invalid data!");
                     continue;
                 }
 
-                int invalidFootballers = coachDto.Footballers.RemoveAll(f => !IsValid(f) ||
-                                                                             DateTime.Parse(f.ContractStartDate) >
-                                                                             DateTime.Parse(f.ContractEndDate));
-
+                int invalidFootballers = coachDto.Footballers
+                    .RemoveAll(dto => !IsValid(dto) || DateTime.Parse(dto.ContractEndDate) < DateTime.Parse(dto.ContractStartDate));
                 for (int i = 0; i < invalidFootballers; i++)
                 {
-                    sb.AppendLine(ErrorMessage);
+                    sb.AppendLine("Invalid data!");
                 }
 
                 Coach coach = AutoMapper.Map<Coach>(coachDto);
-                validCoaches.Add(coach);
+                validCoachesWithFootballers.Add(coach);
 
                 sb.AppendLine(string.Format(SuccessfullyImportedCoach, coach.Name, coach.Footballers.Count));
             }
 
-            context.Coaches.AddRange(validCoaches);
+            context.Coaches.AddRange(validCoachesWithFootballers);
             context.SaveChanges();
 
             return sb.ToString();
@@ -59,8 +56,45 @@ namespace Footballers.DataProcessor
 
         public static string ImportTeams(FootballersContext context, string jsonString)
         {
+            var teamsDtos = JsonConvert.DeserializeObject<ImportTeamDto[]>(jsonString);
+            var allFotballersIds = context.Footballers.Select(f => f.Id);
 
-            return string.Empty;
+            var validTeamWithFootballers = new HashSet<Team>();
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var teamDto in teamsDtos)
+            {
+                if (!IsValid(teamDto))
+                {
+                    sb.AppendLine(ErrorMessage);
+                    continue;
+                }
+
+                Team team = AutoMapper.Map<Team>(teamDto);
+
+                foreach (var id in teamDto.FootballersIds)
+                {
+                    if (!allFotballersIds.Contains(id))
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
+                    team.TeamsFootballers.Add(new TeamFootballer()
+                    {
+                        FootballerId = id,
+                        Team = team
+                    });
+                }
+
+                validTeamWithFootballers.Add(team);
+                sb.AppendLine(string.Format(SuccessfullyImportedTeam, team.Name, team.TeamsFootballers.Count));
+            }
+
+            context.Teams.AddRange(validTeamWithFootballers);
+            context.SaveChanges();
+
+            return sb.ToString();
         }
 
         private static bool IsValid(object dto)

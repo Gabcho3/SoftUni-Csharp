@@ -27,7 +27,7 @@ namespace Footballers
 
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
 
-            //ExportEntities(context, projectDir + @"ExportResults/");
+            ExportEntities(context, projectDir + @"ExportResults/");
 
             using (var transaction = context.Database.BeginTransaction())
             {
@@ -43,18 +43,18 @@ namespace Footballers
 
             PrintAndExportEntityToFile(coaches, exportDir + "Actual Result - ImportCoaches.txt");
 
-            //var teams =
-            // DataProcessor.Deserializer.ImportTeams(context,
-            //     File.ReadAllText(baseDir + "teams.json"));
+            var teams =
+             DataProcessor.Deserializer.ImportTeams(context,
+                 File.ReadAllText(baseDir + "teams.json"));
 
-            //PrintAndExportEntityToFile(teams, exportDir + "Actual Result - ImportTeams.txt");
+            PrintAndExportEntityToFile(teams, exportDir + "Actual Result - ImportTeams.txt");
         }
 
         private static void ExportEntities(FootballersContext context, string exportDir)
         {
-            var exportCoachesWithTheirFootballers = DataProcessor.Serializer.ExportCoachesWithTheirFootballers(context);
-            Console.WriteLine(exportCoachesWithTheirFootballers);
-            File.WriteAllText(exportDir + "Actual Result - ExportCoachesWithTheirFootballers.xml", exportCoachesWithTheirFootballers);
+            //var exportCoachesWithTheirFootballers = DataProcessor.Serializer.ExportCoachesWithTheirFootballers(context);
+            //Console.WriteLine(exportCoachesWithTheirFootballers);
+            //File.WriteAllText(exportDir + "Actual Result - ExportCoachesWithTheirFootballers.xml", exportCoachesWithTheirFootballers);
 
             DateTime dateTime = DateTime.ParseExact("31/03/2020", "dd/MM/yyyy", CultureInfo.InvariantCulture);
             var exportTeamsWithMostPlayers = DataProcessor.Serializer.ExportTeamsWithMostFootballers(context, dateTime);

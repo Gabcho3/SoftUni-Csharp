@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using Footballers.Data.Models;
+using Footballers.DataProcessor.ExportDto;
 using Footballers.DataProcessor.ImportDto;
 
 namespace Footballers
@@ -15,7 +16,12 @@ namespace Footballers
             CreateMap<ImportCoachesDto, Coach>();
 
             //Footballers
-            CreateMap<ImportFootballersDto, Footballer>();
+            CreateMap<ImpoortFootballersDto, Footballer>();
+            CreateMap<Footballer, ExportFootballerDto>()
+                .ForMember(dest => dest.ContractStartDate, opt =>
+                    opt.MapFrom(src => src.ContractStartDate.ToString("d", CultureInfo.InvariantCulture)))
+                .ForMember(dest => dest.ContractEndDate, opt =>
+                    opt.MapFrom(src => src.ContractEndDate.ToString("d", CultureInfo.InvariantCulture)));
 
             //Teams
             CreateMap<ImportTeamDto, Team>();

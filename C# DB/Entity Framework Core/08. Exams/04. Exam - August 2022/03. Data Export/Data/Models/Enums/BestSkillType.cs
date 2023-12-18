@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Footballers.Data.Models.Enums
 {
-    public enum PositionType
+    public enum BestSkillType
     {
-        Goalkeeper = 0, 
-        Defender = 1, 
-        Midfielder = 2, 
-        Forward = 3
+        Defence = 0, 
+        Dribble = 1, 
+        Pass = 2, 
+        Shoot = 3, 
+        Speed = 4
     }
 }
