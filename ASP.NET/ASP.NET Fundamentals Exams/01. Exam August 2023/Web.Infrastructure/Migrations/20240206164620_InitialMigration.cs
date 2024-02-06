@@ -198,6 +198,28 @@ namespace Web.Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "AdsBuyers",
+                columns: table => new
+                {
+                    BuyerId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    AdId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AdsBuyers", x => new { x.AdId, x.BuyerId });
+                    table.ForeignKey(
+                        name: "FK_AdsBuyers_Ads_AdId",
+                        column: x => x.AdId,
+                        principalTable: "Ads",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_AdsBuyers_AspNetUsers_BuyerId",
+                        column: x => x.BuyerId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                });
+
             migrationBuilder.InsertData(
                 table: "Categories",
                 columns: new[] { "Id", "Name" },
@@ -219,6 +241,11 @@ namespace Web.Infrastructure.Migrations
                 name: "IX_Ads_OwnerId",
                 table: "Ads",
                 column: "OwnerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AdsBuyers_BuyerId",
+                table: "AdsBuyers",
+                column: "BuyerId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -263,7 +290,7 @@ namespace Web.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Ads");
+                name: "AdsBuyers");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
@@ -281,13 +308,16 @@ namespace Web.Infrastructure.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Categories");
+                name: "Ads");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Categories");
         }
     }
 }

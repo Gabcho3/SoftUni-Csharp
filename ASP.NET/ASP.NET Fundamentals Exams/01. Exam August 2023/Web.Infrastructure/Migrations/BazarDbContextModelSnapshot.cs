@@ -268,6 +268,21 @@ namespace Web.Infrastructure.Migrations
                     b.ToTable("Ads");
                 });
 
+            modelBuilder.Entity("Web.Infrastructure.Models.AdBuyer", b =>
+                {
+                    b.Property<int>("AdId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BuyerId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("AdId", "BuyerId");
+
+                    b.HasIndex("BuyerId");
+
+                    b.ToTable("AdsBuyers");
+                });
+
             modelBuilder.Entity("Web.Infrastructure.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -381,6 +396,25 @@ namespace Web.Infrastructure.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("Web.Infrastructure.Models.AdBuyer", b =>
+                {
+                    b.HasOne("Web.Infrastructure.Models.Ad", "Ad")
+                        .WithMany()
+                        .HasForeignKey("AdId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "Buyer")
+                        .WithMany()
+                        .HasForeignKey("BuyerId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Ad");
+
+                    b.Navigation("Buyer");
                 });
 
             modelBuilder.Entity("Web.Infrastructure.Models.Category", b =>

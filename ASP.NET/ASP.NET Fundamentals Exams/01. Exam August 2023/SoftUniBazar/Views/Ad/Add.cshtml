@@ -1,4 +1,8 @@
-﻿@*@{
+﻿@using Microsoft.AspNetCore.Identity
+@model CreateAdViewModel
+@inject UserManager<IdentityUser> userManager;
+
+@{
     ViewBag.Title = "Create a New Ad";
 }
 
@@ -23,7 +27,7 @@
                 <input asp-for="@Model.ImageUrl" class="form-control" aria-required="true" />
                 <span asp-validation-for="@Model.ImageUrl" class="text-danger"></span>
             </div>
-             <div class="mb-3">
+            <div class="mb-3">
                 <label asp-for="@Model.Price" class="form-label-add-edit">Price</label>
                 <input asp-for="@Model.Price" class="form-control" aria-required="true" rows="5" />
                 <span asp-validation-for="Description" class="text-danger"></span>
@@ -41,11 +45,15 @@
             <div class="mb-3">
                 <input class="btn btn-warning mb-2 w-100 p-3 fw-bold" type="submit" value="Add" />
             </div>
+            
+            @*Getting OwnerId without showing it*@
+            <input hidden="true" asp-for="OwnerId" value="@userManager.GetUserId(User)" />
         </form>
+        
     </div>
 </div>
 
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-}*@
+}
