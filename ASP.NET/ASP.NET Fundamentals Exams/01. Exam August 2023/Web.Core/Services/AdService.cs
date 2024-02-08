@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using SoftUniBazar.Data;
+using Web.Core.AutoMapper;
 using Web.Core.Contracts;
 using Web.Core.ViewModels;
 using Web.Infrastructure.Models;
@@ -11,6 +12,11 @@ namespace Web.Core.Services
     {
         private readonly BazarDbContext context;
 
+        private static IMapper autoMapper = new Mapper(new MapperConfiguration(cfg =>
+        {
+            cfg.AddProfile<BazarProfile>();
+        }));
+
         public AdService(BazarDbContext _context)
         {
             context = _context;
@@ -19,34 +25,18 @@ namespace Web.Core.Services
         public async Task<CreateAdViewModel> GetAdByIdAsync(int id)
         {
             var ad = await context.Ads.FindAsync(id);
-
-            CreateAdViewModel viewModel = new CreateAdViewModel()
-            {
-                Id = ad.Id,
-                Name = ad.Name,
-                Description = ad.Description,
-                Price = ad.Price,
-                CategoryId = ad.CategoryId,
-                ImageUrl = ad.ImageUrl,
-                OwnerId = ad.OwnerId
-            };
+            CreateAdViewModel viewModel = autoMapper.Map<CreateAdViewModel>(ad);
 
             return viewModel;
         }
 
         public async Task<List<AdViewModel>> GetAllAdsAsync()
         {
-            return await context.Ads.Select(a => new AdViewModel()
-            {
-                Id = a.Id,
-                Name = a.Name,
-                Description = a.Description,
-                Price = a.Price,
-                ImageUrl = a.ImageUrl,
-                CreatedOn = a.CreatedOn,
-                Owner = a.Owner.UserName,
-                Category = a.Category.Name
-            }).ToListAsync();
+            return await context.Ads
+                .Include(x => x.Owner)
+                .Include(x => x.Category)
+                .Select(a => autoMapper.Map<AdViewModel>(a))
+                .ToListAsync();
         }
 
         public async Task<List<CategoryViewModel>> GetAllCategoriesAsync()
@@ -68,42 +58,28 @@ namespace Web.Core.Services
                 .ToListAsync();
 
             return await context.Ads
+                .Include(a => a.Owner)
+                .Include(a => a.Category)
                 .Where(a => adsIds.Contains(a.Id))
-                .Select(a => new AdViewModel()
-                {
-                    Id = a.Id,
-                    Name = a.Name,
-                    Description = a.Description,
-                    Price = a.Price,
-                    ImageUrl = a.ImageUrl,
-                    CreatedOn = a.CreatedOn,
-                    Owner = a.Owner.UserName,
-                    Category = a.Category.Name
-                }).ToListAsync();
+                .Select(a => autoMapper.Map<AdViewModel>(a))
+                .ToListAsync();
 
         }
 
         public async Task AddAdAsync(CreateAdViewModel ad)
         {
-            await context.Ads.AddAsync(new Ad()
-            {
-                Name = ad.Name,
-                Description = ad.Description,
-                Price = ad.Price,
-                CategoryId = ad.CategoryId,
-                CreatedOn = DateTime.Now,
-                ImageUrl = ad.ImageUrl,
-                OwnerId = ad.OwnerId
-            });
+            Ad adToAdd = autoMapper.Map<Ad>(ad);
+            adToAdd.CreatedOn = DateTime.Now;
 
+            await context.Ads.AddAsync(adToAdd);
             await context.SaveChangesAsync();
         }
 
         public async Task EditAdAsync(int id, CreateAdViewModel ad)
         {
             var adToEdit = await context.Ads.FindAsync(id);
-            
-            adToEdit.Name = ad.Name;
+
+            adToEdit!.Name = ad.Name;
             adToEdit.Description = ad.Description;
             adToEdit.ImageUrl = ad.ImageUrl;
             adToEdit.Price = ad.Price;
