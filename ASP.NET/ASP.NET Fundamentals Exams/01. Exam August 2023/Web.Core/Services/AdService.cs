@@ -88,6 +88,14 @@ namespace Web.Core.Services
             await context.SaveChangesAsync();
         }
 
+        public async Task DeleteAdAsync(int id)
+        {
+            var ad = await context.Ads.FindAsync(id);
+            context.Ads.Remove(ad!);
+            
+            await context.SaveChangesAsync();
+        }
+
         public bool AddAdToCart(int adId, string buyerId)
         {
             AdBuyer? alreadyExist = context.AdsBuyers.FirstOrDefault(x => x.AdId == adId && x.BuyerId == buyerId);

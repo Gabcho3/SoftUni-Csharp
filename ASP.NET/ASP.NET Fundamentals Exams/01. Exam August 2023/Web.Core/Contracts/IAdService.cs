@@ -17,6 +17,8 @@ namespace Web.Core.Contracts
 
         Task EditAdAsync(int id, CreateAdViewModel ad);
 
+        Task DeleteAdAsync(int id);
+
         bool AddAdToCart(int adId, string buyerId);
 
         Task RemoveFromCartAsync(int adId, string buyerId);

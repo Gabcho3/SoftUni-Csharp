@@ -68,6 +68,14 @@ namespace SoftUniBazar.Controllers
             return RedirectToAction("All");
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await adService.DeleteAdAsync(id);
+
+            return RedirectToAction("All");
+        }
+
         public IActionResult AddToCart(int id)
         {
             var successful = adService.AddAdToCart(id, userManager.GetUserId(User));
