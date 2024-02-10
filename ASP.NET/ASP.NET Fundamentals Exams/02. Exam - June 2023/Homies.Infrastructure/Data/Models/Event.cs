@@ -39,7 +39,7 @@ namespace Homies.Infrastructure.Data.Models
         public int TypeId { get; set; }
 
         [ForeignKey(nameof(TypeId))]
-        public Type Type { get; set; }
+        public Type Type { get; set; } = null!;
 
         public List<EventParticipant> EventParticipants { get; set; } = new List<EventParticipant>();
     }
