@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homies", "Homies\Homies.csproj", "{6284C577-833D-4B62-994B-F748F2BE2305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homies", "Homies\Homies.csproj", "{6284C577-833D-4B62-994B-F748F2BE2305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homies.Infrastructure", "Homies.Infrastructure\Homies.Infrastructure.csproj", "{B8B317E0-7AE7-42F9-8C16-DD116592BD9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homies.Core", "Homies.Core\Homies.Core.csproj", "{433C584C-68FB-4176-9B37-D018DFB5EBB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{6284C577-833D-4B62-994B-F748F2BE2305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6284C577-833D-4B62-994B-F748F2BE2305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6284C577-833D-4B62-994B-F748F2BE2305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8B317E0-7AE7-42F9-8C16-DD116592BD9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8B317E0-7AE7-42F9-8C16-DD116592BD9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8B317E0-7AE7-42F9-8C16-DD116592BD9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8B317E0-7AE7-42F9-8C16-DD116592BD9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{433C584C-68FB-4176-9B37-D018DFB5EBB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{433C584C-68FB-4176-9B37-D018DFB5EBB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{433C584C-68FB-4176-9B37-D018DFB5EBB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{433C584C-68FB-4176-9B37-D018DFB5EBB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
