@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Homies.Infrastructure.Migrations
 {
     [DbContext(typeof(HomiesDbContext))]
-    [Migration("20240210220138_InitialMigration")]
+    [Migration("20240211114534_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

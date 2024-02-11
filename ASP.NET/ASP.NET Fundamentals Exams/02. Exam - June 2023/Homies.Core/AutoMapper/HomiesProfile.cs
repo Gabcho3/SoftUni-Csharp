@@ -15,7 +15,9 @@ namespace Homies.Core.AutoMapper
                 .ForMember(dest => dest.Type,
                     opt => opt.MapFrom(src => src.Type.Name));
 
-            CreateMap<CreateEventDto, Event>();
+            CreateMap<Event, EventFormDto>();
+
+            CreateMap<EventFormDto, Event>();
         }
     }
 }

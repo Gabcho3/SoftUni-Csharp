@@ -1,6 +1,6 @@
-﻿@inject UserManager<IdentityUser> userManager;
+﻿@inject UserManager<IdentityUser> userManager
 
-@model CreateEventDto;
+@model EventFormDto
 
 @{
     ViewBag.Title = "Create a New Event";
@@ -24,12 +24,12 @@
             </div>
             <div class="mb-3">
                 <label asp-for="@Model.Start" class="form-label-add-edit">Start</label>
-                <input type="date" asp-for="@Model.Start" class="form-control" aria-required="true" value="@DateTime.Now.ToString("yyyy-MM-dd H:mm")" />
+                <input asp-for="@Model.Start" class="form-control" aria-required="true" value="@DateTime.Now.ToString("dd/MM/yyyy H:mm")" />
                 <span asp-validation-for="@Model.Start" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label asp-for="@Model.End" class="form-label-add-edit">End</label>
-                <input type="date" asp-for="@Model.End" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd H:mm")" />
+                <input asp-for="@Model.End" class="form-control" value="@DateTime.Now.ToString("dd/MM/yyyy H:mm")" />
                 <span asp-validation-for="@Model.End" class="text-danger"></span>
             </div>
             <div class="mb-3">

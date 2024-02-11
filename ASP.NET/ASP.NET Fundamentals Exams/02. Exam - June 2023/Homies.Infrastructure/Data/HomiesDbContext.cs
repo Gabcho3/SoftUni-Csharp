@@ -27,11 +27,13 @@ namespace Homies.Data
             modelBuilder.Entity<EventParticipant>()
                 .HasOne(x => x.Helper)
                 .WithMany()
+                .HasForeignKey(x => x.HelperId)
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<EventParticipant>()
                 .HasOne(x => x.Event)
                 .WithMany()
+                .HasForeignKey(x => x.EventId)
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder

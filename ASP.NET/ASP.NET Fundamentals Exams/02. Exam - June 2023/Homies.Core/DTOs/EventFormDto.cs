@@ -1,9 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Type = Homies.Infrastructure.Data.Models.Type;
 
 namespace Homies.Core.DTOs
 {
-    public class CreateEventDto
+    public class EventFormDto
     {
         public int Id { get; set; }
 
@@ -19,15 +18,15 @@ namespace Homies.Core.DTOs
         public string OrganiserId { get; set; } = null!;
 
         [Required]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "yyyy-MM-dd H:mm")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "dd/MM/yyyy H:mm")]
         public DateTime CreatedOn { get; set; }
 
         [Required]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "yyyy-MM-dd H:mm")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "dd/MM/yyyy H:mm")]
         public DateTime Start { get; set; }
 
         [Required]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "yyyy-MM-dd H:mm")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "dd/MM/yyyy H:mm")]
         public DateTime End { get; set; }
 
         [Required]

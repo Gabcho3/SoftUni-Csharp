@@ -219,6 +219,11 @@ namespace Homies.Infrastructure.Migrations
                         column: x => x.EventId,
                         principalTable: "Events",
                         principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_EventsParticipants_Events_EventId1",
+                        column: x => x.EventId1,
+                        principalTable: "Events",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.InsertData(
@@ -285,6 +290,11 @@ namespace Homies.Infrastructure.Migrations
                 name: "IX_EventsParticipants_EventId",
                 table: "EventsParticipants",
                 column: "EventId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EventsParticipants_EventId1",
+                table: "EventsParticipants",
+                column: "EventId1");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
