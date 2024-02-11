@@ -75,7 +75,6 @@ namespace Homies.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
         }
 
-
         public void OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
