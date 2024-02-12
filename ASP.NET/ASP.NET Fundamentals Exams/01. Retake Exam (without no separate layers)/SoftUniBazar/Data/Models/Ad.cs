@@ -30,7 +30,7 @@ namespace SoftUniBazar.Data.Models
         [Required]
         public string ImageUrl { get; set; } = null!;
 
-        [DisplayFormat(DataFormatString = DateTimeFormat)]
+        [DisplayFormat(DataFormatString = DateFormat)]
         public DateTime CreatedOn { get; set; }
 
         [Required]

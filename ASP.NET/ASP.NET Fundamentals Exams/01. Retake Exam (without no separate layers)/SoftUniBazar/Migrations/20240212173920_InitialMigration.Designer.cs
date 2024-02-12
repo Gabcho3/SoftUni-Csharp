@@ -12,7 +12,7 @@ using SoftUniBazar.Data;
 namespace SoftUniBazar.Migrations
 {
     [DbContext(typeof(BazarDbContext))]
-    [Migration("20240212172036_InitialMigration")]
+    [Migration("20240212173920_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,5 +1,7 @@
-﻿@*@{
-    ViewBag.Title = "Create a New AdConstants";
+﻿@model AdFormViewModel
+
+@{
+    ViewBag.Title = "Create a New Ad";
 }
 
 <h2 class="text-center">@ViewBag.Title</h2>
@@ -7,7 +9,7 @@
 
 <div class="row">
     <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
-        <form asp-action="AdConstantsd" method="post">
+        <form asp-action="Add" method="post">
             <div class="mb-3">
                 <label asp-for="@Model.Name" class="form-label-add-edit">Name</label>
                 <input asp-for="@Model.Name" class="form-control" aria-required="true" />
@@ -26,7 +28,6 @@
              <div class="mb-3">
                 <label asp-for="@Model.Price" class="form-label-add-edit">Price</label>
                 <input asp-for="@Model.Price" class="form-control" aria-required="true" rows="5" />
-                <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label asp-for="@Model.CategoryId" class="form-label-add-edit">Category</label>
@@ -39,7 +40,7 @@
                 <span asp-validation-for="@Model.CategoryId" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <input class="btn btn-warning mb-2 w-100 p-3 fw-bold" type="submit" value="AdConstantsd" />
+                <input class="btn btn-warning mb-2 w-100 p-3 fw-bold" type="submit" value="Add" />
             </div>
         </form>
     </div>
@@ -48,4 +49,4 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-}*@
+}
