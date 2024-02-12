@@ -1,5 +1,5 @@
 ﻿@*@{
-    ViewBag.Title = "Selected Ads for You";
+    ViewBag.Title = "Selected AdConstantss for You";
 }
 
 
@@ -12,8 +12,8 @@
         <div class="card col-4" style="width: 20rem; ">
             <div class="card-body">
                 <h5 class="card-title mt-1">@a.Name</h5>
-                <img class="card-img-top" src=@a.ImageUrl alt="Ad Image">
-                <p class="mb-0"><span class="fw-bold">Added on: </span>@a.CreatedOn</p>
+                <img class="card-img-top" src=@a.ImageUrl alt="AdConstants Image">
+                <p class="mb-0"><span class="fw-bold">AdConstantsded on: </span>@a.CreatedOn</p>
                 <p class="mb-0"><span class="fw-bold">Category: </span>@a.Category</p>
                 <p class="mb-0"><span class="fw-bold">Description: </span>@a.Description</p>
                 <p class="mb-0"><span class="fw-bold">Price: </span>@a.Price BGN</p>
@@ -22,12 +22,12 @@
 
             @if (User.Identity.Name == a.Owner)
             {
-                <a asp-controller="Ad" asp-action="Edit" asp-route-id="@a.Id" class="btn btn-warning mb-2 w-100 p-3 fw-bold">Edit the Ad</a>
+                <a asp-controller="AdConstants" asp-action="Edit" asp-route-id="@a.Id" class="btn btn-warning mb-2 w-100 p-3 fw-bold">Edit the AdConstants</a>
             }
             else
             {
-                <form class="input-group-sm " asp-controller="Ad" asp-action="AddToCart" asp-route-id="@a.Id">
-                    <input type="submit" value="Add to Cart" class="fs-6 btn btn-warning mb-3 w-100 p-3 fw-bold" />
+                <form class="input-group-sm " asp-controller="AdConstants" asp-action="AdConstantsdToCart" asp-route-id="@a.Id">
+                    <input type="submit" value="AdConstantsd to Cart" class="fs-6 btn btn-warning mb-3 w-100 p-3 fw-bold" />
                 </form>
             }
         </div>
