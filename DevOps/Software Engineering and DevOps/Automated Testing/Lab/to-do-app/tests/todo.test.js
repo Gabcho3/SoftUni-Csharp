@@ -27,7 +27,7 @@ test("user can delete a task", async ({ page }) => {
   expect(tasks).not.toContain("Test Task");
 });
 
-//Verify is user can set a task as completed
+//Verify if user can set a task as completed
 test("user can complete a task", async ({ page }) => {
   //Add a task
   await page.goto("http://localhost:5500/");
@@ -38,5 +38,22 @@ test("user can complete a task", async ({ page }) => {
   await page.click(".task-complete");
 
   const completedTask = await page.$(".task.completed#task-0");
+  expect(completedTask).not.toBeNull();
+});
+
+//Verify if user can filter task by category Completed
+test("user can filter a task by category Completed", async ({ page }) => {
+  await page.goto("http://localhost:5500/");
+  await page.fill("#task-input", "Test Task");
+  await page.click("#add-task");
+
+  //Complete the task
+  await page.click("#task-0 .task-complete");
+
+  //Filter tasks by category Complete
+  await page.selectOption("#filter", "completed");
+
+  //Check if task is there
+  const completedTask = await page.$("#task-0.completed");
   expect(completedTask).not.toBeNull();
 });
