@@ -57,3 +57,24 @@ test("user can filter a task by category Completed", async ({ page }) => {
   const completedTask = await page.$("#task-0.completed");
   expect(completedTask).not.toBeNull();
 });
+
+//Verify if user can filter task by category Active
+test("user can filter a task by category Active", async ({ page }) => {
+  await page.goto("http://localhost:5500/");
+  await page.fill("#task-input", "Test Task");
+  await page.click("#add-task");
+
+  //Complete the task
+  await page.click("#task-0 .task-complete");
+
+  //Filter tasks by category Active
+  await page.selectOption("#filter", "active");
+
+  //Check if task is there
+  const isTaskHidden = await page.$eval(
+    "#task-0",
+    (task) => task.style.display === "none"
+  );
+
+  expect(isTaskHidden).toBeTruthy();
+});
