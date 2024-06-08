@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 
+//Verify links' visability
 test('Verify "All books" link is visible', async ({ page }) => {
   await page.goto("http://localhost:3000/");
   await page.waitForSelector("nav.navbar");
@@ -36,6 +37,7 @@ test('Verify "Register" link is visible', async ({ page }) => {
   expect(isVisible).toBe(true);
 });
 
+//Verify user's login
 test("Verify user can login", async ({ page }) => {
   await page.goto("http://localhost:3000/");
   await page.waitForSelector("nav.navbar");
@@ -73,6 +75,7 @@ test("Verify dialog appear after login with empty values", async ({ page }) => {
   });
 });
 
+//Verify user's register
 test("Verify user can register", async ({ page }) => {
   await page.goto("http://localhost:3000/");
   await page.waitForSelector("nav.navbar");
@@ -111,3 +114,34 @@ test("Verify user cannot register if repeated password do not match", async ({ p
     expect(dialog.message).toBe("Passwords don't match!")
   })
 });
+
+//Verify "Add Book" functionality
+test("Verify user can add book", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on login
+  await page.click('a[href="/login"]');
+
+  //Submit login form
+  await page.fill("#email", "peter@abv.bg");
+  await page.fill("#password", "123456");
+  await page.click('input[type="submit"]');
+
+  //Click on "Add Book"
+  await page.click('a[href="/create"]')
+  
+  //Submit "Add Book" form
+  await page.fill("#title", "My Book");
+  await page.fill("#description", "Some descrription");
+  await page.fill("#image", "Some image link");
+  await page.selectOption("#type", "Mistery");
+  await page.click('input[type="submit"]')
+
+  //Verify book is added
+  await page.waitForSelector("#dashboard-page");
+  const bookListTitles = await page.$$eval("li.otherBooks > h3", (booksTitles) => 
+    booksTitles.map((bookTitle) => bookTitle.textContent)
+  );
+  expect(bookListTitles).toContain("My Book");
+})
