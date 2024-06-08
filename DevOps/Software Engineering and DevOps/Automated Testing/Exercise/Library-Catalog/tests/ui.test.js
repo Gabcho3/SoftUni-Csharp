@@ -53,3 +53,22 @@ test("Verify user can login", async ({ page }) => {
   const isVisible = await logoutBtn.isVisible();
   expect(isVisible).toBe(true);
 });
+
+test("Verify that you cannot login with empty credentials", async ({ page}) => {
+  await page.goto("http://localhost:3000/");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on login
+  await page.click('a[href="/login"]');
+
+  //Submit loging form
+  await page.fill("#email", "");
+  await page.fill("#password", "");
+  await page.click('input[type="submit"]');
+
+  //Verify dialog appear
+  await page.on("dialog", async (dialog) => {
+    expect(dialog.type()).toBe("alert");
+    expect(dialog.message()).toBe("All fields are required!");
+  });
+});
