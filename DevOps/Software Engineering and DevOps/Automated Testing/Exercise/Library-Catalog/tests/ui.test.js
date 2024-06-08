@@ -91,3 +91,23 @@ test("Verify user can register", async ({ page }) => {
   const isVisible = await logoutBtn.isVisible();
   expect(isVisible).toBe(true);
 });
+
+test("Verify user cannot register if repeated password do not match", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on login
+  await page.click('a[href="/register"]');
+
+  //Submit register form
+  await page.fill("#email", "test@abv.bg");
+  await page.fill("#password", "123456");
+  await page.fill("#repeat-pass", "123");
+  await page.click('input[type="submit"]');
+
+  //Verify dialog appeareance
+  await page.on("dialog", async dialog => {
+    expect(dialog.type()).toBe("alert");
+    expect(dialog.message).toBe("Passwords don't match!")
+  })
+});
