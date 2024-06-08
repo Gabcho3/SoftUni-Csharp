@@ -54,7 +54,7 @@ test("Verify user can login", async ({ page }) => {
   expect(isVisible).toBe(true);
 });
 
-test("Verify that you cannot login with empty credentials", async ({ page}) => {
+test("Verify dialog appear after login with empty values", async ({ page }) => {
   await page.goto("http://localhost:3000/");
   await page.waitForSelector("nav.navbar");
 
@@ -69,6 +69,25 @@ test("Verify that you cannot login with empty credentials", async ({ page}) => {
   //Verify dialog appear
   await page.on("dialog", async (dialog) => {
     expect(dialog.type()).toBe("alert");
-    expect(dialog.message()).toBe("All fields are required!");
+    expect(dialog.message()).toBe("All fi")
   });
+});
+
+test("Verify user can register", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on login
+  await page.click('a[href="/register"]');
+
+  //Submit register form
+  await page.fill("#email", "test@abv.bg");
+  await page.fill("#password", "123456");
+  await page.fill("#repeat-pass", "123456");
+  await page.click('input[type="submit"]');
+
+  //Verify user is registered
+  const logoutBtn = await page.$("#logoutBtn");
+  const isVisible = await logoutBtn.isVisible();
+  expect(isVisible).toBe(true);
 });
