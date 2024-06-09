@@ -1,5 +1,8 @@
 import { test, expect } from "@playwright/test";
 
+const loginEmail = "peter@abv.bg";
+const loginPass = "123456";
+
 //Verify links' visability
 test('Verify "All books" link is visible', async ({ page }) => {
   await page.goto("http://localhost:3000/");
@@ -46,8 +49,8 @@ test("Verify user can login", async ({ page }) => {
   await page.click('a[href="/login"]');
 
   //Submit loging form
-  await page.fill("#email", "peter@abv.bg");
-  await page.fill("#password", "123456");
+  await page.fill("#email", loginEmail);
+  await page.fill("#password", loginPass);
   await page.click('input[type="submit"]');
 
   //Verify there is logout button
@@ -124,8 +127,8 @@ test("Verify user can add book", async ({ page }) => {
   await page.click('a[href="/login"]');
 
   //Submit login form
-  await page.fill("#email", "peter@abv.bg");
-  await page.fill("#password", "123456");
+  await page.fill("#email", loginEmail);
+  await page.fill("#password", loginPass);
   await page.click('input[type="submit"]');
 
   //Click on "Add Book"
@@ -144,4 +147,4 @@ test("Verify user can add book", async ({ page }) => {
     booksTitles.map((bookTitle) => bookTitle.textContent)
   );
   expect(bookListTitles).toContain("My Book");
-})
+});
