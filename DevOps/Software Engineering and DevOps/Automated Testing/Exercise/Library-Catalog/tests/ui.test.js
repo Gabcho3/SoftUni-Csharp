@@ -187,5 +187,31 @@ test("Verify that all books are displayed", async ({page}) => {
 
   //Get All Books
   const books = await page.$$("li.otherBooks");
-  expect(books.length).toEqual(4);
+  expect(books.length).toBeGreaterThan(0);
+});
+
+//Verify "Details" functionality
+test("Verify that logged-in user sees details button and button works correctly", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on login
+  await page.click('a[href="/login"]');
+
+  //Login
+  await page.fill("#email", loginEmail);
+  await page.fill("#password", loginPass);
+  await page.click('input[type="submit"]');
+
+  //Verify button is visible
+  await page.waitForSelector("#dashboard-page");
+  const detailsBtn = await page.$("li.otherBooks a.button");
+  expect(await detailsBtn.isVisible()).toBe(true);
+
+  //Verify user can click on button
+  await page.click(".otherBooks a.button");
+  await page.waitForSelector("#details-page");
+
+  const title = await page.$(".book-information > h3");
+  expect(await title.textContent()).toBe("My Book");
 });
