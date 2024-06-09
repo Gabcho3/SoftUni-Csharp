@@ -53,6 +53,8 @@ test("Verify user can login", async ({ page }) => {
   await page.fill("#password", loginPass);
   await page.click('input[type="submit"]');
 
+  await page.waitForSelector("nav.navbar");
+
   //Verify there is logout button
   const logoutBtn = await page.$("#logoutBtn");
   const isVisible = await logoutBtn.isVisible();
