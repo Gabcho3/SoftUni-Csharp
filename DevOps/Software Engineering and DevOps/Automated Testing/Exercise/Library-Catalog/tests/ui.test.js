@@ -256,3 +256,48 @@ test("Verify that All book info is displayed correctly", async ({ page }) => {
   const type = await page.$(".book-information p.type");
   expect(await type.textContent()).toContain("Mistery");
 });
+
+test('Verify that "Edit" and "Delete" buutons are visible for author of book', async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on login
+  await page.click('a[href="/login"]');
+
+  //Login
+  await page.fill("#email", loginEmail);
+  await page.fill("#password", loginPass);
+  await page.click('input[type="submit"]');
+
+  //Click on "Details"
+  await page.click(".otherBooks a.button");
+  await page.waitForSelector(".book-information")
+
+  //Verify that "Edit" and "Delete" buutons are visible
+  const actionsDiv = await page.$("div.actions");
+  const editBtn = await actionsDiv.$("a:nth-child(1)");
+  const deleteBtn = await actionsDiv.$("a:nth-child(2)");
+
+  expect(await editBtn.isVisible()).toBe(true);
+  expect(await deleteBtn.isVisible()).toBe(true);
+});
+
+test('Verify that "Edit" and "Delete" buutons are not visible for non-creator', async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on "All Books"
+  await page.click('a[href="/catalog"]');
+
+  //Click on "Details"
+  await page.click(".otherBooks a.button");
+  await page.waitForSelector(".book-information")
+
+  //Verify that "Edit" and "Delete" buutons are visible
+  const actionsDiv = await page.$("div.actions");
+  const editBtn = await actionsDiv.$("a:nth-child(1)");
+  const deleteBtn = await actionsDiv.$("a:nth-child(2)");
+
+  expect(editBtn).toBeNull();
+  expect(deleteBtn).toBeNull();
+});
