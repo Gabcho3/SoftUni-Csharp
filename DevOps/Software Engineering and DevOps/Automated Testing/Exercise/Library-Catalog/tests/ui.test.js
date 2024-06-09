@@ -148,3 +148,44 @@ test("Verify user can add book", async ({ page }) => {
   );
   expect(bookListTitles).toContain("My Book");
 });
+
+test("Verify user cannot add book with empty values", async ({ page }) => {
+  await page.goto("http://localhost:3000");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on login
+  await page.click('a[href="/login"]');
+
+  //Submit login form
+  await page.fill("#email", loginEmail);
+  await page.fill("#password", loginPass);
+  await page.click('input[type="submit"]');
+
+  //Click on "Add Book"
+  await page.click('a[href="/create"]')
+  
+  //Submit "Add Book" form
+  await page.fill("#title", "");
+  await page.fill("#description", "");
+  await page.fill("#image", "");
+  await page.click('input[type="submit"]')
+
+  //Verify dialog appearance
+  page.on("dialog", async (dialog) => {
+    expect(dialog.type()).toBe("alert");
+    expect(dialog.message()).toBe("All fields are required!")
+  });
+});
+
+//Verify "All Books" functionality
+test("Verify that all books are displayed", async ({page}) => {
+  await page.goto("http://localhost:3000");
+  await page.waitForSelector("nav.navbar");
+
+  //Click "All Books"
+  await page.click('a[href="/catalog"]');
+
+  //Get All Books
+  const books = await page.$$("li.otherBooks");
+  expect(books.length).toEqual(4);
+});
