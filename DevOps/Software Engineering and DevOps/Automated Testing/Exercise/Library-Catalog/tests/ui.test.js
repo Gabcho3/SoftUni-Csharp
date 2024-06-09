@@ -215,3 +215,22 @@ test("Verify that logged-in user sees details button and button works correctly"
   const title = await page.$(".book-information > h3");
   expect(await title.textContent()).toBe("My Book");
 });
+
+test("Verify that guest user sees details button and button works correctly", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on "All Books"
+  await page.click('a[href="/catalog"]');
+
+  //Verify button is visible
+  const detailsBtn = await page.$("li.otherBooks a.button");
+  expect(await detailsBtn.isVisible()).toBe(true);
+
+  //Verify user can click on button
+  await page.click(".otherBooks a.button");
+  await page.waitForSelector("#details-page");
+
+  const title = await page.$(".book-information > h3");
+  expect(await title.textContent()).toBe("My Book");
+});
