@@ -136,7 +136,7 @@ test("Verify user can add book", async ({ page }) => {
   
   //Submit "Add Book" form
   await page.fill("#title", "My Book");
-  await page.fill("#description", "Some descrription");
+  await page.fill("#description", "Some description");
   await page.fill("#image", "Some image link");
   await page.selectOption("#type", "Mistery");
   await page.click('input[type="submit"]')
@@ -233,4 +233,26 @@ test("Verify that guest user sees details button and button works correctly", as
 
   const title = await page.$(".book-information > h3");
   expect(await title.textContent()).toBe("My Book");
+});
+
+test("Verify that All book info is displayed correctly", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on "All Books"
+  await page.click('a[href="/catalog"]');
+
+  //Click on "Details"
+  await page.click(".otherBooks a.button");
+
+  //Getting book info from test "Verify user can add book" (col 122)
+  //Verify that all info is displayed correctly
+  const title = await page.$(".book-information > h3");
+  expect(await title.textContent()).toBe("My Book");
+
+  const description = await page.$(".book-description p");
+  expect(await description.textContent()).toBe("Some description");
+
+  const type = await page.$(".book-information p.type");
+  expect(await type.textContent()).toContain("Mistery");
 });
