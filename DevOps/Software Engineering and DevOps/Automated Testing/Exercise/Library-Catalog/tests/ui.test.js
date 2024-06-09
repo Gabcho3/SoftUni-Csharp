@@ -235,6 +235,7 @@ test("Verify that guest user sees details button and button works correctly", as
   expect(await title.textContent()).toBe("My Book");
 });
 
+//Verify info of Book
 test("Verify that All book info is displayed correctly", async ({ page }) => {
   await page.goto("http://localhost:3000/");
   await page.waitForSelector("nav.navbar");
@@ -257,7 +258,8 @@ test("Verify that All book info is displayed correctly", async ({ page }) => {
   expect(await type.textContent()).toContain("Mistery");
 });
 
-test('Verify that "Edit" and "Delete" buutons are visible for author of book', async ({ page }) => {
+//Verify "Edit" and "Delete" buttons
+test('Verify that "Edit" and "Delete" buttons are visible for author of the book', async ({ page }) => {
   await page.goto("http://localhost:3000/");
   await page.waitForSelector("nav.navbar");
 
@@ -273,7 +275,7 @@ test('Verify that "Edit" and "Delete" buutons are visible for author of book', a
   await page.click(".otherBooks a.button");
   await page.waitForSelector(".book-information")
 
-  //Verify that "Edit" and "Delete" buutons are visible
+  //Verify that "Edit" and "Delete" buttons are visible
   const actionsDiv = await page.$("div.actions");
   const editBtn = await actionsDiv.$("a:nth-child(1)");
   const deleteBtn = await actionsDiv.$("a:nth-child(2)");
@@ -282,22 +284,76 @@ test('Verify that "Edit" and "Delete" buutons are visible for author of book', a
   expect(await deleteBtn.isVisible()).toBe(true);
 });
 
-test('Verify that "Edit" and "Delete" buutons are not visible for non-creator', async ({ page }) => {
+test('Verify that "Edit" and "Delete" buttons are not visible for non-creator', async ({ page }) => {
   await page.goto("http://localhost:3000/");
   await page.waitForSelector("nav.navbar");
 
-  //Click on "All Books"
-  await page.click('a[href="/catalog"]');
+  //Click on login
+  await page.click('a[href="/login"]')
+
+  //Login with credentials from register test (col 82)
+  await page.fill("#email", "test@abv.bg");
+  await page.fill("#password", "123456");
+  await page.click('input[type="submit"]');
 
   //Click on "Details"
   await page.click(".otherBooks a.button");
   await page.waitForSelector(".book-information")
 
-  //Verify that "Edit" and "Delete" buutons are visible
-  const actionsDiv = await page.$("div.actions");
-  const editBtn = await actionsDiv.$("a:nth-child(1)");
-  const deleteBtn = await actionsDiv.$("a:nth-child(2)");
+  //Verify that "Edit" and "Delete" buttons are not visible
+  const buttonsTextContent = await page.$$eval("div.actions a", (buttons) => 
+    buttons.map((btn) => btn.textContent)
+  );
 
-  expect(editBtn).toBeNull();
-  expect(deleteBtn).toBeNull();
+  expect(buttonsTextContent).not.toContain("Edit");
+  expect(buttonsTextContent).not.toContain("Delete");
+});
+
+//Verify "Like" button
+test('Verify that "Like" button is not visible for author of the book', async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on login
+  await page.click('a[href="/login"]');
+
+  //Login
+  await page.fill("#email", loginEmail);
+  await page.fill("#password", loginPass);
+  await page.click('input[type="submit"]');
+
+  //Click on "Details"
+  await page.click(".otherBooks a.button");
+  await page.waitForSelector(".book-information")
+
+  //Verify that "Like" button is not visible
+  const buttonsTextContent = await page.$$eval("div.actions a", (buttons) => 
+    buttons.map((btn) => btn.textContent)
+  );
+
+  expect(buttonsTextContent).not.toContain("Like");
+});
+
+test('Verify that "Like" button is visible for non-creator', async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.waitForSelector("nav.navbar");
+
+  //Click on login
+  await page.click('a[href="/login"]')
+
+  //Login with credentials from register test (col 82)
+  await page.fill("#email", "test@abv.bg");
+  await page.fill("#password", "123456");
+  await page.click('input[type="submit"]');
+
+  //Click on "Details"
+  await page.click(".otherBooks a.button");
+  await page.waitForSelector(".book-information")
+
+  //Verify that "Like" button is visible
+  const buttonsTextContent = await page.$$eval("div.actions a", (buttons) => 
+    buttons.map((btn) => btn.textContent)
+  );
+
+  expect(buttonsTextContent).toContain("Like");
 });
