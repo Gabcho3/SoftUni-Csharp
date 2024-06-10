@@ -1,7 +1,6 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('./server');
-const { exec } = require('child_process');
 const expect = chai.expect;
 
 chai.use(chaiHttp);
@@ -72,4 +71,29 @@ describe('Books API', () => {
         done();
       });
   });
+
+  it("should not be able to perform HTTP actions with a non-existing book", (done) => {
+    const bookId = "999";
+
+    chai.request(server)
+      .get(`/books/${bookId}`)
+      .end((err, res) => {
+        expect(res).to.have.status(404);
+      });
+
+      chai.request(server)
+      .put(`/books/${bookId}`)
+      .send({id : bookId, title : "Non-Existing Book", author: "Non-Existing Author"})
+      .end((err, res) => {
+        expect(res).to.have.status(404);
+      });
+
+      chai.request(server)
+      .delete(`/books/${bookId}`)
+      .end((err, res) => {
+        expect(res).to.have.status(404);
+        done();
+      });
+  });
+
 });
