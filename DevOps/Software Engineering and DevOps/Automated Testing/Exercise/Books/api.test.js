@@ -48,4 +48,20 @@ describe('Books API', () => {
       });
   });
 
+  it("should be able to update a Book by Id", (done) => {
+    const updatedBook = { id: testBook.id, title: "My Book", author: testBook.author};
+
+    chai.request(server)
+      .put(`/books/${testBook.id}`)
+      .send(updatedBook)
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body).to.be.a("object");
+        expect(res.body.id).to.be.equal(updatedBook.id);
+        expect(res.body.title).to.be.equal(updatedBook.title);
+        expect(res.body.author).to.be.equal(updatedBook.author);
+        done();
+      });
+  });
+
 });
