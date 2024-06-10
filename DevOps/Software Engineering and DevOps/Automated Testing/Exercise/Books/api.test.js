@@ -64,4 +64,12 @@ describe('Books API', () => {
       });
   });
 
+  it("should be able to delete a book by Id", (done) => {
+    chai.request(server)
+      .delete(`/books/${testBook.id}`)
+      .end((err, res) => {
+        expect(res).to.have.status(204); //Verify that no content was returned
+        done();
+      });
+  });
 });
